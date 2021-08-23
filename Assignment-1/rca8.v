@@ -20,6 +20,7 @@ module RippleCarryAdder8(A, B, cin, sum, cout);
 endmodule
 
 // Not Required I guess.
+/*
 module Test_RippleCarryAdder8();
 
 reg [7:0] a;
@@ -61,3 +62,4 @@ initial begin
 end
 
 endmodule
+*/
