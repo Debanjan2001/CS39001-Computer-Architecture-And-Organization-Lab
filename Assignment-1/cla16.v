@@ -18,7 +18,7 @@ module CLAAdder16(A, B, cin, S, P, G, cout);
     CLAAdder4 cla2(A[11:8],B[11:8],carry[2],S[11:8],p_in[11:8],g_in[11:8],carry[3]);
     CLAAdder4 cla3(A[15:12],B[15:12],carry[3],S[15:12],p_in[15:12],g_in[15:12],carry[4]);
 
-    assign cout = carry;
+    assign cout = carry[4];
     
     assign P = p_in[15:12] & p_in[11:8] & p_in[7:4] & p_in[3:0];
     assign G = g_in[15:12] | (p_in[15:12] & g_in[11:8]) | (p_in[15:12] & p_in[11:8] & g_in[7:4]) | (p_in[15:12] & p_in[11:8] & p_in[7:4] & g_in[3:0]);
