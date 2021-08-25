@@ -2,6 +2,6 @@ module HalfAdder(a, b, s, c);
     input a,b;
     output s,c;
 
-    assign s = a ^ b;
-    assign c = a & b;
+    xor w1 (s,a,b);
+    and w2 (c,a,b);
 endmodule
