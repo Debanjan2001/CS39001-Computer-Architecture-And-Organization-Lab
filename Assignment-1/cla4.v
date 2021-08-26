@@ -1,11 +1,9 @@
-module CLAAdder4(A, B, cin, S, P, G, cout);
+module CLAAdder4(A, B, cin, S, P, G,cout);
     
     input [3:0] A,B;
     output [3:0] S,P,G;
     input cin;
     output cout;
-
-    wire [3:0] P,G;
 
     wire [4:0] fastCarry;
 

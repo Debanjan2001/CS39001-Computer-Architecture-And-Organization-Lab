@@ -4,10 +4,10 @@ module TestCLA16();
     reg [15:0] a,b;
     reg cin;
     wire[15:0] sum;
-    wire [3:0] p,g;
+    wire [15:0] p,g;
     wire cout;
 
-    CLAAdder16 cla16(.A(a), .B(b), .cin(cin), .S(sum), .P(p), .G(g),.cout(cout));
+    CLAAdder16 cla16(.A(a),.B(b),.cin(cin),.sum(sum),.cout(cout),.P_out(p),.G_out(g) );
 
     initial begin
         $monitor("a = %b, b = %b, cin = %b, sum = %b, cout = %b", a, b, cin, sum, cout);
