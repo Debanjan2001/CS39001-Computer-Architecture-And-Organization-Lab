@@ -86,7 +86,7 @@ Equivalent register Removal        : YES
 Optimization Goal                  : Speed
 Optimization Effort                : 1
 Power Reduction                    : NO
-Keep Hierarchy                     : No
+Keep Hierarchy                     : Yes
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -185,6 +185,10 @@ Macro Statistics
 
 Optimizing unit <CLAAdder16> ...
 
+Optimizing unit <LookAheadUnit16by4> ...
+
+Optimizing unit <CLAAdder4> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block CLAAdder16, actual ratio is 0.
@@ -216,11 +220,12 @@ Top Level Output File Name         : CLAAdder16.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 28
-#      LUT2                        : 4
-#      LUT3                        : 4
-#      LUT5                        : 16
-#      LUT6                        : 4
+# BELS                             : 67
+#      LUT2                        : 36
+#      LUT3                        : 5
+#      LUT4                        : 6
+#      LUT5                        : 4
+#      LUT6                        : 16
 # IO Buffers                       : 50
 #      IBUF                        : 33
 #      OBUF                        : 17
@@ -232,14 +237,14 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   28  out of  63400     0%  
-    Number used as Logic:                28  out of  63400     0%  
+ Number of Slice LUTs:                   67  out of  63400     0%  
+    Number used as Logic:                67  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     28
-   Number with an unused Flip Flop:      28  out of     28   100%  
-   Number with an unused LUT:             0  out of     28     0%  
-   Number of fully used LUT-FF pairs:     0  out of     28     0%  
+ Number of LUT Flip Flop pairs used:     67
+   Number with an unused Flip Flop:      67  out of     67   100%  
+   Number with an unused LUT:             0  out of     67     0%  
+   Number of fully used LUT-FF pairs:     0  out of     67     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -279,7 +284,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 5.816ns
+   Maximum combinational path delay: 5.667ns
 
 Timing Details:
 ---------------
@@ -287,9 +292,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 321 / 17
+  Total number of paths / destination ports: 725 / 17
 -------------------------------------------------------------------------
-Delay:               5.816ns (Levels of Logic = 10)
+Delay:               5.667ns (Levels of Logic = 12)
   Source:            A<1> (PAD)
   Destination:       sum<15> (PAD)
 
@@ -297,19 +302,24 @@ Delay:               5.816ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.001   0.933  A_1_IBUF (A_1_IBUF)
-     LUT5:I0->O            2   0.124   0.427  cla0/fastCarry<2><1>1 (cla0/fastCarry<2>)
-     LUT5:I4->O            4   0.124   0.556  launit/outCarry<0> (la4carry<0>)
-     LUT5:I3->O            2   0.124   0.427  cla1/fastCarry<2><1>1 (cla1/fastCarry<2>)
-     LUT5:I4->O            4   0.124   0.556  launit/outCarry<1><1> (la4carry<1>)
-     LUT5:I3->O            2   0.124   0.427  cla2/fastCarry<2><1>1 (cla2/fastCarry<2>)
-     LUT5:I4->O            4   0.124   0.556  launit/outCarry<2><2> (la4carry<2>)
-     LUT5:I3->O            2   0.124   0.542  cla3/fastCarry<2><1>1 (cla3/fastCarry<2>)
-     LUT5:I3->O            1   0.124   0.399  cla3/Mxor_S_3_xo<0>1 (sum_15_OBUF)
+     IBUF:I->O             5   0.001   0.563  A_1_IBUF (A_1_IBUF)
+     begin scope: 'cla0:A<1>'
+     LUT2:I0->O            2   0.124   0.542  Mxor_P_1_xo<0>1 (P<1>)
+     end scope: 'cla0:P<1>'
+     begin scope: 'launit:P_in<1>'
+     LUT2:I0->O            1   0.124   0.716  G<0><3>_SW0 (N01)
+     LUT6:I3->O            1   0.124   0.939  G<0><3> (G_out<0>)
+     LUT6:I0->O            5   0.124   0.448  outCarry<0>1 (C<0>)
+     LUT6:I5->O            5   0.124   0.448  outCarry<1><1>1 (C<1>)
+     LUT6:I5->O            5   0.124   0.743  outCarry<2><2>1 (C<2>)
+     end scope: 'launit:C<2>'
+     begin scope: 'cla3:cin'
+     LUT6:I3->O            1   0.124   0.399  Mxor_S_3_xo<0>1 (S<3>)
+     end scope: 'cla3:S<3>'
      OBUF:I->O                 0.000          sum_15_OBUF (sum<15>)
     ----------------------------------------
-    Total                      5.816ns (0.993ns logic, 4.823ns route)
-                                       (17.1% logic, 82.9% route)
+    Total                      5.667ns (0.869ns logic, 4.798ns route)
+                                       (15.3% logic, 84.7% route)
 
 =========================================================================
 
@@ -320,12 +330,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.44 secs
+Total CPU time to Xst completion: 7.99 secs
  
 --> 
 
 
-Total memory usage is 486228 kilobytes
+Total memory usage is 486232 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)

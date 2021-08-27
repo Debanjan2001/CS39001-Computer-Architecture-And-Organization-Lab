@@ -15,7 +15,7 @@ Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.04 secs
  
 --> 
-Reading design: CLAAdder16.prj
+Reading design: RippleCarryAdder32.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -43,16 +43,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "CLAAdder16.prj"
+Input File Name                    : "RippleCarryAdder32.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "CLAAdder16"
+Output File Name                   : "RippleCarryAdder32"
 Output Format                      : NGC
 Target Device                      : xc7a100t-1-csg324
 
 ---- Source Options
-Top Module Name                    : CLAAdder16
+Top Module Name                    : RippleCarryAdder32
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -108,60 +108,60 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" into library work
-Parsing verilog file "cla4.v" included at line 21.
-Parsing module <CLAAdder4>.
-Parsing module <LookAheadUnit16by4>.
-Parsing module <CLAAdder16>.
+Analyzing Verilog file "/home/bob/Desktop/test-xilinx/assignment1/rca32.v" into library work
+Parsing verilog file "rca16.v" included at line 21.
+Parsing verilog file "rca8.v" included at line 21.
+Parsing verilog file "full_adder.v" included at line 21.
+Parsing module <FullAdder>.
+Parsing module <RippleCarryAdder8>.
+Parsing module <RippleCarryAdder16>.
+Parsing module <RippleCarryAdder32>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <CLAAdder16>.
+Elaborating module <RippleCarryAdder32>.
 
-Elaborating module <LookAheadUnit16by4>.
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" Line 62: Assignment to P_block ignored, since the identifier is never used
+Elaborating module <RippleCarryAdder16>.
 
-Elaborating module <CLAAdder4>.
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" Line 63: Assignment to outcarry ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" Line 64: Assignment to outcarry ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" Line 65: Assignment to outcarry ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" Line 66: Assignment to outcarry ignored, since the identifier is never used
+Elaborating module <RippleCarryAdder8>.
+
+Elaborating module <FullAdder>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <CLAAdder16>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/cla16.v".
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" line 62: Output port <P_out> of the instance <launit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" line 62: Output port <G_out> of the instance <launit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" line 63: Output port <cout> of the instance <cla0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" line 64: Output port <cout> of the instance <cla1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" line 65: Output port <cout> of the instance <cla2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16.v" line 66: Output port <cout> of the instance <cla3> is unconnected or connected to loadless signal.
+Synthesizing Unit <RippleCarryAdder32>.
+    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/rca32.v".
     Summary:
 	no macro.
-Unit <CLAAdder16> synthesized.
+Unit <RippleCarryAdder32> synthesized.
 
-Synthesizing Unit <LookAheadUnit16by4>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/cla16.v".
+Synthesizing Unit <RippleCarryAdder16>.
+    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/rca16.v".
     Summary:
 	no macro.
-Unit <LookAheadUnit16by4> synthesized.
+Unit <RippleCarryAdder16> synthesized.
 
-Synthesizing Unit <CLAAdder4>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/cla4.v".
+Synthesizing Unit <RippleCarryAdder8>.
+    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/rca8.v".
     Summary:
-Unit <CLAAdder4> synthesized.
+	no macro.
+Unit <RippleCarryAdder8> synthesized.
+
+Synthesizing Unit <FullAdder>.
+    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/full_adder.v".
+    Summary:
+Unit <FullAdder> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Xors                                                 : 8
- 4-bit xor2                                            : 8
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
 
 =========================================================================
 
@@ -174,8 +174,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Xors                                                 : 8
- 4-bit xor2                                            : 8
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
 
 =========================================================================
 
@@ -183,11 +183,13 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <CLAAdder16> ...
+Optimizing unit <RippleCarryAdder32> ...
+
+Optimizing unit <RippleCarryAdder8> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block CLAAdder16, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block RippleCarryAdder32, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -212,18 +214,16 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : CLAAdder16.ngc
+Top Level Output File Name         : RippleCarryAdder32.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 28
-#      LUT2                        : 4
-#      LUT3                        : 4
-#      LUT5                        : 16
-#      LUT6                        : 4
-# IO Buffers                       : 50
-#      IBUF                        : 33
-#      OBUF                        : 17
+# BELS                             : 48
+#      LUT3                        : 16
+#      LUT5                        : 32
+# IO Buffers                       : 98
+#      IBUF                        : 65
+#      OBUF                        : 33
 
 Device utilization summary:
 ---------------------------
@@ -232,19 +232,19 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   28  out of  63400     0%  
-    Number used as Logic:                28  out of  63400     0%  
+ Number of Slice LUTs:                   48  out of  63400     0%  
+    Number used as Logic:                48  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     28
-   Number with an unused Flip Flop:      28  out of     28   100%  
-   Number with an unused LUT:             0  out of     28     0%  
-   Number of fully used LUT-FF pairs:     0  out of     28     0%  
+ Number of LUT Flip Flop pairs used:     48
+   Number with an unused Flip Flop:      48  out of     48   100%  
+   Number with an unused LUT:             0  out of     48     0%  
+   Number of fully used LUT-FF pairs:     0  out of     48     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          82
- Number of bonded IOBs:                  50  out of    210    23%  
+ Number of IOs:                          98
+ Number of bonded IOBs:                  98  out of    210    46%  
 
 Specific Feature Utilization:
 
@@ -279,7 +279,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 5.816ns
+   Maximum combinational path delay: 11.559ns
 
 Timing Details:
 ---------------
@@ -287,29 +287,37 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 321 / 17
+  Total number of paths / destination ports: 1153 / 33
 -------------------------------------------------------------------------
-Delay:               5.816ns (Levels of Logic = 10)
+Delay:               11.559ns (Levels of Logic = 18)
   Source:            A<1> (PAD)
-  Destination:       sum<15> (PAD)
+  Destination:       sum<31> (PAD)
 
-  Data Path: A<1> to sum<15>
+  Data Path: A<1> to sum<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.001   0.933  A_1_IBUF (A_1_IBUF)
-     LUT5:I0->O            2   0.124   0.427  cla0/fastCarry<2><1>1 (cla0/fastCarry<2>)
-     LUT5:I4->O            4   0.124   0.556  launit/outCarry<0> (la4carry<0>)
-     LUT5:I3->O            2   0.124   0.427  cla1/fastCarry<2><1>1 (cla1/fastCarry<2>)
-     LUT5:I4->O            4   0.124   0.556  launit/outCarry<1><1> (la4carry<1>)
-     LUT5:I3->O            2   0.124   0.427  cla2/fastCarry<2><1>1 (cla2/fastCarry<2>)
-     LUT5:I4->O            4   0.124   0.556  launit/outCarry<2><2> (la4carry<2>)
-     LUT5:I3->O            2   0.124   0.542  cla3/fastCarry<2><1>1 (cla3/fastCarry<2>)
-     LUT5:I3->O            1   0.124   0.399  cla3/Mxor_S_3_xo<0>1 (sum_15_OBUF)
-     OBUF:I->O                 0.000          sum_15_OBUF (sum<15>)
+     IBUF:I->O             2   0.001   0.925  A_1_IBUF (A_1_IBUF)
+     LUT5:I0->O            3   0.124   0.550  rca1/rca1/fa1/out1 (rca1/rca1/carry<1>)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca1/fa3/out1 (rca1/rca1/carry<3>)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca1/fa5/out1 (rca1/rca1/carry<5>)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca1/fa7/out1 (rca1/carry1)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca2/fa1/out1 (rca1/rca2/carry<1>)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca2/fa3/out1 (rca1/rca2/carry<3>)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca2/fa5/out1 (rca1/rca2/carry<5>)
+     LUT5:I3->O            3   0.124   0.550  rca1/rca2/fa7/out1 (carry1)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca1/fa1/out1 (rca2/rca1/carry<1>)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca1/fa3/out1 (rca2/rca1/carry<3>)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca1/fa5/out1 (rca2/rca1/carry<5>)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca1/fa7/out1 (rca2/carry1)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca2/fa1/out1 (rca2/rca2/carry<1>)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca2/fa3/out1 (rca2/rca2/carry<3>)
+     LUT5:I3->O            3   0.124   0.550  rca2/rca2/fa5/out1 (rca2/rca2/carry<5>)
+     LUT5:I3->O            1   0.124   0.399  rca2/rca2/fa7/Mxor_sum_xo<0>1 (sum_31_OBUF)
+     OBUF:I->O                 0.000          sum_31_OBUF (sum<31>)
     ----------------------------------------
-    Total                      5.816ns (0.993ns logic, 4.823ns route)
-                                       (17.1% logic, 82.9% route)
+    Total                     11.559ns (1.985ns logic, 9.574ns route)
+                                       (17.2% logic, 82.8% route)
 
 =========================================================================
 
@@ -320,14 +328,14 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.44 secs
+Total CPU time to Xst completion: 7.30 secs
  
 --> 
 
 
-Total memory usage is 486228 kilobytes
+Total memory usage is 485520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
