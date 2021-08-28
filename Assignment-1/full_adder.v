@@ -15,7 +15,6 @@ module FullAdder(a, b, cin, sum, cout);
         sum => Output sum bit
         cout => Output carry bit 
     */
-
     input a,b,cin;
     output sum,cout;
     wire   w1, w2, w3, w4; 

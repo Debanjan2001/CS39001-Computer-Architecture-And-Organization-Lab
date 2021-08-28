@@ -1,24 +1,21 @@
+/*------------------------------------------------------
+    Assignment No. - 1
+    Problem No. - 2)a)
+    Semester No. - 5
+    Group No. - 21
+    Group Member1 - Pritkumar Godhani, 19CS10048
+    Group Member2 - Debanjan Saha, 19CS30014 
+-------------------------------------------------------*/
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    12:39:57 08/28/2021 
-// Design Name: 
-// Module Name:    cla4_aug 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module CLAAdderAug4(A, B, cin, S, P_block, G_block);
+    /*
+        A,B => 4 bit input lines
+        cin => Input carry bit
+        S => 4 bit Output lines
+        P_block => Output block propagate line 
+        G_block => Output block generate line
+    */
     input [3:0] A,B;
     output [3:0] S;
     input cin;

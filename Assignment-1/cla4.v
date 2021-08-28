@@ -1,7 +1,22 @@
+/*------------------------------------------------------
+    Assignment No. - 1
+    Problem No. - 2)b)
+    Semester No. - 5
+    Group No. - 21
+    Group Member1 - Pritkumar Godhani, 19CS10048
+    Group Member2 - Debanjan Saha, 19CS30014 
+-------------------------------------------------------*/
 `timescale 1ns / 1ps
 
-module CLAAdder4(A, B, cin, S, P, G,cout);
-    
+module CLAAdder4(A, B, cin, S, P, G, cout);
+    /*
+        A,B => 4 bit input lines
+        cin => Input carry bit
+        S => 4 bit Output lines
+        P => 4 bit Output propagate lines 
+        G => 4 bit Output generate lines
+        cout => Output carry bit
+    */
     input [3:0] A,B;
     output [3:0] S,P,G;
     input cin;
