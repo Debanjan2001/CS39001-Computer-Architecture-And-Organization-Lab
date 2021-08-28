@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 `include "rca32.v"
 
 module RippleCarryAdder64(A, B, cin, sum, cout);

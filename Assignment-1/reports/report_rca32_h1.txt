@@ -15,7 +15,7 @@ Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.04 secs
  
 --> 
-Reading design: RippleCarryAdder4.prj
+Reading design: RippleCarryAdder32.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -43,16 +43,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "RippleCarryAdder4.prj"
+Input File Name                    : "RippleCarryAdder32.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "RippleCarryAdder4"
+Output File Name                   : "RippleCarryAdder32"
 Output Format                      : NGC
 Target Device                      : xc7a100t-1-csg324
 
 ---- Source Options
-Top Module Name                    : RippleCarryAdder4
+Top Module Name                    : RippleCarryAdder32
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -108,16 +108,24 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/rca4.v" into library work
+Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/rca32.v" into library work
+Parsing verilog file "rca16.v" included at line 21.
+Parsing verilog file "rca8.v" included at line 21.
 Parsing verilog file "full_adder.v" included at line 21.
 Parsing module <FullAdder>.
-Parsing module <RippleCarryAdder4>.
+Parsing module <RippleCarryAdder8>.
+Parsing module <RippleCarryAdder16>.
+Parsing module <RippleCarryAdder32>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <RippleCarryAdder4>.
+Elaborating module <RippleCarryAdder32>.
+
+Elaborating module <RippleCarryAdder16>.
+
+Elaborating module <RippleCarryAdder8>.
 
 Elaborating module <FullAdder>.
 
@@ -125,11 +133,23 @@ Elaborating module <FullAdder>.
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <RippleCarryAdder4>.
-    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca4.v".
+Synthesizing Unit <RippleCarryAdder32>.
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca32.v".
     Summary:
 	no macro.
-Unit <RippleCarryAdder4> synthesized.
+Unit <RippleCarryAdder32> synthesized.
+
+Synthesizing Unit <RippleCarryAdder16>.
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca16.v".
+    Summary:
+	no macro.
+Unit <RippleCarryAdder16> synthesized.
+
+Synthesizing Unit <RippleCarryAdder8>.
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca8.v".
+    Summary:
+	no macro.
+Unit <RippleCarryAdder8> synthesized.
 
 Synthesizing Unit <FullAdder>.
     Related source file is "/home/bob/Desktop/test-xilinx/ass1/full_adder.v".
@@ -140,8 +160,8 @@ Unit <FullAdder> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Xors                                                 : 8
- 1-bit xor2                                            : 8
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
 
 =========================================================================
 
@@ -154,8 +174,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Xors                                                 : 8
- 1-bit xor2                                            : 8
+# Xors                                                 : 64
+ 1-bit xor2                                            : 64
 
 =========================================================================
 
@@ -163,13 +183,17 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <RippleCarryAdder4> ...
+Optimizing unit <RippleCarryAdder32> ...
+
+Optimizing unit <RippleCarryAdder16> ...
+
+Optimizing unit <RippleCarryAdder8> ...
 
 Optimizing unit <FullAdder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block RippleCarryAdder4, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block RippleCarryAdder32, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -194,15 +218,15 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : RippleCarryAdder4.ngc
+Top Level Output File Name         : RippleCarryAdder32.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 8
-#      LUT3                        : 8
-# IO Buffers                       : 14
-#      IBUF                        : 9
-#      OBUF                        : 5
+# BELS                             : 64
+#      LUT3                        : 64
+# IO Buffers                       : 98
+#      IBUF                        : 65
+#      OBUF                        : 33
 
 Device utilization summary:
 ---------------------------
@@ -211,19 +235,19 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    8  out of  63400     0%  
-    Number used as Logic:                 8  out of  63400     0%  
+ Number of Slice LUTs:                   64  out of  63400     0%  
+    Number used as Logic:                64  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      8
-   Number with an unused Flip Flop:       8  out of      8   100%  
-   Number with an unused LUT:             0  out of      8     0%  
-   Number of fully used LUT-FF pairs:     0  out of      8     0%  
+ Number of LUT Flip Flop pairs used:     64
+   Number with an unused Flip Flop:      64  out of     64   100%  
+   Number with an unused LUT:             0  out of     64     0%  
+   Number of fully used LUT-FF pairs:     0  out of     64     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          14
- Number of bonded IOBs:                  14  out of    210     6%  
+ Number of IOs:                          98
+ Number of bonded IOBs:                  98  out of    210    46%  
 
 Specific Feature Utilization:
 
@@ -258,7 +282,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.244ns
+   Maximum combinational path delay: 21.892ns
 
 Timing Details:
 ---------------
@@ -266,9 +290,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 33 / 5
+  Total number of paths / destination ports: 1153 / 33
 -------------------------------------------------------------------------
-Delay:               3.244ns (Levels of Logic = 10)
+Delay:               21.892ns (Levels of Logic = 72)
   Source:            B<0> (PAD)
   Destination:       cout (PAD)
 
@@ -277,22 +301,118 @@ Delay:               3.244ns (Levels of Logic = 10)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   0.001   0.722  B_0_IBUF (B_0_IBUF)
-     begin scope: 'fa0:b'
+     begin scope: 'rca1:B<0>'
+     begin scope: 'rca1/rca1:B<0>'
+     begin scope: 'rca1/rca1/fa0:b'
      LUT3:I0->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa0:cout'
-     begin scope: 'fa1:cin'
+     end scope: 'rca1/rca1/fa0:cout'
+     begin scope: 'rca1/rca1/fa1:cin'
      LUT3:I1->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa1:cout'
-     begin scope: 'fa2:cin'
+     end scope: 'rca1/rca1/fa1:cout'
+     begin scope: 'rca1/rca1/fa2:cin'
      LUT3:I1->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa2:cout'
-     begin scope: 'fa3:cin'
+     end scope: 'rca1/rca1/fa2:cout'
+     begin scope: 'rca1/rca1/fa3:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca1/fa3:cout'
+     begin scope: 'rca1/rca1/fa4:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca1/fa4:cout'
+     begin scope: 'rca1/rca1/fa5:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca1/fa5:cout'
+     begin scope: 'rca1/rca1/fa6:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca1/fa6:cout'
+     begin scope: 'rca1/rca1/fa7:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca1/fa7:cout'
+     end scope: 'rca1/rca1:cout'
+     begin scope: 'rca1/rca2:cin'
+     begin scope: 'rca1/rca2/fa0:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa0:cout'
+     begin scope: 'rca1/rca2/fa1:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa1:cout'
+     begin scope: 'rca1/rca2/fa2:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa2:cout'
+     begin scope: 'rca1/rca2/fa3:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa3:cout'
+     begin scope: 'rca1/rca2/fa4:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa4:cout'
+     begin scope: 'rca1/rca2/fa5:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa5:cout'
+     begin scope: 'rca1/rca2/fa6:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa6:cout'
+     begin scope: 'rca1/rca2/fa7:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca1/rca2/fa7:cout'
+     end scope: 'rca1/rca2:cout'
+     end scope: 'rca1:cout'
+     begin scope: 'rca2:cin'
+     begin scope: 'rca2/rca1:cin'
+     begin scope: 'rca2/rca1/fa0:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa0:cout'
+     begin scope: 'rca2/rca1/fa1:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa1:cout'
+     begin scope: 'rca2/rca1/fa2:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa2:cout'
+     begin scope: 'rca2/rca1/fa3:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa3:cout'
+     begin scope: 'rca2/rca1/fa4:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa4:cout'
+     begin scope: 'rca2/rca1/fa5:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa5:cout'
+     begin scope: 'rca2/rca1/fa6:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa6:cout'
+     begin scope: 'rca2/rca1/fa7:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca1/fa7:cout'
+     end scope: 'rca2/rca1:cout'
+     begin scope: 'rca2/rca2:cin'
+     begin scope: 'rca2/rca2/fa0:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa0:cout'
+     begin scope: 'rca2/rca2/fa1:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa1:cout'
+     begin scope: 'rca2/rca2/fa2:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa2:cout'
+     begin scope: 'rca2/rca2/fa3:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa3:cout'
+     begin scope: 'rca2/rca2/fa4:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa4:cout'
+     begin scope: 'rca2/rca2/fa5:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa5:cout'
+     begin scope: 'rca2/rca2/fa6:cin'
+     LUT3:I1->O            2   0.124   0.542  out1 (cout)
+     end scope: 'rca2/rca2/fa6:cout'
+     begin scope: 'rca2/rca2/fa7:cin'
      LUT3:I1->O            1   0.124   0.399  out1 (cout)
-     end scope: 'fa3:cout'
+     end scope: 'rca2/rca2/fa7:cout'
+     end scope: 'rca2/rca2:cout'
+     end scope: 'rca2:cout'
      OBUF:I->O                 0.000          cout_OBUF (cout)
     ----------------------------------------
-    Total                      3.244ns (0.497ns logic, 2.747ns route)
-                                       (15.3% logic, 84.7% route)
+    Total                     21.892ns (3.969ns logic, 17.923ns route)
+                                       (18.1% logic, 81.9% route)
 
 =========================================================================
 
@@ -303,12 +423,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.68 secs
+Total CPU time to Xst completion: 7.08 secs
  
 --> 
 
 
-Total memory usage is 485304 kilobytes
+Total memory usage is 485444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

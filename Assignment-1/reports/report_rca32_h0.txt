@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/test-xilinx/assignment1/rca32.v" into library work
+Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/rca32.v" into library work
 Parsing verilog file "rca16.v" included at line 21.
 Parsing verilog file "rca8.v" included at line 21.
 Parsing verilog file "full_adder.v" included at line 21.
@@ -134,25 +134,25 @@ Elaborating module <FullAdder>.
 =========================================================================
 
 Synthesizing Unit <RippleCarryAdder32>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/rca32.v".
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca32.v".
     Summary:
 	no macro.
 Unit <RippleCarryAdder32> synthesized.
 
 Synthesizing Unit <RippleCarryAdder16>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/rca16.v".
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca16.v".
     Summary:
 	no macro.
 Unit <RippleCarryAdder16> synthesized.
 
 Synthesizing Unit <RippleCarryAdder8>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/rca8.v".
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca8.v".
     Summary:
 	no macro.
 Unit <RippleCarryAdder8> synthesized.
 
 Synthesizing Unit <FullAdder>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/full_adder.v".
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/full_adder.v".
     Summary:
 Unit <FullAdder> synthesized.
 
@@ -327,13 +327,13 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
+Total REAL time to Xst completion: 7.00 secs
 Total CPU time to Xst completion: 7.30 secs
  
 --> 
 
 
-Total memory usage is 485520 kilobytes
+Total memory usage is 485444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

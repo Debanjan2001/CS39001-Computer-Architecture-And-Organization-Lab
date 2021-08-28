@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module CLAAdder4(A, B, cin, S, P, G,cout);
     
     input [3:0] A,B;

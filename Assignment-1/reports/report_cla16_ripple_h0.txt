@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" into library work
+Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/cla16_ripple.v" into library work
 Parsing verilog file "cla4.v" included at line 21.
 Parsing module <CLAAdder4>.
 Parsing module <CLARippledAdder16>.
@@ -120,31 +120,19 @@ Parsing module <CLARippledAdder16>.
 Elaborating module <CLARippledAdder16>.
 
 Elaborating module <CLAAdder4>.
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" Line 35: Assignment to p_in ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" Line 36: Assignment to p_in ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" Line 37: Assignment to p_in ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" Line 38: Assignment to p_in ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <CLARippledAdder16>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v".
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 35: Output port <P> of the instance <cla0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 35: Output port <G> of the instance <cla0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 36: Output port <P> of the instance <cla1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 36: Output port <G> of the instance <cla1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 37: Output port <P> of the instance <cla2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 37: Output port <G> of the instance <cla2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 38: Output port <P> of the instance <cla3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/bob/Desktop/test-xilinx/assignment1/cla16_ripple.v" line 38: Output port <G> of the instance <cla3> is unconnected or connected to loadless signal.
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/cla16_ripple.v".
     Summary:
 	no macro.
 Unit <CLARippledAdder16> synthesized.
 
 Synthesizing Unit <CLAAdder4>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/cla4.v".
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/cla4.v".
     Summary:
 Unit <CLAAdder4> synthesized.
 
@@ -208,12 +196,16 @@ Top Level Output File Name         : CLARippledAdder16.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 24
-#      LUT3                        : 8
-#      LUT5                        : 16
-# IO Buffers                       : 50
+# BELS                             : 62
+#      LUT2                        : 32
+#      LUT3                        : 10
+#      LUT4                        : 2
+#      LUT5                        : 11
+#      LUT6                        : 6
+#      MUXF7                       : 1
+# IO Buffers                       : 82
 #      IBUF                        : 33
-#      OBUF                        : 17
+#      OBUF                        : 49
 
 Device utilization summary:
 ---------------------------
@@ -222,19 +214,19 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   24  out of  63400     0%  
-    Number used as Logic:                24  out of  63400     0%  
+ Number of Slice LUTs:                   61  out of  63400     0%  
+    Number used as Logic:                61  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     24
-   Number with an unused Flip Flop:      24  out of     24   100%  
-   Number with an unused LUT:             0  out of     24     0%  
-   Number of fully used LUT-FF pairs:     0  out of     24     0%  
+ Number of LUT Flip Flop pairs used:     61
+   Number with an unused Flip Flop:      61  out of     61   100%  
+   Number with an unused LUT:             0  out of     61     0%  
+   Number of fully used LUT-FF pairs:     0  out of     61     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          50
- Number of bonded IOBs:                  50  out of    210    23%  
+ Number of IOs:                          82
+ Number of bonded IOBs:                  82  out of    210    39%  
 
 Specific Feature Utilization:
 
@@ -269,7 +261,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.167ns
+   Maximum combinational path delay: 7.422ns
 
 Timing Details:
 ---------------
@@ -277,29 +269,31 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 321 / 17
+  Total number of paths / destination ports: 533 / 49
 -------------------------------------------------------------------------
-Delay:               6.167ns (Levels of Logic = 10)
-  Source:            A<1> (PAD)
-  Destination:       S<15> (PAD)
+Delay:               7.422ns (Levels of Logic = 12)
+  Source:            B<0> (PAD)
+  Destination:       cout (PAD)
 
-  Data Path: A<1> to S<15>
+  Data Path: B<0> to cout
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.925  A_1_IBUF (A_1_IBUF)
-     LUT5:I0->O            3   0.124   0.550  cla0/fastCarry<2><1>1 (cla0/fastCarry<2>)
-     LUT5:I3->O            3   0.124   0.550  cla0/fastCarry<4><3>1 (carry<1>)
-     LUT5:I3->O            3   0.124   0.550  cla1/fastCarry<2><1>1 (cla1/fastCarry<2>)
-     LUT5:I3->O            3   0.124   0.550  cla1/fastCarry<4><3>1 (carry<2>)
-     LUT5:I3->O            3   0.124   0.550  cla2/fastCarry<2><1>1 (cla2/fastCarry<2>)
-     LUT5:I3->O            3   0.124   0.550  cla2/fastCarry<4><3>1 (carry<3>)
-     LUT5:I3->O            3   0.124   0.550  cla3/fastCarry<2><1>1 (cla3/fastCarry<2>)
-     LUT5:I3->O            1   0.124   0.399  cla3/fastCarry<4><3>1 (cout_OBUF)
+     IBUF:I->O             6   0.001   0.749  B_0_IBUF (B_0_IBUF)
+     LUT3:I0->O            1   0.124   0.421  cla0/fastCarry<3><2>1 (cla0/fastCarry<3><2>)
+     LUT5:I4->O            3   0.124   0.550  cla0/fastCarry<3><2>2 (cla0/fastCarry<3>)
+     LUT3:I1->O            4   0.124   0.959  cla0/fastCarry<4><3>1 (carry<1>)
+     LUT6:I0->O            1   0.124   0.000  cla1/fastCarry<3><2>_G (N16)
+     MUXF7:I1->O           4   0.368   0.556  cla1/fastCarry<3><2> (cla1/fastCarry<3>)
+     LUT5:I3->O            1   0.124   0.421  cla2/fastCarry<3><2>_SW4 (N13)
+     LUT5:I4->O            3   0.124   0.550  cla2/fastCarry<3><2> (cla2/fastCarry<3>)
+     LUT3:I1->O            3   0.124   0.790  cla2/fastCarry<4><3>1 (carry<3>)
+     LUT5:I1->O            2   0.124   0.542  cla3/fastCarry<3><2> (cla3/fastCarry<3>)
+     LUT3:I1->O            1   0.124   0.399  cla3/fastCarry<4><3>1 (cout_OBUF)
      OBUF:I->O                 0.000          cout_OBUF (cout)
     ----------------------------------------
-    Total                      6.167ns (0.993ns logic, 5.174ns route)
-                                       (16.1% logic, 83.9% route)
+    Total                      7.422ns (1.485ns logic, 5.937ns route)
+                                       (20.0% logic, 80.0% route)
 
 =========================================================================
 
@@ -310,14 +304,14 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.09 secs
+Total CPU time to Xst completion: 7.01 secs
  
 --> 
 
 
-Total memory usage is 486044 kilobytes
+Total memory usage is 486056 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

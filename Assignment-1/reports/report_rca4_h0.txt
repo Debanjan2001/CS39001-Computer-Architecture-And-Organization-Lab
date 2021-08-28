@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.04 secs
  
 --> 
@@ -86,7 +86,7 @@ Equivalent register Removal        : YES
 Optimization Goal                  : Speed
 Optimization Effort                : 1
 Power Reduction                    : NO
-Keep Hierarchy                     : Yes
+Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Global Optimization                : AllClockNets
@@ -165,8 +165,6 @@ Macro Statistics
 
 Optimizing unit <RippleCarryAdder4> ...
 
-Optimizing unit <FullAdder> ...
-
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block RippleCarryAdder4, actual ratio is 0.
@@ -198,8 +196,9 @@ Top Level Output File Name         : RippleCarryAdder4.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 8
-#      LUT3                        : 8
+# BELS                             : 6
+#      LUT3                        : 2
+#      LUT5                        : 4
 # IO Buffers                       : 14
 #      IBUF                        : 9
 #      OBUF                        : 5
@@ -211,14 +210,14 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    8  out of  63400     0%  
-    Number used as Logic:                 8  out of  63400     0%  
+ Number of Slice LUTs:                    6  out of  63400     0%  
+    Number used as Logic:                 6  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      8
-   Number with an unused Flip Flop:       8  out of      8   100%  
-   Number with an unused LUT:             0  out of      8     0%  
-   Number of fully used LUT-FF pairs:     0  out of      8     0%  
+ Number of LUT Flip Flop pairs used:      6
+   Number with an unused Flip Flop:       6  out of      6   100%  
+   Number with an unused LUT:             0  out of      6     0%  
+   Number of fully used LUT-FF pairs:     0  out of      6     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
@@ -258,7 +257,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.244ns
+   Maximum combinational path delay: 2.123ns
 
 Timing Details:
 ---------------
@@ -268,31 +267,21 @@ All values displayed in nanoseconds (ns)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 33 / 5
 -------------------------------------------------------------------------
-Delay:               3.244ns (Levels of Logic = 10)
-  Source:            B<0> (PAD)
-  Destination:       cout (PAD)
+Delay:               2.123ns (Levels of Logic = 4)
+  Source:            A<1> (PAD)
+  Destination:       sum<3> (PAD)
 
-  Data Path: B<0> to cout
+  Data Path: A<1> to sum<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.722  B_0_IBUF (B_0_IBUF)
-     begin scope: 'fa0:b'
-     LUT3:I0->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa0:cout'
-     begin scope: 'fa1:cin'
-     LUT3:I1->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa1:cout'
-     begin scope: 'fa2:cin'
-     LUT3:I1->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa2:cout'
-     begin scope: 'fa3:cin'
-     LUT3:I1->O            1   0.124   0.399  out1 (cout)
-     end scope: 'fa3:cout'
+     IBUF:I->O             2   0.001   0.925  A_1_IBUF (A_1_IBUF)
+     LUT5:I0->O            3   0.124   0.550  fa1/out1 (carry<1>)
+     LUT5:I3->O            1   0.124   0.399  fa3/out1 (cout_OBUF)
      OBUF:I->O                 0.000          cout_OBUF (cout)
     ----------------------------------------
-    Total                      3.244ns (0.497ns logic, 2.747ns route)
-                                       (15.3% logic, 84.7% route)
+    Total                      2.123ns (0.249ns logic, 1.874ns route)
+                                       (11.7% logic, 88.3% route)
 
 =========================================================================
 
@@ -303,12 +292,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.68 secs
+Total CPU time to Xst completion: 6.72 secs
  
 --> 
 
 
-Total memory usage is 485304 kilobytes
+Total memory usage is 485284 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

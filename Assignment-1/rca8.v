@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 `include "full_adder.v"
 
 module RippleCarryAdder8(A, B, cin, sum, cout);

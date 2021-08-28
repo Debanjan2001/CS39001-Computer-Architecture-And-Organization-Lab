@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: CLAAdder4.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/test-xilinx/assignment1/cla4.v" into library work
+Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/cla4.v" into library work
 Parsing module <CLAAdder4>.
 
 =========================================================================
@@ -122,7 +122,7 @@ Elaborating module <CLAAdder4>.
 =========================================================================
 
 Synthesizing Unit <CLAAdder4>.
-    Related source file is "/home/bob/Desktop/test-xilinx/assignment1/cla4.v".
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/cla4.v".
     Summary:
 Unit <CLAAdder4> synthesized.
 
@@ -284,13 +284,13 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.98 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.57 secs
  
 --> 
 
 
-Total memory usage is 485384 kilobytes
+Total memory usage is 485336 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

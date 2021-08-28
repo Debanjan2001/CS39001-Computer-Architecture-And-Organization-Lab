@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module HalfAdder(a, b, s, c);
     input a,b;
     output s,c;

@@ -5,17 +5,17 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
-Reading design: RippleCarryAdder4.prj
+Reading design: CLARippledAdder16.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -43,16 +43,16 @@ TABLE OF CONTENTS
 *                      Synthesis Options Summary                        *
 =========================================================================
 ---- Source Parameters
-Input File Name                    : "RippleCarryAdder4.prj"
+Input File Name                    : "CLARippledAdder16.prj"
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
-Output File Name                   : "RippleCarryAdder4"
+Output File Name                   : "CLARippledAdder16"
 Output Format                      : NGC
 Target Device                      : xc7a100t-1-csg324
 
 ---- Source Options
-Top Module Name                    : RippleCarryAdder4
+Top Module Name                    : CLARippledAdder16
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
@@ -108,40 +108,40 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/rca4.v" into library work
-Parsing verilog file "full_adder.v" included at line 21.
-Parsing module <FullAdder>.
-Parsing module <RippleCarryAdder4>.
+Analyzing Verilog file "/home/bob/Desktop/test-xilinx/ass1/cla16_ripple.v" into library work
+Parsing verilog file "cla4.v" included at line 21.
+Parsing module <CLAAdder4>.
+Parsing module <CLARippledAdder16>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
-Elaborating module <RippleCarryAdder4>.
+Elaborating module <CLARippledAdder16>.
 
-Elaborating module <FullAdder>.
+Elaborating module <CLAAdder4>.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <RippleCarryAdder4>.
-    Related source file is "/home/bob/Desktop/test-xilinx/ass1/rca4.v".
+Synthesizing Unit <CLARippledAdder16>.
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/cla16_ripple.v".
     Summary:
 	no macro.
-Unit <RippleCarryAdder4> synthesized.
+Unit <CLARippledAdder16> synthesized.
 
-Synthesizing Unit <FullAdder>.
-    Related source file is "/home/bob/Desktop/test-xilinx/ass1/full_adder.v".
+Synthesizing Unit <CLAAdder4>.
+    Related source file is "/home/bob/Desktop/test-xilinx/ass1/cla4.v".
     Summary:
-Unit <FullAdder> synthesized.
+Unit <CLAAdder4> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # Xors                                                 : 8
- 1-bit xor2                                            : 8
+ 4-bit xor2                                            : 8
 
 =========================================================================
 
@@ -155,7 +155,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Xors                                                 : 8
- 1-bit xor2                                            : 8
+ 4-bit xor2                                            : 8
 
 =========================================================================
 
@@ -163,13 +163,13 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 
-Optimizing unit <RippleCarryAdder4> ...
+Optimizing unit <CLARippledAdder16> ...
 
-Optimizing unit <FullAdder> ...
+Optimizing unit <CLAAdder4> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block RippleCarryAdder4, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block CLARippledAdder16, actual ratio is 0.
 
 Final Macro Processing ...
 
@@ -194,15 +194,20 @@ Partition Implementation Status
 *                            Design Summary                             *
 =========================================================================
 
-Top Level Output File Name         : RippleCarryAdder4.ngc
+Top Level Output File Name         : CLARippledAdder16.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 8
-#      LUT3                        : 8
-# IO Buffers                       : 14
-#      IBUF                        : 9
-#      OBUF                        : 5
+# BELS                             : 63
+#      LUT2                        : 32
+#      LUT3                        : 13
+#      LUT4                        : 4
+#      LUT5                        : 7
+#      LUT6                        : 6
+#      MUXF7                       : 1
+# IO Buffers                       : 82
+#      IBUF                        : 33
+#      OBUF                        : 49
 
 Device utilization summary:
 ---------------------------
@@ -211,19 +216,19 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    8  out of  63400     0%  
-    Number used as Logic:                 8  out of  63400     0%  
+ Number of Slice LUTs:                   62  out of  63400     0%  
+    Number used as Logic:                62  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      8
-   Number with an unused Flip Flop:       8  out of      8   100%  
-   Number with an unused LUT:             0  out of      8     0%  
-   Number of fully used LUT-FF pairs:     0  out of      8     0%  
+ Number of LUT Flip Flop pairs used:     62
+   Number with an unused Flip Flop:      62  out of     62   100%  
+   Number with an unused LUT:             0  out of     62     0%  
+   Number of fully used LUT-FF pairs:     0  out of     62     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                          14
- Number of bonded IOBs:                  14  out of    210     6%  
+ Number of IOs:                          82
+ Number of bonded IOBs:                  82  out of    210    39%  
 
 Specific Feature Utilization:
 
@@ -258,7 +263,7 @@ Speed Grade: -1
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.244ns
+   Maximum combinational path delay: 7.780ns
 
 Timing Details:
 ---------------
@@ -266,9 +271,9 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 33 / 5
+  Total number of paths / destination ports: 525 / 49
 -------------------------------------------------------------------------
-Delay:               3.244ns (Levels of Logic = 10)
+Delay:               7.780ns (Levels of Logic = 16)
   Source:            B<0> (PAD)
   Destination:       cout (PAD)
 
@@ -276,23 +281,29 @@ Delay:               3.244ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.722  B_0_IBUF (B_0_IBUF)
-     begin scope: 'fa0:b'
-     LUT3:I0->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa0:cout'
-     begin scope: 'fa1:cin'
-     LUT3:I1->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa1:cout'
-     begin scope: 'fa2:cin'
-     LUT3:I1->O            2   0.124   0.542  out1 (cout)
-     end scope: 'fa2:cout'
-     begin scope: 'fa3:cin'
-     LUT3:I1->O            1   0.124   0.399  out1 (cout)
-     end scope: 'fa3:cout'
+     IBUF:I->O             6   0.001   0.749  B_0_IBUF (B_0_IBUF)
+     begin scope: 'cla0:B<0>'
+     LUT3:I0->O            1   0.124   0.421  fastCarry<3><2>1 (fastCarry<3><2>)
+     LUT5:I4->O            2   0.124   0.542  fastCarry<3><2>2 (fastCarry<3>)
+     LUT3:I1->O            4   0.124   0.796  fastCarry<4><3>1 (cout)
+     end scope: 'cla0:cout'
+     begin scope: 'cla1:cin'
+     LUT5:I1->O            2   0.124   0.542  fastCarry<3><2> (fastCarry<3>)
+     LUT3:I1->O            4   0.124   0.796  fastCarry<4><3>1 (cout)
+     end scope: 'cla1:cout'
+     begin scope: 'cla2:cin'
+     LUT5:I1->O            2   0.124   0.542  fastCarry<3><2> (fastCarry<3>)
+     LUT3:I1->O            5   0.124   0.966  fastCarry<4><3>1 (cout)
+     end scope: 'cla2:cout'
+     begin scope: 'cla3:cin'
+     LUT6:I0->O            1   0.124   0.000  fastCarry<3><2>_G (N4)
+     MUXF7:I1->O           2   0.368   0.542  fastCarry<3><2> (fastCarry<3>)
+     LUT3:I1->O            1   0.124   0.399  fastCarry<4><3>1 (cout)
+     end scope: 'cla3:cout'
      OBUF:I->O                 0.000          cout_OBUF (cout)
     ----------------------------------------
-    Total                      3.244ns (0.497ns logic, 2.747ns route)
-                                       (15.3% logic, 84.7% route)
+    Total                      7.780ns (1.485ns logic, 6.295ns route)
+                                       (19.1% logic, 80.9% route)
 
 =========================================================================
 
@@ -303,12 +314,12 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.68 secs
+Total CPU time to Xst completion: 7.11 secs
  
 --> 
 
 
-Total memory usage is 485304 kilobytes
+Total memory usage is 486052 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

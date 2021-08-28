@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 `include "rca8.v"
 
 module RippleCarryAdder16(A, B, cin, sum, cout);
