@@ -1,3 +1,12 @@
+/*------------------------------------------------------
+    Assignment No. - 1
+    Problem No. - 1)c)
+    Semester No. - 5
+    Group No. - 21
+    Group Member1 - Pritkumar Godhani, 19CS10048
+    Group Member2 - Debanjan Saha, 19CS30014 
+-------------------------------------------------------*/
+`timescale 1ns / 1ps
 `include "rca8.v"
 
 module Test_RippleCarryAdder8();
@@ -18,23 +27,23 @@ module Test_RippleCarryAdder8();
 
         $monitor( "a = %b, b = %b, cin= %b, sum = %b , cout = %b ",a,b,cin,sum,cout);
 
-        #1 a=8'b00000001;b=8'b00000001;cin=1'b0;
+        #3 a=8'b00000001;b=8'b00000001;cin=1'b0;
 
-        #1 a=8'b00000001;b=8'b00000001;cin=1'b1;
+        #3 a=8'b00000001;b=8'b00000001;cin=1'b1;
 
-        #1 a=8'b00000010;b=8'b00000011;cin=1'b0;
+        #3 a=8'b00000010;b=8'b00000011;cin=1'b0;
 
-        #1 a=8'b10000001;b=8'b10000001;cin=1'b0;
+        #3 a=8'b10000001;b=8'b10000001;cin=1'b0;
 
-        #1 a=8'b00011001;b=8'b00110001;cin=1'b0;
+        #3 a=8'b00011001;b=8'b00110001;cin=1'b0;
 
-        #1 a=8'b00000011;b=8'b00000011;cin=1'b1;
+        #3 a=8'b00000011;b=8'b00000011;cin=1'b1;
 
-        #1 a=8'b11111111;b=8'b00000001;cin=1'b0;
+        #3 a=8'b11111111;b=8'b00000001;cin=1'b0;
 
-        #1 a=8'b11111111;b=8'b00000000;cin=1'b1;
+        #3 a=8'b11111111;b=8'b00000000;cin=1'b1;
 
-        #1 a=8'b11111111;b=8'b11111111;cin=1'b0;
+        #3 a=8'b11111111;b=8'b11111111;cin=1'b0;
 
         $finish;
 
