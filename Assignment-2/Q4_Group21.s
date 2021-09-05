@@ -103,7 +103,7 @@ error:      # input error block
     la      $a0, newline
     syscall                             # and a newline
 
-    j       main                        # jump to exit
+    j       main                        # jump to main 
 
 perfect_num:# if(sum == a) true block
     li      $v0, 4
