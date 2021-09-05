@@ -5,12 +5,29 @@
 #   >> Group No : 21
 #   >> Authors : Debanjan Saha     (19CS30014)
 #                Pritkumar Godhani (19CS10048)   
-#   >> 
-#
+#   
 #
 ###########################################
-
-
+##
+##  >> Algorithm :
+##      compute_gcd(int a, int b) 
+##      {   
+##          if (a == 0) return b;
+##          while(b != 0)    
+##          {    
+##              if(a > b) a = a - b;
+##              else b = b - a;
+##          }
+##          return a;
+##      }
+##########################################
+#
+#   Register     |       Variable
+# ---------------------------------  
+#   s0           |       a
+#   s1           |       b
+#
+#########################################
 .globl  main
 ###### Data Section Starts ######
 .data
@@ -80,19 +97,19 @@ error:        # input error branch
     syscall                             # print the error message
     j       exit                        # exit the program
 
-print_result:
+print_result:# print the result i.e. gcd block
     li      $v0, 4
     la      $a0, output
-    syscall
+    syscall                             # print output statement
     
     li      $v0, 1
     move    $a0, $s0
-    syscall
+    syscall                             # print the computed gcd value (in s0)
 
     li      $v0, 4
     la      $a0, newline
-    syscall
+    syscall                             # print newline
 
-exit:
+exit:       # exit block
     li      $v0, 10
-    syscall
+    syscall                             # exit the program
