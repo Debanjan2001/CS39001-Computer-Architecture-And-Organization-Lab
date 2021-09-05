@@ -5,11 +5,33 @@
 #   >> Group No : 21
 #   >> Authors : Debanjan Saha     (19CS30014)
 #                Pritkumar Godhani (19CS10048)   
-#   >> Work Left : Put comments in the code.
 #
 #
 ###########################################
-
+##    >> Algorithm : 
+##    is_perfect(int a) 
+##    {
+##        int sum = 0, i = 1;
+##        for(; i < a; i++) 
+##        {
+##            if(a % i == 0) 
+##            {
+##               sum += i;
+##            }
+##        }
+##        if(sum == a) 
+##            print("Perfect");
+##        else 
+##            print("Not Perfect");
+##    }
+###########################################
+#       Register     |       Variable 
+#   --------------------------------------
+#       $s0          |       a    
+#       $s1          |       sum
+#       $t0          |       i
+#
+###########################################
 .globl  main
 ###### Data Section Starts ######
 .data
@@ -26,75 +48,72 @@ newline:
 
 ###### Code Section Starts ######
 .text                
-main:          # main block
+main:       # main block
     li      $v0, 4  
     la      $a0, prompt
-    syscall                             # prompt for the first integer
+    syscall                             # prompt for the input integer
 
     li      $v0, 5
-    syscall                             # read a, the first integer
+    syscall                             # read a, the input integer
     move    $s0, $v0                    # copy a into s0
 
-    li      $v0, 4  
+    li      $v0, 4                      
     la      $a0, newline
-    syscall 
+    syscall                             # print newline
 
-    ble    $s0, $zero, error
+    ble    $s0, $zero, error            # check if input integer s0(a) is positive otherwise jump to error 
 
-    add     $s1, $zero, $zero
-    addi    $t0, $zero, 1
+    add     $s1, $zero, $zero           # init s1 to 0 ( sum = 0 )
+    addi    $t0, $zero, 1               # init t0 to 1 ( i = 1 )
 
-for:
-    bge     $t0, $s0, check
+for:        # for loop 
+    bge     $t0, $s0, check             # condition check, if i >= a jump to check otherwise proceed with the loop body
 
-    move    $t1, $s0
-    move    $t2, $t0
+    div     $s0, $t0                    # divide s0 / t0, (a / i)
+    mfhi    $t1                         # t1 = a % i ; extract the higher 16 bits of the division result (i.e., the modulus into t1)
 
-    div     $t1, $t2
-    mfhi    $t1
+    move    $t2, $t0                    # copy curr value of i in t2
 
-    move    $t2, $t0
+    addi    $t0, $t0, 1                 # t0 = t0 + 1 ; increment value of i
 
-    addi    $t0, $t0, 1
+    bne     $t1, $zero, for             # check if t1 = a % i is zero (i.e., if i is a divisor of a), if not jump to for(next iteration)
 
-    bne     $t1, $zero, for
+    add     $s1, $s1, $t2               # sum += i ; otherwise add the value of i before increment (in t2) to sum(in s1)
+    j       for                         # continue next iteration
 
-    add     $s1, $s1, $t2
-    j       for
-
-check:
-    beq     $s0, $s1, perfect_num
-
-    li      $v0, 4
+check:      # if(sum == a) check block
+    beq     $s0, $s1, perfect_num       # if(sum(s1) == a(s0)) jump to perfect_num
+    # (sum != a) block
+    li      $v0, 4                  
     la      $a0, not_perfect
-    syscall
+    syscall                             # else print it is not perfect
 
     li      $v0, 4  
     la      $a0, newline
-    syscall
+    syscall                             # and a newline
 
-    j       exit
+    j       exit                        # jump to exit
 
-error:
-    li      $v0, 4
+error:      # input error block
+    li      $v0, 4                      
     la      $a0, input_err
-    syscall
+    syscall                             # print error message
 
     li      $v0, 4  
     la      $a0, newline
-    syscall
+    syscall                             # and a newline
 
-    j       exit
+    j       exit                        # jump to exit
 
-perfect_num:
+perfect_num:# if(sum == a) true block
     li      $v0, 4
     la      $a0, perfect
-    syscall
+    syscall                             # print number is perfect
 
     li      $v0, 4  
     la      $a0, newline
-    syscall
+    syscall                             # and a newline
 
-exit:
+exit:       # exit block
     li      $v0, 10
-    syscall
+    syscall                             # exit the program
