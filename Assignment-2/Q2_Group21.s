@@ -97,9 +97,9 @@ error:        # input error branch
     syscall                             # print the error message
     
     li      $v0, 4
-    la      $a0, newline
+    la      $a0, newline                # print a newline
     syscall  
-    j       main                       # exit the program
+    j       main                        # jump to main
 
 print_result:# print the result i.e. gcd block
     li      $v0, 4
