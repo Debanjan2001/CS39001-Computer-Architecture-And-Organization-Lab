@@ -95,7 +95,11 @@ error:        # input error branch
     li      $v0, 4          
     la      $a0, input_err
     syscall                             # print the error message
-    j       exit                        # exit the program
+    
+    li      $v0, 4
+    la      $a0, newline
+    syscall  
+    j       main                       # exit the program
 
 print_result:# print the result i.e. gcd block
     li      $v0, 4
