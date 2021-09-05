@@ -10,6 +10,31 @@
 
     .data
 
+###########################################
+##    >> Algorithm : 
+##    is_prime(int n) 
+##    {
+##        int i = 2;
+##        for(; i * i <= n; i++){}
+##        int temp = i; 
+##        for(i = 2; i < temp ; i++){
+##              if( n % i == 0){
+##                  printf("Composite");
+##                  return;
+##              }
+##        }
+##        print("Prime");
+##    }
+###########################################
+#       Register     |       Variable 
+#   --------------------------------------
+#       $s0          |       n    
+#       $s1          |       i
+#       $t0          |       temp
+#
+###########################################
+    
+
 # Program Output Text Constants
 prompt:
     .asciiz "Please enter a positive integer greater than equals to 10: "
@@ -25,12 +50,6 @@ newline:
     .text
 
 # main program
-#
-# program variables
-#   n   :    $s0
-#   i   :    $s1
-#  10   :    $t0
-# (n%i) :    $t0
 
 main:
 
@@ -64,7 +83,7 @@ primality_test:
     j		primality_test_loop		    # jump to 'primality_test_loop'
 
 primality_test_loop:
-    bge     $s1, $t0, prime_message         # if i >= (1 + (int)sqrt(n) ), branch to 'prime_message' 
+    bge     $s1, $t0, prime_message         # if i >= ( 1 + (int)sqrt(n) ), branch to 'prime_message' 
     div     $s0, $s1                        # Divide n by i and store remainder in $mfhi and division result in $mflo 
     mfhi    $t1                             # Get the value of the remainder ( n%i) from register $mfhi to register $t1
     beq     $t1, $zero, composite_message   # If remainder (n%i) == 0
