@@ -16,7 +16,7 @@ prompt_a:
 prompt_r:
     .asciiz "Enter the value of r: "
 blankspace:
-    .asciiz " "
+    .asciiz "\t"
 newline: 
     .asciiz "\n"
 
