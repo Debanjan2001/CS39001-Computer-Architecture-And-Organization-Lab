@@ -2,9 +2,7 @@
 ## Assignment 3 - Q3. 
 ## Status :: Works fine.
 ## Pending :: Fine touches, figure out what pushIntoStack, initStack are to be used for
-###
-
-
+##
 .globl main
 
 # Data Section Begins
