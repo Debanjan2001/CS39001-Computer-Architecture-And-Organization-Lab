@@ -1,6 +1,6 @@
 #############################################
 #
-#   >> Assignment 3 : MIPS Assignment 1
+#   >> Assignment 3 : MIPS Assignment 2
 #   >> Question 1 : MIPS-32 ASM Program for Booth Multiplication Procedure for Two 16-Bit 2's Complement Input Numbers
 #   >> Group No : 21
 #   >> Authors : Debanjan Saha     (19CS30014)
