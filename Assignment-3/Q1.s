@@ -21,7 +21,7 @@ result:
 newline:
     .asciiz "\n"
 input_err:
-    .asciiz "Invalid input. Please enter numbers from -32768 to +32767 only."
+    .asciiz "Invalid input. Please enter numbers from -32767 to +32767 only."
 
 ###### Code Section Starts ######
 .text
