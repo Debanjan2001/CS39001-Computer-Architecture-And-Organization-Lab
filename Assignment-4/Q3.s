@@ -1,8 +1,8 @@
 #############################################
 #   >> Assignment 4 : MIPS Assignment 4
-#   >> Question 2 : MIPS-32 ASM Program for - 1) Reading an integer array of size 10
-#                                             2) Sorting the array using a function 'recursive_sort'
-#                                             3) Printing The Sorted Array
+#   >> Question 3 : MIPS-32 ASM Program for - 1) Reading an integer array of size 10 and sorting it.
+#                                             2) Printing The Sorted Array
+#                                             3) Finding a key in the array using a function 'recursive_search'
 #   >> Group No : 21
 #   >> Authors : Pritkumar Godhani (19CS10048)
 #                Debanjan Saha     (19CS30014)
@@ -20,13 +20,19 @@ interactive_input:
     .asciiz "Enter the integer_"
 sorted_array_message:
     .asciiz "Sorted Array : "
+input_key_message:
+    .asciiz "Enter the key to search : " 
+found_message:
+    .asciiz " FOUND in the array at index = "
+not_found_message:
+    .asciiz " NOT FOUND in the array."
 newline:
     .asciiz "\n"
 blankspace:
     .asciiz "  "
 colon:
     .asciiz ": "
-complete:
+completed_message:
     .asciiz "[Program Successfully Completed]\n"
  
 # align as 4 byte boundary i.e space for integer array
@@ -39,7 +45,7 @@ array:
 main:
 
     jal     initStack
-    
+
     li      $v0, 4              # Load system call code into register $v0 for printing string
     la      $a0, prompt_array   # Load the address of string 'prompt_array' to register $a0
     syscall                     # Make a system call and print the string stored in 'prompt_array'  
@@ -73,8 +79,20 @@ main:
 
         blt     $t0, $t1, array_input_loop    # if i < 10, loop back to 'array_input_loop'  
         
-        # If instruction comes below the above line, it means input has been read.
+        # If instruction comes below the above line, it means array input has been read.
 
+read_key:
+
+    li      $v0, 4                  # Output input key msg
+    la      $a0, input_key_message
+    syscall
+
+    li      $v0, 5          # Read key / n
+    syscall
+    move    $s0, $v0        # Store s0 = n
+
+
+sorting_segment:
     # Start Sorting using recursive function
     la      $a0, array          # Load address of array into $a0 for function argument 
     li		$a1, 0		        # $a1 = 0
@@ -85,19 +103,62 @@ main:
     la      $a0, sorted_array_message   # Load the address of string 'sorted_array' to register $a0      
     syscall                     # Make a system call and print the string stored in 'sorted_array'
 
-    la      $a0, array            # Load address of array into $a0 as first argument
-    li      $a1, 10              # Copy value of $t1 into $a1 as second argument ($t1 stores size of array)
-    jal     printArray            # Call 'printArray' to print the array
+    la      $a0, array          # Load address of array into $a0 as first argument
+    li      $a1, 10             # Copy value of $t1 into $a1 as second argument ($t1 stores size of array)
+    jal     printArray          # Call 'printArray' to print the array
 
     li      $v0, 4              # Load system call code into register $v0 for printing string       
     la      $a0, newline        # Load the address of string 'newline' to register $a0    
     syscall                     # Make a system call and print the string stored in 'newline'
 
-    li      $v0, 4              # Load system call code into register $v0 for printing string       
-    la      $a0, complete       # Load the address of string 'complete' to register $a0    
-    syscall                     # Make a system call and print the string stored in 'complete'
+search_segment:
 
-    j exit	                    # jump to 'exit'
+    la      $a0, array  #arr
+    li      $a1, 0  #start
+    li      $a2, 9  #end
+    move    $a3, $s0 #key
+    
+    jal     recursive_search    #call 
+    move    $t0, $v0            # index
+            
+    li      $v0, 1
+    move    $a0, $s0
+    syscall
+    
+    li      $t1, -1
+    beq     $t0, $t1, not_found_condition
+
+    found_condition:
+        li      $v0, 4
+        la      $a0, found_message
+        syscall 
+
+        li      $v0, 1
+        move    $a0, $t0
+        syscall  
+
+        j       complete_program
+
+    not_found_condition:
+
+        li      $v0, 4
+        la      $a0, not_found_message
+        syscall
+
+        j       complete_program    
+
+complete_program:
+
+    li      $v0, 4
+    la      $a0, newline
+    syscall
+
+    li      $v0, 4
+    la      $a0, completed_message
+    syscall
+
+    j       exit	                    # jump to 'exit'
+
 
 ########################################     
 ##  initStack( void ) : return void
@@ -121,6 +182,107 @@ pushToStack:
     sw      $a0, ($sp)                  # copy the argument into the stack
     jr      $ra                         # return        
 #########################################
+
+
+recursive_search:
+    addi    $sp, $sp, -28      # Decrement the stack pointer
+    sw      $ra, 0($sp)     
+    sw      $s0, 4($sp)
+    sw      $s1, 8($sp)
+    sw      $s2, 12($sp)
+    sw      $s3, 16($sp)
+    sw      $s4, 20($sp)
+    sw      $s5, 24($sp)
+
+    move    $s0, $a0    # arr
+    move    $s1, $a1    # start
+    move    $s2, $a2    # end 
+    move    $s3, $a3    # key
+
+    rec_search_while_loop:
+        sle     $t0, $s1, $s2       # t0 = 1 if (start<=end) else 0
+        beq     $t0, $zero, end_rec_search_while_loop        # 
+        li      $t0, 3              # t0 = 3
+        sub		$s4, $s2, $s1		# end - start
+        div		$s4, $t0			# divide by 3
+        mflo	$s4					# (end-start)/3
+
+        sub     $s5, $s2, $s4   # mid2
+        add     $s4, $s4, $s1   # mid1
+
+        search_condition1:
+            sll     $t0, $s4, 2 # 4*mid1
+            add     $t0, $t0, $s0   # &a[mid1]
+            lw      $t1, 0($t0) #a[mid1]
+            bne     $s3, $t1, search_condition2 # 
+            move    $v0, $s4    # ans <= mid1
+            j		return_from_recursive_search				# jump to retur
+            
+        search_condition2:
+            sll     $t0, $s5, 2 #4*mid2
+            add     $t0, $t0, $s0   # &a[mid2]
+            lw      $t1, 0($t0) #a[mid2]
+            bne     $s3, $t1, search_condition3 # 
+            move    $v0, $s5    # ans <= mid2
+            j		return_from_recursive_search				# jump to retur
+
+        search_condition3:
+
+            sll     $t0, $s4, 2 #4*mid1
+            add     $t0, $t0, $s0   # &a[mid1]
+            lw      $t1, 0($t0) #a[mid1]
+            bge     $s3, $t1, search_condition4 # key>=a[mid1]
+            
+            move    $a0, $s0    #arr 
+            move    $a1, $s1    # start
+            addi    $t0, $s4, -1    #mid1-1
+            move    $a2, $t0       
+            move    $a3, $s3    # key
+            jal     recursive_search     
+            j       return_from_recursive_search
+
+        search_condition4:
+
+            sll     $t0, $s5, 2 #4*mid2
+            add     $t0, $t0, $s0   # &a[mid2]
+            lw      $t1, 0($t0) #a[mid2]
+            ble     $s3, $t1, search_condition5 # key<=a[mid1]
+            
+            move    $a0, $s0    #arr 
+            addi    $t0, $s5, 1    #mid2+1
+            move    $a1, $t0    # mid2 +1
+            move    $a2, $s2    #end     
+            move    $a3, $s3    # key
+            jal     recursive_search
+            j       return_from_recursive_search
+
+        search_condition5:
+            
+            move    $a0, $s0    #arr 
+            addi    $t0, $s4, 1    #mid1+1
+            addi    $t1, $s5, -1    #mid2-1
+            move    $a1, $t0    # mid1 +1
+            move    $a2, $t1    # mid2 - 1   
+            move    $a3, $s3    # key
+            jal     recursive_search
+            j       return_from_recursive_search
+
+
+    end_rec_search_while_loop:
+        li      $v0, -1
+        j       return_from_recursive_search			
+        
+
+return_from_recursive_search:
+    lw      $ra, 0($sp)
+    lw		$s0, 4($sp)	            # Restore value of $s0 from the stack     
+    lw		$s1, 8($sp)	            # Restore value of $s0 from the stack     
+    lw		$s2, 12($sp)	            # Restore value of $s0 from the stack     
+    lw		$s3, 16($sp)	            # Restore value of $s0 from the stack     
+    lw		$s4, 20($sp)	            # Restore value of $s0 from the stack     
+    lw      $s5, 24($sp)
+    addi    $sp, $sp, 28             # Pop 
+    jr      $ra 
 
 
 ################################################################
