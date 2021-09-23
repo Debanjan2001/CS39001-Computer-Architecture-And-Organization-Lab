@@ -44,7 +44,7 @@ array:
 .text
 main:
 
-    jal     initStack
+    jal     initStack           # Initiate the stack
 
     li      $v0, 4              # Load system call code into register $v0 for printing string
     la      $a0, prompt_array   # Load the address of string 'prompt_array' to register $a0
@@ -69,8 +69,8 @@ main:
         syscall                 # Make a system call and print i            
 
         li      $v0, 4          # Load system call code into register $v0 for printing string
-        la      $a0, colon      # Load the address of string 'colon' to register $a0
-        syscall                 # Make a system call and print the string stored in 'colon'
+        la      $a0, colon      # Load the address of string 'colon' to register $a0         
+        syscall                 # Make a system call and print the string stored in 'colon'      
 
         li      $v0, 5          # Load system call code into register $v0 for taking integer input    
         syscall                 # make the system call and read array[i] 
@@ -83,12 +83,12 @@ main:
 
 read_key:
 
-    li      $v0, 4                  # Output input key msg
-    la      $a0, input_key_message
-    syscall
+    li      $v0, 4                   # Load system call code to print string
+    la      $a0, input_key_message   # Load address of input_key_message
+    syscall                         # Print the string
 
-    li      $v0, 5          # Read key / n
-    syscall
+    li      $v0, 5          # load system call code to Read key or n
+    syscall                 # Make system call to read integer
     move    $s0, $v0        # Store s0 = n
 
 
@@ -113,49 +113,49 @@ sorting_segment:
 
 search_segment:
 
-    la      $a0, array  #arr
-    li      $a1, 0  #start
-    li      $a2, 9  #end
-    move    $a3, $s0 #key
+    la      $a0, array  # Set first argument = address of array
+    li      $a1, 0      # Set second argument,start = 0
+    li      $a2, 9      # Set 3rd argument, end = 9
+    move    $a3, $s0    # Set 4th argument = key
     
-    jal     recursive_search    #call 
-    move    $t0, $v0            # index
+    jal     recursive_search    # call recursive_search
+    move    $t0, $v0            # Copy the returned result to $t0
             
-    li      $v0, 1
-    move    $a0, $s0
-    syscall
+    li      $v0, 1      # Load system call code to print integer
+    move    $a0, $s0    # copy $s0 i.e value of key to first argument
+    syscall             # Print the key(n)
     
-    li      $t1, -1
-    beq     $t0, $t1, not_found_condition
+    li      $t1, -1     # Set $t1 = -1 
+    beq     $t0, $t1, not_found_condition     # if result == -1, then goto not_found_condition
 
     found_condition:
-        li      $v0, 4
-        la      $a0, found_message
-        syscall 
+        li      $v0, 4                  # Load system call code into register $v0 for printing string       
+        la      $a0, found_message      # Load the address of string 'found_message' to register $a0         
+        syscall                         # Make a system call and print the string stored in 'found_message'  
 
-        li      $v0, 1
-        move    $a0, $t0
-        syscall  
+        li      $v0, 1                  # Load system call code into register $v0 for printing integer
+        move    $a0, $t0                # Copy the result of search to register $a0         
+        syscall                         # Make a system call and print the result
 
-        j       complete_program
+        j       complete_program        # Jump to 'complete_program'
 
     not_found_condition:
 
-        li      $v0, 4
-        la      $a0, not_found_message
-        syscall
+        li      $v0, 4                  # Load system call code into register $v0 for printing string
+        la      $a0, not_found_message  # Load the address of string 'not_found_message' to register $a0         
+        syscall                         # Make a system call and print the string stored in 'not_found_message'  
 
-        j       complete_program    
+        j       complete_program        # Jump to 'complete_program'
 
 complete_program:
 
-    li      $v0, 4
-    la      $a0, newline
-    syscall
+    li      $v0, 4          # Load system call code into register $v0 for printing string      
+    la      $a0, newline    # Load the address of newline to register $a0       
+    syscall                 # Make a system call and print the string newline
 
-    li      $v0, 4
-    la      $a0, completed_message
-    syscall
+    li      $v0, 4                  # Load system call code into register $v0 for printing string      
+    la      $a0, completed_message  # Load the address of string 'completed_message' to register $a0       
+    syscall                         # Make a system call and print the string stored in 'completed_message'
 
     j       exit	                    # jump to 'exit'
 
@@ -185,104 +185,104 @@ pushToStack:
 
 
 recursive_search:
-    addi    $sp, $sp, -28      # Decrement the stack pointer
-    sw      $ra, 0($sp)     
-    sw      $s0, 4($sp)
-    sw      $s1, 8($sp)
-    sw      $s2, 12($sp)
-    sw      $s3, 16($sp)
-    sw      $s4, 20($sp)
-    sw      $s5, 24($sp)
+    addi    $sp, $sp, -28       # Decrement the stack pointer and reserve space for 7 variables to be stored in stack
+    sw      $ra, 0($sp)         # Store return address in stack
+    sw      $s0, 4($sp)         # Store $s0 in stack
+    sw      $s1, 8($sp)         # Store $s1 in stack
+    sw      $s2, 12($sp)        # Store $s2 in stack
+    sw      $s3, 16($sp)        # Store $s3 in stack
+    sw      $s4, 20($sp)        # Store $s4 in stack
+    sw      $s5, 24($sp)        # Store $s5 in stack
 
-    move    $s0, $a0    # arr
-    move    $s1, $a1    # start
-    move    $s2, $a2    # end 
-    move    $s3, $a3    # key
+    move    $s0, $a0    # Store address of  array in $s0
+    move    $s1, $a1    # Store variable start
+    move    $s2, $a2    # Store varibale end 
+    move    $s3, $a3    # Store variable key
 
     rec_search_while_loop:
-        sle     $t0, $s1, $s2       # t0 = 1 if (start<=end) else 0
-        beq     $t0, $zero, end_rec_search_while_loop        # 
+        sle     $t0, $s1, $s2       # $t0 = 1 if (start<=end) else 0
+        beq     $t0, $zero, end_rec_search_while_loop  # if $t0 is false goto   'end_rec_search_while_loop' 
         li      $t0, 3              # t0 = 3
-        sub		$s4, $s2, $s1		# end - start
-        div		$s4, $t0			# divide by 3
-        mflo	$s4					# (end-start)/3
+        sub		$s4, $s2, $s1		# Store end - start
+        div		$s4, $t0			# divide (end-start) by 3
+        mflo	$s4					# Get the floor((end-start)/3) into $s4
 
-        sub     $s5, $s2, $s4   # mid2
-        add     $s4, $s4, $s1   # mid1
+        sub     $s5, $s2, $s4   # Store the value of mid2 = end - (end-start)/3
+        add     $s4, $s4, $s1   # Store the value of mid1 = start + (end-start)/3
 
         search_condition1:
-            sll     $t0, $s4, 2 # 4*mid1
-            add     $t0, $t0, $s0   # &a[mid1]
-            lw      $t1, 0($t0) #a[mid1]
-            bne     $s3, $t1, search_condition2 # 
-            move    $v0, $s4    # ans <= mid1
-            j		return_from_recursive_search				# jump to retur
+            sll     $t0, $s4, 2     # Store 4*mid1
+            add     $t0, $t0, $s0   # Store the address of array[mid1]
+            lw      $t1, 0($t0)     # Load value  of array[mid1]
+            bne     $s3, $t1, search_condition2     # if key!=array[mid1] goto search_condition2
+            move    $v0, $s4    # else, Set result = mid1
+            j		return_from_recursive_search				# jump to return_from_recursive_search	
             
         search_condition2:
-            sll     $t0, $s5, 2 #4*mid2
-            add     $t0, $t0, $s0   # &a[mid2]
-            lw      $t1, 0($t0) #a[mid2]
-            bne     $s3, $t1, search_condition3 # 
-            move    $v0, $s5    # ans <= mid2
-            j		return_from_recursive_search				# jump to retur
+            sll     $t0, $s5, 2 # Store 4*mid2
+            add     $t0, $t0, $s0   # Store the address of array[mid2]
+            lw      $t1, 0($t0) #Load value  of array[mid2]
+            bne     $s3, $t1, search_condition3 # if key!=array[mid2] goto search_condition3 
+            move    $v0, $s5    # else ,Set result = mid2
+        j		return_from_recursive_search	# jump to return_from_recursive_search
 
         search_condition3:
 
-            sll     $t0, $s4, 2 #4*mid1
-            add     $t0, $t0, $s0   # &a[mid1]
-            lw      $t1, 0($t0) #a[mid1]
-            bge     $s3, $t1, search_condition4 # key>=a[mid1]
+            sll     $t0, $s4, 2 # Store 4*mid1
+            add     $t0, $t0, $s0   # Store the address of array[mid1]
+            lw      $t1, 0($t0) #   Load value  of array[mid1]
+            bge     $s3, $t1, search_condition4 # if key>=array[mid1] goto search_condition4 
             
-            move    $a0, $s0    #arr 
-            move    $a1, $s1    # start
-            addi    $t0, $s4, -1    #mid1-1
-            move    $a2, $t0       
-            move    $a3, $s3    # key
-            jal     recursive_search     
-            j       return_from_recursive_search
+            move    $a0, $s0    # Set first argument as array base address
+            move    $a1, $s1    # Set second argument = start
+            addi    $t0, $s4, -1  # Compute mid1-1
+            move    $a2, $t0      # Set third argument = mid-1
+            move    $a3, $s3    # Set 4th argument = key
+            jal     recursive_search                # Call recursive_search
+            j       return_from_recursive_search    # jump to return_from_recursive_search
 
         search_condition4:
 
-            sll     $t0, $s5, 2 #4*mid2
-            add     $t0, $t0, $s0   # &a[mid2]
-            lw      $t1, 0($t0) #a[mid2]
-            ble     $s3, $t1, search_condition5 # key<=a[mid1]
+            sll     $t0, $s5, 2 # Store 4*mid2
+            add     $t0, $t0, $s0   # Store the address of array[mid2]
+            lw      $t1, 0($t0) # Load value  of array[mid2]
+            ble     $s3, $t1, search_condition5 # if key<=array[mid1] goto search_condition5
             
-            move    $a0, $s0    #arr 
-            addi    $t0, $s5, 1    #mid2+1
-            move    $a1, $t0    # mid2 +1
-            move    $a2, $s2    #end     
-            move    $a3, $s3    # key
-            jal     recursive_search
-            j       return_from_recursive_search
+            move    $a0, $s0    # Set first argument as array base address
+            addi    $t0, $s5, 1 # Compute mid2+1
+            move    $a1, $t0    # Set 2nd argument = mid2 +1
+            move    $a2, $s2    # Set 3rd argument = end  
+            move    $a3, $s3    # Set 4th argument = key
+            jal     recursive_search                # Call recursive_search
+            j       return_from_recursive_search    # jump to return_from_recursive_search
 
         search_condition5:
             
-            move    $a0, $s0    #arr 
-            addi    $t0, $s4, 1    #mid1+1
-            addi    $t1, $s5, -1    #mid2-1
-            move    $a1, $t0    # mid1 +1
-            move    $a2, $t1    # mid2 - 1   
-            move    $a3, $s3    # key
-            jal     recursive_search
-            j       return_from_recursive_search
+            move    $a0, $s0        # Set 1st argument = base address of array 
+            addi    $t0, $s4, 1     # Compute mid1+1
+            addi    $t1, $s5, -1    # Compute mid2-1
+            move    $a1, $t0        # Set 2nd argument = mid1 +1
+            move    $a2, $t1        # Set 3rd argument = mid2 - 1   
+            move    $a3, $s3        # Set 5th argument = key
+            jal     recursive_search                # Call recursive_search
+            j       return_from_recursive_search    # jump to return_from_recursive_search
 
 
     end_rec_search_while_loop:
-        li      $v0, -1
-        j       return_from_recursive_search			
+        li      $v0, -1             # Set $v0 = result = -1
+        j       return_from_recursive_search # jump to	return_from_recursive_search
         
 
 return_from_recursive_search:
-    lw      $ra, 0($sp)
+    lw      $ra, 0($sp)             # Restore value of return address from the stack
     lw		$s0, 4($sp)	            # Restore value of $s0 from the stack     
-    lw		$s1, 8($sp)	            # Restore value of $s0 from the stack     
-    lw		$s2, 12($sp)	            # Restore value of $s0 from the stack     
-    lw		$s3, 16($sp)	            # Restore value of $s0 from the stack     
-    lw		$s4, 20($sp)	            # Restore value of $s0 from the stack     
-    lw      $s5, 24($sp)
-    addi    $sp, $sp, 28             # Pop 
-    jr      $ra 
+    lw		$s1, 8($sp)	            # Restore value of $s1 from the stack     
+    lw		$s2, 12($sp)	        # Restore value of $s2 from the stack     
+    lw		$s3, 16($sp)	        # Restore value of $s3 from the stack     
+    lw		$s4, 20($sp)	        # Restore value of $s4 from the stack     
+    lw      $s5, 24($sp)            # Restore value of $s5 from the stack   
+    addi    $sp, $sp, 28            # Pop  the 7 variables from stack 
+    jr      $ra                     # Return to caller.
 
 
 ################################################################
@@ -298,127 +298,139 @@ return_from_recursive_search:
 #################################################################
 recursive_sort:
 
-    addi    $sp, $sp, -28      # Decrement the stack pointer
-    sw      $ra, 0($sp)
-    sw      $s0, 4($sp)
-    sw      $s1, 8($sp)
-    sw      $s2, 12($sp)
-    sw      $s3, 16($sp)
-    sw      $s4, 20($sp)
-    sw      $s5, 24($sp)
+    addi    $sp, $sp, -28       # Decrement the stack pointer and reserve space for 7 variables to be stored in stack
+    sw      $ra, 0($sp)         # Store return address in stack
+    sw      $s0, 4($sp)         # Store $s0 in stack
+    sw      $s1, 8($sp)         # Store $s1 in stack
+    sw      $s2, 12($sp)        # Store $s2 in stack
+    sw      $s3, 16($sp)        # Store $s3 in stack
+    sw      $s4, 20($sp)        # Store $s4 in stack
+    sw      $s5, 24($sp)        # Store $s5 in stack
 
     
-    move    $s0, $a0 # arr
-    move    $s1, $a1 # left
-    move    $s2, $a2 # right
-    move    $s3, $a1  # l = left
-    move    $s4, $a2  # r = right
-    move    $s5, $a1 # p  = left
+    move    $s0, $a0    # Set $s0 = $a0 (copy address of array)
+    move    $s1, $a1    # Set $s1 = $a1 (store variable left)
+    move    $s2, $a2    # Set $s2 = $a2 (store variable right)
+    move    $s3, $a1    # Set $s3 = $a1 (store variable l = left)
+    move    $s4, $a2    # Set $s4 = $a2 (store variable r = right)
+    move    $s5, $a1    # Set variable p = left
 
     
     outer_while_loop:
 
-        slt    $t1, $s3, $s4 # l<r ? 1: 0
-        beq    $t1, $zero, return_from_recursive_sort
+        slt    $t1, $s3, $s4    # if l < r then $t1 = 1 else = 0
+        beq    $t1, $zero, return_from_recursive_sort   # if $t1 is 0 (false) jump to 'return_from_recursive_sort'
         inner_iterative_while_loop1:
 
-            slt     $t1, $s3, $s2 # t1 = 1 if l < right
-            beq		$t1, $zero, inner_iterative_while_loop2	# if $l>=right then loop2
+            slt     $t1, $s3, $s2   # $t1 = 1 if l < right else 0
+            beq		$t1, $zero, inner_iterative_while_loop2	    # if l>=right then goto inner_iterative_while_loop2
             
-            sll     $t1, $s3, 2 # 4*l
-            add     $t1, $t1, $s0 # address of  array[l]
-            lw      $t2, 0($t1)  # Load array[l]
+            sll     $t1, $s3, 2     # Store value of 4*l in $t1
+            add     $t1, $t1, $s0   # address of  array[l]
+            lw      $t2, 0($t1)     # Load array[l]
 
-            sll     $t3, $s5, 2 # 4*p
-            add     $t3, $t3, $s0 # address of  array[p]
-            lw      $t4, 0($t3)  # Load array[p]
+            sll     $t3, $s5, 2     # 4*p
+            add     $t3, $t3, $s0   # address of  array[p]
+            lw      $t4, 0($t3)     # Load array[p]
 
-            sle     $t5, $t2, $t4  # t4 = 1 if a[l] <= a[p]
-            beq		$t5, $zero, inner_iterative_while_loop2	# if $a[l]>a[p] then loop2
+            sle     $t5, $t2, $t4  # t4 = 1 if array[l] <= array[p]
+            beq		$t5, $zero, inner_iterative_while_loop2	    # if $array[l]>array[p] then then goto inner_iterative_while_loop2
 
-            addi    $s3, $s3, 1 # l++
-            j       inner_iterative_while_loop1
+            addi    $s3, $s3, 1     # Do l++
+            j       inner_iterative_while_loop1     # loop back to inner_iterative_while_loop1 
 
         inner_iterative_while_loop2:
 
-            sgt     $t1, $s4, $s1 # t4 = 1 if r > left
-            beq		$t1, $zero, continue_outer_loop	# if $r<=left then loop
+            sgt     $t1, $s4, $s1 # t4 = 1 if r > left else 0
+            beq		$t1, $zero, continue_outer_loop	# if $r<=left then goto  continue_outer_loop	
             
-            sll     $t1, $s4, 2 # 4*r
-            add     $t1, $t1, $s0 # address of  array[r]
-            lw      $t2, 0($t1)  # Load array[r]
+            sll     $t1, $s4, 2     # $t1 =  4*r
+            add     $t1, $t1, $s0   # Store address of  array[r] in $t1
+            lw      $t2, 0($t1)     # Load array[r] in $t2
 
-            sll     $t3, $s5, 2 # 4*p
-            add     $t3, $t3, $s0 # address of  array[p]
-            lw      $t4, 0($t3)  # Load array[p]
+            sll     $t3, $s5, 2     # $t3 = 4*p
+            add     $t3, $t3, $s0   # Store address of  array[p] in $t3
+            lw      $t4, 0($t3)     # Load array[p] in $tt4
 
-            sge     $t5, $t2, $t4  # t4 = 1 if a[r] >= a[p]
-            beq		$t5, $zero, continue_outer_loop	# if $a[r]<a[p] then outer
+            sge     $t5, $t2, $t4  # t4 = 1 if array[r] >= array[p] else 0
+            beq		$t5, $zero, continue_outer_loop	# if $array[r]<array[p] then goto continue_outer_loop
 
-            addi    $s4, $s4, -1 # r--
-            j       inner_iterative_while_loop2
+            addi    $s4, $s4, -1    # Do r--
+            j       inner_iterative_while_loop2     # loop back to inner_iterative_while_loop2 
     
     continue_outer_loop:
 
-        sge     $t1, $s3, $s4 #l>=r? 1:0 
-        beq     $t1, $zero, condition_2
+        sge     $t1, $s3, $s4           # if l>=r, $t1 = 1 else 0 
+        beq     $t1, $zero, condition_2 # if $t1 is false, jump to condition_2
         condition_1:
-            sll    $t1, $s5, 2  # 4p
-            add    $t1, $t1, $s0   # &arr[p] 
-            sll    $t2, $s4, 2 # 4r
-            add    $t2, $t2, $s0   # &arr[r]
+            sll    $t1, $s5, 2     # Store 4*p
+            add    $t1, $t1, $s0   # Store address of array[p] 
+            sll    $t2, $s4, 2     # Compute 4*r
+            add    $t2, $t2, $s0   # Store address of array[r]
             
-            move   $a0, $t1 # f_pparam1 swap
-            move   $a1, $t2 # f_pparam2 swap
+            move   $a0, $t1     # Copy address of array[p] to $a0 
+            move   $a1, $t2     # Copy address of array[r] to $a1
 
-            jal    SWAP
+            jal    SWAP         # Call swap
 
-            move   $a0, $s0 # array : A
-            move   $a1, $s1 # left
-            addi   $t0, $s4, -1 # t0 = r -1
-            move   $a2, $t0     # r-1 to arg
-            jal    recursive_sort 
+            move   $a0, $s0         # array base address copied to $a0(first argument)
+            move   $a1, $s1         # Set $a1 = left
+            addi   $t0, $s4, -1     # Set t0 = r -1 (second argument)
+            move   $a2, $t0         # r-1 to $a2 (third argument)
+            jal    recursive_sort   # Call  recursive_sort
 
-            move   $a0, $s0 # array : A
-            addi   $t0, $s4, 1 # t0 = r + 1
-            move   $a1, $t0 # r+1 to arg
-            move   $a2, $s2     # right to arg
-            jal    recursive_sort 
+            move   $a0, $s0     # array base address copied to $a0(first argument)
+            addi   $t0, $s4, 1  # Set t0 = r + 1
+            move   $a1, $t0     # Copy r+1 to $a1 (second argument for sort)
+            move   $a2, $s2     # Copy right to $a2(third argument for sort)
+            jal    recursive_sort   # Call recursive_sort
 
-            j      return_from_recursive_sort
+            j      return_from_recursive_sort   # Jump to return_from_recursive_sort 
 
         condition_2:
 
-            sll    $t0, $s3, 2  # 4l
-            add    $t0, $t0, $s0  # a[l] 
-            sll    $t1, $s4, 2  # 4r
-            add    $t1, $t1, $s0  # a[r] 
-            move   $a0, $t0 
-            move   $a1, $t1 
+            sll    $t0, $s3, 2    # Store 4*l in $t0
+            add    $t0, $t0, $s0  # Store address of array[l] 
+            sll    $t1, $s4, 2    # Store 4*r
+            add    $t1, $t1, $s0  # Store address of array[r] 
+            move   $a0, $t0       # Copy address of array[l] to $a0 
+            move   $a1, $t1       # Copy address of array[r] to $a0 
 
-            jal    SWAP
-            j      outer_while_loop
+            jal    SWAP             # Call swap
+            j      outer_while_loop # Jump to outer_while_loop
 
 return_from_recursive_sort:
-    lw      $ra, 0($sp)
+    lw      $ra, 0($sp)             # Restore value of return address from the stack
     lw		$s0, 4($sp)	            # Restore value of $s0 from the stack     
-    lw		$s1, 8($sp)	            # Restore value of $s0 from the stack     
-    lw		$s2, 12($sp)	            # Restore value of $s0 from the stack     
-    lw		$s3, 16($sp)	            # Restore value of $s0 from the stack     
-    lw		$s4, 20($sp)	            # Restore value of $s0 from the stack     
-    lw      $s5, 24($sp)
-    addi    $sp, $sp, 28             # Pop 
-    jr      $ra 
+    lw		$s1, 8($sp)	            # Restore value of $s1 from the stack     
+    lw		$s2, 12($sp)	        # Restore value of $s2 from the stack     
+    lw		$s3, 16($sp)	        # Restore value of $s3 from the stack     
+    lw		$s4, 20($sp)	        # Restore value of $s4 from the stack     
+    lw      $s5, 24($sp)            # Restore value of $s5 from the stack   
+    addi    $sp, $sp, 28            # Pop  the 7 variables from stack 
+    jr      $ra                     # Return to caller.
+
+
+################################################
+# @SWAP : Function to swap two array elements
+# Arguments: 
+# -----------
+# $a0 : Address of the one element of array
+# $a1 : Address of the another element of array
+# Returns: 
+# ---------
+# void 
+#################################################
 
 SWAP:
-    move    $t0, $a0
-    move    $t1, $a1
-    lw      $t2, 0($t0)
-    lw      $t3, 0($t1)
-    sw      $t3, 0($t0)
-    sw      $t2, 0($t1)
+    move    $t0, $a0                # Set address of array[l](passed as argument1) to $t0
+    move    $t1, $a1                # Set address of array[r](passed as argument2) to $t1
+    lw      $t2, 0($t0)             # Load value of array[l]
+    lw      $t3, 0($t1)             # Load value of array[r]
+    sw      $t3, 0($t0)             # Swap the two values  
+    sw      $t2, 0($t1)             # Swap the two values
 
-    jr      $ra
+    jr      $ra                 # Return to the caller.
 
 ################################################
 # @printArray : Function to print an array
