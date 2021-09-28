@@ -1,23 +1,25 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/shared_xlnx/Asgn5_Q4/test_seq_comp_isim_beh.exe -prj /home/ise/shared_xlnx/Asgn5_Q4/test_seq_comp_beh.prj work.test_seq_comp work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/shared_xlnx/Asgn5_Q4/master_testbench_isim_beh.exe -prj /home/ise/shared_xlnx/Asgn5_Q4/master_testbench_beh.prj work.master_testbench work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
 Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/shiftregleft.v" into library work
 Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/seqcomp.v" into library work
-Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/test_seq_comp.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/seqcompwithreg.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/master_testbench.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94916 KB
-Fuse CPU Usage: 1410 ms
+Fuse Memory Usage: 94912 KB
+Fuse CPU Usage: 1400 ms
 Compiling module ShiftRegLeft
 Compiling module SequentialComparator
-Compiling module test_seq_comp
+Compiling module SeqCompWithRegister
+Compiling module master_testbench
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 4 Verilog Units
-Built simulation executable /home/ise/shared_xlnx/Asgn5_Q4/test_seq_comp_isim_beh.exe
-Fuse Memory Usage: 98200 KB
+Compiled 5 Verilog Units
+Built simulation executable /home/ise/shared_xlnx/Asgn5_Q4/master_testbench_isim_beh.exe
+Fuse Memory Usage: 98204 KB
 Fuse CPU Usage: 1450 ms
 GCC CPU Usage: 470 ms

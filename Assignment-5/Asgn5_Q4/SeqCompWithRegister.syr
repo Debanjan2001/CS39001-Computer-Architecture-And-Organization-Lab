@@ -1,0 +1,3227 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Reading design: SeqCompWithRegister.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SeqCompWithRegister.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SeqCompWithRegister"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : SeqCompWithRegister
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/shiftregleft.v" into library work
+Parsing module <ShiftRegLeft>.
+Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/seqcomp.v" into library work
+Parsing module <SequentialComparator>.
+Analyzing Verilog file "/home/ise/shared_xlnx/Asgn5_Q4/seqcompwithreg.v" into library work
+Parsing module <SeqCompWithRegister>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <SeqCompWithRegister>.
+
+Elaborating module <ShiftRegLeft>.
+
+Elaborating module <SequentialComparator>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SeqCompWithRegister>.
+    Related source file is "/home/ise/shared_xlnx/Asgn5_Q4/seqcompwithreg.v".
+    Summary:
+	no macro.
+Unit <SeqCompWithRegister> synthesized.
+
+Synthesizing Unit <ShiftRegLeft>.
+    Related source file is "/home/ise/shared_xlnx/Asgn5_Q4/shiftregleft.v".
+    Found 1-bit register for signal <out>.
+    Found 1-bit register for signal <temp<31>>.
+    Found 1-bit register for signal <temp<30>>.
+    Found 1-bit register for signal <temp<29>>.
+    Found 1-bit register for signal <temp<28>>.
+    Found 1-bit register for signal <temp<27>>.
+    Found 1-bit register for signal <temp<26>>.
+    Found 1-bit register for signal <temp<25>>.
+    Found 1-bit register for signal <temp<24>>.
+    Found 1-bit register for signal <temp<23>>.
+    Found 1-bit register for signal <temp<22>>.
+    Found 1-bit register for signal <temp<21>>.
+    Found 1-bit register for signal <temp<20>>.
+    Found 1-bit register for signal <temp<19>>.
+    Found 1-bit register for signal <temp<18>>.
+    Found 1-bit register for signal <temp<17>>.
+    Found 1-bit register for signal <temp<16>>.
+    Found 1-bit register for signal <temp<15>>.
+    Found 1-bit register for signal <temp<14>>.
+    Found 1-bit register for signal <temp<13>>.
+    Found 1-bit register for signal <temp<12>>.
+    Found 1-bit register for signal <temp<11>>.
+    Found 1-bit register for signal <temp<10>>.
+    Found 1-bit register for signal <temp<9>>.
+    Found 1-bit register for signal <temp<8>>.
+    Found 1-bit register for signal <temp<7>>.
+    Found 1-bit register for signal <temp<6>>.
+    Found 1-bit register for signal <temp<5>>.
+    Found 1-bit register for signal <temp<4>>.
+    Found 1-bit register for signal <temp<3>>.
+    Found 1-bit register for signal <temp<2>>.
+    Found 1-bit register for signal <temp<1>>.
+    Found 1-bit register for signal <temp<0>>.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+Unit <ShiftRegLeft> synthesized.
+
+Synthesizing Unit <SequentialComparator>.
+    Related source file is "/home/ise/shared_xlnx/Asgn5_Q4/seqcomp.v".
+        S0 = 3'b000
+        S1 = 3'b001
+        S2 = 3'b010
+        SFE = 3'b011
+        SFL = 3'b100
+        SFG = 3'b110
+    Found 3-bit register for signal <present_state>.
+    Found finite state machine <FSM_0> for signal <present_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <SequentialComparator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 66
+ 1-bit register                                        : 66
+# Multiplexers                                         : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Multiplexers                                         : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <seqcomp/FSM_0> on signal <present_state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 011   | 001
+ 001   | 010
+ 010   | 011
+ 100   | 100
+ 110   | 101
+-------------------
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    temp_31 in unit <ShiftRegLeft>
+    temp_30 in unit <ShiftRegLeft>
+    temp_29 in unit <ShiftRegLeft>
+    temp_28 in unit <ShiftRegLeft>
+    temp_27 in unit <ShiftRegLeft>
+    temp_26 in unit <ShiftRegLeft>
+    temp_25 in unit <ShiftRegLeft>
+    temp_24 in unit <ShiftRegLeft>
+    temp_23 in unit <ShiftRegLeft>
+    temp_22 in unit <ShiftRegLeft>
+    temp_21 in unit <ShiftRegLeft>
+    temp_20 in unit <ShiftRegLeft>
+    temp_19 in unit <ShiftRegLeft>
+    temp_18 in unit <ShiftRegLeft>
+    temp_17 in unit <ShiftRegLeft>
+    temp_16 in unit <ShiftRegLeft>
+    temp_15 in unit <ShiftRegLeft>
+    temp_14 in unit <ShiftRegLeft>
+    temp_13 in unit <ShiftRegLeft>
+    temp_12 in unit <ShiftRegLeft>
+    temp_11 in unit <ShiftRegLeft>
+    temp_10 in unit <ShiftRegLeft>
+    temp_9 in unit <ShiftRegLeft>
+    temp_8 in unit <ShiftRegLeft>
+    temp_7 in unit <ShiftRegLeft>
+    temp_6 in unit <ShiftRegLeft>
+    temp_5 in unit <ShiftRegLeft>
+    temp_4 in unit <ShiftRegLeft>
+    temp_3 in unit <ShiftRegLeft>
+    temp_2 in unit <ShiftRegLeft>
+    temp_1 in unit <ShiftRegLeft>
+    temp_0 in unit <ShiftRegLeft>
+
+
+Optimizing unit <SeqCompWithRegister> ...
+
+Optimizing unit <ShiftRegLeft> ...
+
+Optimizing unit <SequentialComparator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SeqCompWithRegister, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 131
+ Flip-Flops                                            : 131
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SeqCompWithRegister.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 203
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 130
+#      LUT3                        : 64
+#      LUT4                        : 1
+#      LUT5                        : 3
+#      LUT6                        : 2
+#      VCC                         : 1
+# FlipFlops/Latches                : 195
+#      FDC                         : 65
+#      FDE                         : 2
+#      FDP                         : 64
+#      LDC                         : 64
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 134
+#      IBUF                        : 67
+#      OBUF                        : 67
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             195  out of  126800     0%  
+ Number of Slice LUTs:                  201  out of  63400     0%  
+    Number used as Logic:               201  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    297
+   Number with an unused Flip Flop:     102  out of    297    34%  
+   Number with an unused LUT:            96  out of    297    32%  
+   Number of fully used LUT-FF pairs:    99  out of    297    33%  
+   Number of unique control sets:       192
+
+IO Utilization: 
+ Number of IOs:                         135
+ Number of bonded IOBs:                 135  out of    210    64%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------+------------------------+-------+
+Clock Signal                                               | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------+------------------------+-------+
+clk                                                        | BUFGP                  | 131   |
+b/load_data_in[31]_AND_1_o(b/load_data_in[31]_AND_1_o1:O)  | NONE(*)(b/temp_31_LDC) | 1     |
+b/load_data_in[30]_AND_3_o(b/load_data_in[30]_AND_3_o1:O)  | NONE(*)(b/temp_30_LDC) | 1     |
+b/load_data_in[29]_AND_5_o(b/load_data_in[29]_AND_5_o1:O)  | NONE(*)(b/temp_29_LDC) | 1     |
+b/load_data_in[28]_AND_7_o(b/load_data_in[28]_AND_7_o1:O)  | NONE(*)(b/temp_28_LDC) | 1     |
+b/load_data_in[27]_AND_9_o(b/load_data_in[27]_AND_9_o1:O)  | NONE(*)(b/temp_27_LDC) | 1     |
+b/load_data_in[26]_AND_11_o(b/load_data_in[26]_AND_11_o1:O)| NONE(*)(b/temp_26_LDC) | 1     |
+b/load_data_in[25]_AND_13_o(b/load_data_in[25]_AND_13_o1:O)| NONE(*)(b/temp_25_LDC) | 1     |
+b/load_data_in[24]_AND_15_o(b/load_data_in[24]_AND_15_o1:O)| NONE(*)(b/temp_24_LDC) | 1     |
+b/load_data_in[23]_AND_17_o(b/load_data_in[23]_AND_17_o1:O)| NONE(*)(b/temp_23_LDC) | 1     |
+b/load_data_in[22]_AND_19_o(b/load_data_in[22]_AND_19_o1:O)| NONE(*)(b/temp_22_LDC) | 1     |
+b/load_data_in[21]_AND_21_o(b/load_data_in[21]_AND_21_o1:O)| NONE(*)(b/temp_21_LDC) | 1     |
+b/load_data_in[20]_AND_23_o(b/load_data_in[20]_AND_23_o1:O)| NONE(*)(b/temp_20_LDC) | 1     |
+b/load_data_in[19]_AND_25_o(b/load_data_in[19]_AND_25_o1:O)| NONE(*)(b/temp_19_LDC) | 1     |
+b/load_data_in[18]_AND_27_o(b/load_data_in[18]_AND_27_o1:O)| NONE(*)(b/temp_18_LDC) | 1     |
+b/load_data_in[17]_AND_29_o(b/load_data_in[17]_AND_29_o1:O)| NONE(*)(b/temp_17_LDC) | 1     |
+b/load_data_in[16]_AND_31_o(b/load_data_in[16]_AND_31_o1:O)| NONE(*)(b/temp_16_LDC) | 1     |
+b/load_data_in[15]_AND_33_o(b/load_data_in[15]_AND_33_o1:O)| NONE(*)(b/temp_15_LDC) | 1     |
+b/load_data_in[14]_AND_35_o(b/load_data_in[14]_AND_35_o1:O)| NONE(*)(b/temp_14_LDC) | 1     |
+b/load_data_in[13]_AND_37_o(b/load_data_in[13]_AND_37_o1:O)| NONE(*)(b/temp_13_LDC) | 1     |
+b/load_data_in[12]_AND_39_o(b/load_data_in[12]_AND_39_o1:O)| NONE(*)(b/temp_12_LDC) | 1     |
+b/load_data_in[11]_AND_41_o(b/load_data_in[11]_AND_41_o1:O)| NONE(*)(b/temp_11_LDC) | 1     |
+b/load_data_in[10]_AND_43_o(b/load_data_in[10]_AND_43_o1:O)| NONE(*)(b/temp_10_LDC) | 1     |
+b/load_data_in[9]_AND_45_o(b/load_data_in[9]_AND_45_o1:O)  | NONE(*)(b/temp_9_LDC)  | 1     |
+b/load_data_in[8]_AND_47_o(b/load_data_in[8]_AND_47_o1:O)  | NONE(*)(b/temp_8_LDC)  | 1     |
+b/load_data_in[7]_AND_49_o(b/load_data_in[7]_AND_49_o1:O)  | NONE(*)(b/temp_7_LDC)  | 1     |
+b/load_data_in[6]_AND_51_o(b/load_data_in[6]_AND_51_o1:O)  | NONE(*)(b/temp_6_LDC)  | 1     |
+b/load_data_in[5]_AND_53_o(b/load_data_in[5]_AND_53_o1:O)  | NONE(*)(b/temp_5_LDC)  | 1     |
+b/load_data_in[4]_AND_55_o(b/load_data_in[4]_AND_55_o1:O)  | NONE(*)(b/temp_4_LDC)  | 1     |
+b/load_data_in[3]_AND_57_o(b/load_data_in[3]_AND_57_o1:O)  | NONE(*)(b/temp_3_LDC)  | 1     |
+b/load_data_in[2]_AND_59_o(b/load_data_in[2]_AND_59_o1:O)  | NONE(*)(b/temp_2_LDC)  | 1     |
+b/load_data_in[1]_AND_61_o(b/load_data_in[1]_AND_61_o1:O)  | NONE(*)(b/temp_1_LDC)  | 1     |
+b/load_data_in[0]_AND_63_o(b/load_data_in[0]_AND_63_o1:O)  | NONE(*)(b/temp_0_LDC)  | 1     |
+a/load_data_in[31]_AND_1_o(a/load_data_in[31]_AND_1_o1:O)  | NONE(*)(a/temp_31_LDC) | 1     |
+a/load_data_in[30]_AND_3_o(a/load_data_in[30]_AND_3_o1:O)  | NONE(*)(a/temp_30_LDC) | 1     |
+a/load_data_in[29]_AND_5_o(a/load_data_in[29]_AND_5_o1:O)  | NONE(*)(a/temp_29_LDC) | 1     |
+a/load_data_in[28]_AND_7_o(a/load_data_in[28]_AND_7_o1:O)  | NONE(*)(a/temp_28_LDC) | 1     |
+a/load_data_in[27]_AND_9_o(a/load_data_in[27]_AND_9_o1:O)  | NONE(*)(a/temp_27_LDC) | 1     |
+a/load_data_in[26]_AND_11_o(a/load_data_in[26]_AND_11_o1:O)| NONE(*)(a/temp_26_LDC) | 1     |
+a/load_data_in[25]_AND_13_o(a/load_data_in[25]_AND_13_o1:O)| NONE(*)(a/temp_25_LDC) | 1     |
+a/load_data_in[24]_AND_15_o(a/load_data_in[24]_AND_15_o1:O)| NONE(*)(a/temp_24_LDC) | 1     |
+a/load_data_in[23]_AND_17_o(a/load_data_in[23]_AND_17_o1:O)| NONE(*)(a/temp_23_LDC) | 1     |
+a/load_data_in[22]_AND_19_o(a/load_data_in[22]_AND_19_o1:O)| NONE(*)(a/temp_22_LDC) | 1     |
+a/load_data_in[21]_AND_21_o(a/load_data_in[21]_AND_21_o1:O)| NONE(*)(a/temp_21_LDC) | 1     |
+a/load_data_in[20]_AND_23_o(a/load_data_in[20]_AND_23_o1:O)| NONE(*)(a/temp_20_LDC) | 1     |
+a/load_data_in[19]_AND_25_o(a/load_data_in[19]_AND_25_o1:O)| NONE(*)(a/temp_19_LDC) | 1     |
+a/load_data_in[18]_AND_27_o(a/load_data_in[18]_AND_27_o1:O)| NONE(*)(a/temp_18_LDC) | 1     |
+a/load_data_in[17]_AND_29_o(a/load_data_in[17]_AND_29_o1:O)| NONE(*)(a/temp_17_LDC) | 1     |
+a/load_data_in[16]_AND_31_o(a/load_data_in[16]_AND_31_o1:O)| NONE(*)(a/temp_16_LDC) | 1     |
+a/load_data_in[15]_AND_33_o(a/load_data_in[15]_AND_33_o1:O)| NONE(*)(a/temp_15_LDC) | 1     |
+a/load_data_in[14]_AND_35_o(a/load_data_in[14]_AND_35_o1:O)| NONE(*)(a/temp_14_LDC) | 1     |
+a/load_data_in[13]_AND_37_o(a/load_data_in[13]_AND_37_o1:O)| NONE(*)(a/temp_13_LDC) | 1     |
+a/load_data_in[12]_AND_39_o(a/load_data_in[12]_AND_39_o1:O)| NONE(*)(a/temp_12_LDC) | 1     |
+a/load_data_in[11]_AND_41_o(a/load_data_in[11]_AND_41_o1:O)| NONE(*)(a/temp_11_LDC) | 1     |
+a/load_data_in[10]_AND_43_o(a/load_data_in[10]_AND_43_o1:O)| NONE(*)(a/temp_10_LDC) | 1     |
+a/load_data_in[9]_AND_45_o(a/load_data_in[9]_AND_45_o1:O)  | NONE(*)(a/temp_9_LDC)  | 1     |
+a/load_data_in[8]_AND_47_o(a/load_data_in[8]_AND_47_o1:O)  | NONE(*)(a/temp_8_LDC)  | 1     |
+a/load_data_in[7]_AND_49_o(a/load_data_in[7]_AND_49_o1:O)  | NONE(*)(a/temp_7_LDC)  | 1     |
+a/load_data_in[6]_AND_51_o(a/load_data_in[6]_AND_51_o1:O)  | NONE(*)(a/temp_6_LDC)  | 1     |
+a/load_data_in[5]_AND_53_o(a/load_data_in[5]_AND_53_o1:O)  | NONE(*)(a/temp_5_LDC)  | 1     |
+a/load_data_in[4]_AND_55_o(a/load_data_in[4]_AND_55_o1:O)  | NONE(*)(a/temp_4_LDC)  | 1     |
+a/load_data_in[3]_AND_57_o(a/load_data_in[3]_AND_57_o1:O)  | NONE(*)(a/temp_3_LDC)  | 1     |
+a/load_data_in[2]_AND_59_o(a/load_data_in[2]_AND_59_o1:O)  | NONE(*)(a/temp_2_LDC)  | 1     |
+a/load_data_in[1]_AND_61_o(a/load_data_in[1]_AND_61_o1:O)  | NONE(*)(a/temp_1_LDC)  | 1     |
+a/load_data_in[0]_AND_63_o(a/load_data_in[0]_AND_63_o1:O)  | NONE(*)(a/temp_0_LDC)  | 1     |
+-----------------------------------------------------------+------------------------+-------+
+(*) These 64 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 1.746ns (Maximum Frequency: 572.738MHz)
+   Minimum input arrival time before clock: 1.807ns
+   Maximum output required time after clock: 1.953ns
+   Maximum combinational path delay: 1.353ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.746ns (frequency: 572.738MHz)
+  Total number of paths / destination ports: 260 / 129
+-------------------------------------------------------------------------
+Delay:               1.746ns (Levels of Logic = 2)
+  Source:            seqcomp/present_state_FSM_FFd2 (FF)
+  Destination:       seqcomp/present_state_FSM_FFd3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: seqcomp/present_state_FSM_FFd2 to seqcomp/present_state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.478   0.569  seqcomp/present_state_FSM_FFd2 (seqcomp/present_state_FSM_FFd2)
+     LUT2:I0->O            1   0.124   0.421  seqcomp/present_state_FSM_FFd3-In_SW0 (N2)
+     LUT6:I5->O            1   0.124   0.000  seqcomp/present_state_FSM_FFd3-In (seqcomp/present_state_FSM_FFd3-In)
+     FDC:D                     0.030          seqcomp/present_state_FSM_FFd3
+    ----------------------------------------
+    Total                      1.746ns (0.756ns logic, 0.990ns route)
+                                       (43.3% logic, 56.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 263 / 134
+-------------------------------------------------------------------------
+Offset:              1.807ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       seqcomp/present_state_FSM_FFd2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to seqcomp/present_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.001   0.589  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            1   0.124   0.939  seqcomp/present_state_FSM_FFd2-In_SW0 (N4)
+     LUT6:I0->O            1   0.124   0.000  seqcomp/present_state_FSM_FFd2-In (seqcomp/present_state_FSM_FFd2-In)
+     FDC:D                     0.030          seqcomp/present_state_FSM_FFd2
+    ----------------------------------------
+    Total                      1.807ns (0.279ns logic, 1.528ns route)
+                                       (15.4% logic, 84.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[31]_AND_1_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_31_LDC (LATCH)
+  Destination Clock: b/load_data_in[31]_AND_1_o falling
+
+  Data Path: load to b/temp_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[31]_AND_2_o1 (b/load_data_in[31]_AND_2_o)
+     LDC:CLR                   0.494          b/temp_31_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[30]_AND_3_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_30_LDC (LATCH)
+  Destination Clock: b/load_data_in[30]_AND_3_o falling
+
+  Data Path: load to b/temp_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[30]_AND_4_o1 (b/load_data_in[30]_AND_4_o)
+     LDC:CLR                   0.494          b/temp_30_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[29]_AND_5_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_29_LDC (LATCH)
+  Destination Clock: b/load_data_in[29]_AND_5_o falling
+
+  Data Path: load to b/temp_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[29]_AND_6_o1 (b/load_data_in[29]_AND_6_o)
+     LDC:CLR                   0.494          b/temp_29_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[28]_AND_7_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_28_LDC (LATCH)
+  Destination Clock: b/load_data_in[28]_AND_7_o falling
+
+  Data Path: load to b/temp_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[28]_AND_8_o1 (b/load_data_in[28]_AND_8_o)
+     LDC:CLR                   0.494          b/temp_28_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[27]_AND_9_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_27_LDC (LATCH)
+  Destination Clock: b/load_data_in[27]_AND_9_o falling
+
+  Data Path: load to b/temp_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[27]_AND_10_o1 (b/load_data_in[27]_AND_10_o)
+     LDC:CLR                   0.494          b/temp_27_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[26]_AND_11_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_26_LDC (LATCH)
+  Destination Clock: b/load_data_in[26]_AND_11_o falling
+
+  Data Path: load to b/temp_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[26]_AND_12_o1 (b/load_data_in[26]_AND_12_o)
+     LDC:CLR                   0.494          b/temp_26_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[25]_AND_13_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_25_LDC (LATCH)
+  Destination Clock: b/load_data_in[25]_AND_13_o falling
+
+  Data Path: load to b/temp_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[25]_AND_14_o1 (b/load_data_in[25]_AND_14_o)
+     LDC:CLR                   0.494          b/temp_25_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[24]_AND_15_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_24_LDC (LATCH)
+  Destination Clock: b/load_data_in[24]_AND_15_o falling
+
+  Data Path: load to b/temp_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[24]_AND_16_o1 (b/load_data_in[24]_AND_16_o)
+     LDC:CLR                   0.494          b/temp_24_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[23]_AND_17_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_23_LDC (LATCH)
+  Destination Clock: b/load_data_in[23]_AND_17_o falling
+
+  Data Path: load to b/temp_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[23]_AND_18_o1 (b/load_data_in[23]_AND_18_o)
+     LDC:CLR                   0.494          b/temp_23_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[22]_AND_19_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_22_LDC (LATCH)
+  Destination Clock: b/load_data_in[22]_AND_19_o falling
+
+  Data Path: load to b/temp_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[22]_AND_20_o1 (b/load_data_in[22]_AND_20_o)
+     LDC:CLR                   0.494          b/temp_22_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[21]_AND_21_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_21_LDC (LATCH)
+  Destination Clock: b/load_data_in[21]_AND_21_o falling
+
+  Data Path: load to b/temp_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[21]_AND_22_o1 (b/load_data_in[21]_AND_22_o)
+     LDC:CLR                   0.494          b/temp_21_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[20]_AND_23_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_20_LDC (LATCH)
+  Destination Clock: b/load_data_in[20]_AND_23_o falling
+
+  Data Path: load to b/temp_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[20]_AND_24_o1 (b/load_data_in[20]_AND_24_o)
+     LDC:CLR                   0.494          b/temp_20_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[19]_AND_25_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_19_LDC (LATCH)
+  Destination Clock: b/load_data_in[19]_AND_25_o falling
+
+  Data Path: load to b/temp_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[19]_AND_26_o1 (b/load_data_in[19]_AND_26_o)
+     LDC:CLR                   0.494          b/temp_19_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[18]_AND_27_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_18_LDC (LATCH)
+  Destination Clock: b/load_data_in[18]_AND_27_o falling
+
+  Data Path: load to b/temp_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[18]_AND_28_o1 (b/load_data_in[18]_AND_28_o)
+     LDC:CLR                   0.494          b/temp_18_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[17]_AND_29_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_17_LDC (LATCH)
+  Destination Clock: b/load_data_in[17]_AND_29_o falling
+
+  Data Path: load to b/temp_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[17]_AND_30_o1 (b/load_data_in[17]_AND_30_o)
+     LDC:CLR                   0.494          b/temp_17_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[16]_AND_31_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_16_LDC (LATCH)
+  Destination Clock: b/load_data_in[16]_AND_31_o falling
+
+  Data Path: load to b/temp_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[16]_AND_32_o1 (b/load_data_in[16]_AND_32_o)
+     LDC:CLR                   0.494          b/temp_16_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[15]_AND_33_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_15_LDC (LATCH)
+  Destination Clock: b/load_data_in[15]_AND_33_o falling
+
+  Data Path: load to b/temp_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[15]_AND_34_o1 (b/load_data_in[15]_AND_34_o)
+     LDC:CLR                   0.494          b/temp_15_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[14]_AND_35_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_14_LDC (LATCH)
+  Destination Clock: b/load_data_in[14]_AND_35_o falling
+
+  Data Path: load to b/temp_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[14]_AND_36_o1 (b/load_data_in[14]_AND_36_o)
+     LDC:CLR                   0.494          b/temp_14_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[13]_AND_37_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_13_LDC (LATCH)
+  Destination Clock: b/load_data_in[13]_AND_37_o falling
+
+  Data Path: load to b/temp_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[13]_AND_38_o1 (b/load_data_in[13]_AND_38_o)
+     LDC:CLR                   0.494          b/temp_13_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[12]_AND_39_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_12_LDC (LATCH)
+  Destination Clock: b/load_data_in[12]_AND_39_o falling
+
+  Data Path: load to b/temp_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[12]_AND_40_o1 (b/load_data_in[12]_AND_40_o)
+     LDC:CLR                   0.494          b/temp_12_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[11]_AND_41_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_11_LDC (LATCH)
+  Destination Clock: b/load_data_in[11]_AND_41_o falling
+
+  Data Path: load to b/temp_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[11]_AND_42_o1 (b/load_data_in[11]_AND_42_o)
+     LDC:CLR                   0.494          b/temp_11_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[10]_AND_43_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_10_LDC (LATCH)
+  Destination Clock: b/load_data_in[10]_AND_43_o falling
+
+  Data Path: load to b/temp_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[10]_AND_44_o1 (b/load_data_in[10]_AND_44_o)
+     LDC:CLR                   0.494          b/temp_10_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[9]_AND_45_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_9_LDC (LATCH)
+  Destination Clock: b/load_data_in[9]_AND_45_o falling
+
+  Data Path: load to b/temp_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[9]_AND_46_o1 (b/load_data_in[9]_AND_46_o)
+     LDC:CLR                   0.494          b/temp_9_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[8]_AND_47_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_8_LDC (LATCH)
+  Destination Clock: b/load_data_in[8]_AND_47_o falling
+
+  Data Path: load to b/temp_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[8]_AND_48_o1 (b/load_data_in[8]_AND_48_o)
+     LDC:CLR                   0.494          b/temp_8_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[7]_AND_49_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_7_LDC (LATCH)
+  Destination Clock: b/load_data_in[7]_AND_49_o falling
+
+  Data Path: load to b/temp_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[7]_AND_50_o1 (b/load_data_in[7]_AND_50_o)
+     LDC:CLR                   0.494          b/temp_7_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[6]_AND_51_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_6_LDC (LATCH)
+  Destination Clock: b/load_data_in[6]_AND_51_o falling
+
+  Data Path: load to b/temp_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[6]_AND_52_o1 (b/load_data_in[6]_AND_52_o)
+     LDC:CLR                   0.494          b/temp_6_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[5]_AND_53_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_5_LDC (LATCH)
+  Destination Clock: b/load_data_in[5]_AND_53_o falling
+
+  Data Path: load to b/temp_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[5]_AND_54_o1 (b/load_data_in[5]_AND_54_o)
+     LDC:CLR                   0.494          b/temp_5_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[4]_AND_55_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_4_LDC (LATCH)
+  Destination Clock: b/load_data_in[4]_AND_55_o falling
+
+  Data Path: load to b/temp_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[4]_AND_56_o1 (b/load_data_in[4]_AND_56_o)
+     LDC:CLR                   0.494          b/temp_4_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[3]_AND_57_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_3_LDC (LATCH)
+  Destination Clock: b/load_data_in[3]_AND_57_o falling
+
+  Data Path: load to b/temp_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[3]_AND_58_o1 (b/load_data_in[3]_AND_58_o)
+     LDC:CLR                   0.494          b/temp_3_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[2]_AND_59_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_2_LDC (LATCH)
+  Destination Clock: b/load_data_in[2]_AND_59_o falling
+
+  Data Path: load to b/temp_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[2]_AND_60_o1 (b/load_data_in[2]_AND_60_o)
+     LDC:CLR                   0.494          b/temp_2_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[1]_AND_61_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_1_LDC (LATCH)
+  Destination Clock: b/load_data_in[1]_AND_61_o falling
+
+  Data Path: load to b/temp_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  b/load_data_in[1]_AND_62_o1 (b/load_data_in[1]_AND_62_o)
+     LDC:CLR                   0.494          b/temp_1_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b/load_data_in[0]_AND_63_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.728ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       b/temp_0_LDC (LATCH)
+  Destination Clock: b/load_data_in[0]_AND_63_o falling
+
+  Data Path: load to b/temp_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            1   0.124   0.399  b/load_data_in[0]_AND_64_o1 (b/load_data_in[0]_AND_64_o)
+     LDC:CLR                   0.494          b/temp_0_LDC
+    ----------------------------------------
+    Total                      1.728ns (0.619ns logic, 1.109ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[31]_AND_1_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_31_LDC (LATCH)
+  Destination Clock: a/load_data_in[31]_AND_1_o falling
+
+  Data Path: load to a/temp_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[31]_AND_2_o1 (a/load_data_in[31]_AND_2_o)
+     LDC:CLR                   0.494          a/temp_31_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[30]_AND_3_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_30_LDC (LATCH)
+  Destination Clock: a/load_data_in[30]_AND_3_o falling
+
+  Data Path: load to a/temp_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[30]_AND_4_o1 (a/load_data_in[30]_AND_4_o)
+     LDC:CLR                   0.494          a/temp_30_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[29]_AND_5_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_29_LDC (LATCH)
+  Destination Clock: a/load_data_in[29]_AND_5_o falling
+
+  Data Path: load to a/temp_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[29]_AND_6_o1 (a/load_data_in[29]_AND_6_o)
+     LDC:CLR                   0.494          a/temp_29_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[28]_AND_7_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_28_LDC (LATCH)
+  Destination Clock: a/load_data_in[28]_AND_7_o falling
+
+  Data Path: load to a/temp_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[28]_AND_8_o1 (a/load_data_in[28]_AND_8_o)
+     LDC:CLR                   0.494          a/temp_28_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[27]_AND_9_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_27_LDC (LATCH)
+  Destination Clock: a/load_data_in[27]_AND_9_o falling
+
+  Data Path: load to a/temp_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[27]_AND_10_o1 (a/load_data_in[27]_AND_10_o)
+     LDC:CLR                   0.494          a/temp_27_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[26]_AND_11_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_26_LDC (LATCH)
+  Destination Clock: a/load_data_in[26]_AND_11_o falling
+
+  Data Path: load to a/temp_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[26]_AND_12_o1 (a/load_data_in[26]_AND_12_o)
+     LDC:CLR                   0.494          a/temp_26_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[25]_AND_13_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_25_LDC (LATCH)
+  Destination Clock: a/load_data_in[25]_AND_13_o falling
+
+  Data Path: load to a/temp_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[25]_AND_14_o1 (a/load_data_in[25]_AND_14_o)
+     LDC:CLR                   0.494          a/temp_25_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[24]_AND_15_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_24_LDC (LATCH)
+  Destination Clock: a/load_data_in[24]_AND_15_o falling
+
+  Data Path: load to a/temp_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[24]_AND_16_o1 (a/load_data_in[24]_AND_16_o)
+     LDC:CLR                   0.494          a/temp_24_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[23]_AND_17_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_23_LDC (LATCH)
+  Destination Clock: a/load_data_in[23]_AND_17_o falling
+
+  Data Path: load to a/temp_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[23]_AND_18_o1 (a/load_data_in[23]_AND_18_o)
+     LDC:CLR                   0.494          a/temp_23_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[22]_AND_19_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_22_LDC (LATCH)
+  Destination Clock: a/load_data_in[22]_AND_19_o falling
+
+  Data Path: load to a/temp_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[22]_AND_20_o1 (a/load_data_in[22]_AND_20_o)
+     LDC:CLR                   0.494          a/temp_22_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[21]_AND_21_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_21_LDC (LATCH)
+  Destination Clock: a/load_data_in[21]_AND_21_o falling
+
+  Data Path: load to a/temp_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[21]_AND_22_o1 (a/load_data_in[21]_AND_22_o)
+     LDC:CLR                   0.494          a/temp_21_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[20]_AND_23_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_20_LDC (LATCH)
+  Destination Clock: a/load_data_in[20]_AND_23_o falling
+
+  Data Path: load to a/temp_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[20]_AND_24_o1 (a/load_data_in[20]_AND_24_o)
+     LDC:CLR                   0.494          a/temp_20_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[19]_AND_25_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_19_LDC (LATCH)
+  Destination Clock: a/load_data_in[19]_AND_25_o falling
+
+  Data Path: load to a/temp_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[19]_AND_26_o1 (a/load_data_in[19]_AND_26_o)
+     LDC:CLR                   0.494          a/temp_19_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[18]_AND_27_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_18_LDC (LATCH)
+  Destination Clock: a/load_data_in[18]_AND_27_o falling
+
+  Data Path: load to a/temp_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[18]_AND_28_o1 (a/load_data_in[18]_AND_28_o)
+     LDC:CLR                   0.494          a/temp_18_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[17]_AND_29_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_17_LDC (LATCH)
+  Destination Clock: a/load_data_in[17]_AND_29_o falling
+
+  Data Path: load to a/temp_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[17]_AND_30_o1 (a/load_data_in[17]_AND_30_o)
+     LDC:CLR                   0.494          a/temp_17_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[16]_AND_31_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_16_LDC (LATCH)
+  Destination Clock: a/load_data_in[16]_AND_31_o falling
+
+  Data Path: load to a/temp_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[16]_AND_32_o1 (a/load_data_in[16]_AND_32_o)
+     LDC:CLR                   0.494          a/temp_16_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[15]_AND_33_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_15_LDC (LATCH)
+  Destination Clock: a/load_data_in[15]_AND_33_o falling
+
+  Data Path: load to a/temp_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[15]_AND_34_o1 (a/load_data_in[15]_AND_34_o)
+     LDC:CLR                   0.494          a/temp_15_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[14]_AND_35_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_14_LDC (LATCH)
+  Destination Clock: a/load_data_in[14]_AND_35_o falling
+
+  Data Path: load to a/temp_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[14]_AND_36_o1 (a/load_data_in[14]_AND_36_o)
+     LDC:CLR                   0.494          a/temp_14_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[13]_AND_37_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_13_LDC (LATCH)
+  Destination Clock: a/load_data_in[13]_AND_37_o falling
+
+  Data Path: load to a/temp_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[13]_AND_38_o1 (a/load_data_in[13]_AND_38_o)
+     LDC:CLR                   0.494          a/temp_13_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[12]_AND_39_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_12_LDC (LATCH)
+  Destination Clock: a/load_data_in[12]_AND_39_o falling
+
+  Data Path: load to a/temp_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[12]_AND_40_o1 (a/load_data_in[12]_AND_40_o)
+     LDC:CLR                   0.494          a/temp_12_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[11]_AND_41_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_11_LDC (LATCH)
+  Destination Clock: a/load_data_in[11]_AND_41_o falling
+
+  Data Path: load to a/temp_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[11]_AND_42_o1 (a/load_data_in[11]_AND_42_o)
+     LDC:CLR                   0.494          a/temp_11_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[10]_AND_43_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_10_LDC (LATCH)
+  Destination Clock: a/load_data_in[10]_AND_43_o falling
+
+  Data Path: load to a/temp_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[10]_AND_44_o1 (a/load_data_in[10]_AND_44_o)
+     LDC:CLR                   0.494          a/temp_10_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[9]_AND_45_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_9_LDC (LATCH)
+  Destination Clock: a/load_data_in[9]_AND_45_o falling
+
+  Data Path: load to a/temp_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[9]_AND_46_o1 (a/load_data_in[9]_AND_46_o)
+     LDC:CLR                   0.494          a/temp_9_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[8]_AND_47_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_8_LDC (LATCH)
+  Destination Clock: a/load_data_in[8]_AND_47_o falling
+
+  Data Path: load to a/temp_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[8]_AND_48_o1 (a/load_data_in[8]_AND_48_o)
+     LDC:CLR                   0.494          a/temp_8_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[7]_AND_49_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_7_LDC (LATCH)
+  Destination Clock: a/load_data_in[7]_AND_49_o falling
+
+  Data Path: load to a/temp_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[7]_AND_50_o1 (a/load_data_in[7]_AND_50_o)
+     LDC:CLR                   0.494          a/temp_7_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[6]_AND_51_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_6_LDC (LATCH)
+  Destination Clock: a/load_data_in[6]_AND_51_o falling
+
+  Data Path: load to a/temp_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[6]_AND_52_o1 (a/load_data_in[6]_AND_52_o)
+     LDC:CLR                   0.494          a/temp_6_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[5]_AND_53_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_5_LDC (LATCH)
+  Destination Clock: a/load_data_in[5]_AND_53_o falling
+
+  Data Path: load to a/temp_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[5]_AND_54_o1 (a/load_data_in[5]_AND_54_o)
+     LDC:CLR                   0.494          a/temp_5_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[4]_AND_55_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_4_LDC (LATCH)
+  Destination Clock: a/load_data_in[4]_AND_55_o falling
+
+  Data Path: load to a/temp_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[4]_AND_56_o1 (a/load_data_in[4]_AND_56_o)
+     LDC:CLR                   0.494          a/temp_4_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[3]_AND_57_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_3_LDC (LATCH)
+  Destination Clock: a/load_data_in[3]_AND_57_o falling
+
+  Data Path: load to a/temp_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[3]_AND_58_o1 (a/load_data_in[3]_AND_58_o)
+     LDC:CLR                   0.494          a/temp_3_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[2]_AND_59_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_2_LDC (LATCH)
+  Destination Clock: a/load_data_in[2]_AND_59_o falling
+
+  Data Path: load to a/temp_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[2]_AND_60_o1 (a/load_data_in[2]_AND_60_o)
+     LDC:CLR                   0.494          a/temp_2_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[1]_AND_61_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.734ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_1_LDC (LATCH)
+  Destination Clock: a/load_data_in[1]_AND_61_o falling
+
+  Data Path: load to a/temp_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            2   0.124   0.405  a/load_data_in[1]_AND_62_o1 (a/load_data_in[1]_AND_62_o)
+     LDC:CLR                   0.494          a/temp_1_LDC
+    ----------------------------------------
+    Total                      1.734ns (0.619ns logic, 1.115ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'a/load_data_in[0]_AND_63_o'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              1.728ns (Levels of Logic = 2)
+  Source:            load (PAD)
+  Destination:       a/temp_0_LDC (LATCH)
+  Destination Clock: a/load_data_in[0]_AND_63_o falling
+
+  Data Path: load to a/temp_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   0.001   0.710  load_IBUF (load_IBUF)
+     LUT2:I0->O            1   0.124   0.399  a/load_data_in[0]_AND_64_o1 (a/load_data_in[0]_AND_64_o)
+     LDC:CLR                   0.494          a/temp_0_LDC
+    ----------------------------------------
+    Total                      1.728ns (0.619ns logic, 1.109ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 135 / 67
+-------------------------------------------------------------------------
+Offset:              1.953ns (Levels of Logic = 2)
+  Source:            seqcomp/present_state_FSM_FFd1 (FF)
+  Destination:       out<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: seqcomp/present_state_FSM_FFd1 to out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.478   0.952  seqcomp/present_state_FSM_FFd1 (seqcomp/present_state_FSM_FFd1)
+     LUT5:I0->O            1   0.124   0.399  seqcomp/Mmux_out21 (out_1_OBUF)
+     OBUF:I->O                 0.000          out_1_OBUF (out<1>)
+    ----------------------------------------
+    Total                      1.953ns (0.602ns logic, 1.351ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[31]_AND_1_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.870ns (Levels of Logic = 2)
+  Source:            a/temp_31_LDC (LATCH)
+  Destination:       regtempA<31> (PAD)
+  Source Clock:      a/load_data_in[31]_AND_1_o falling
+
+  Data Path: a/temp_31_LDC to regtempA<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_31_LDC (a/temp_31_LDC)
+     LUT3:I0->O            2   0.124   0.405  a/temp_311 (a/temp_31)
+     OBUF:I->O                 0.000          regtempA_31_OBUF (regtempA<31>)
+    ----------------------------------------
+    Total                      1.870ns (0.749ns logic, 1.121ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[30]_AND_3_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_30_LDC (LATCH)
+  Destination:       regtempA<30> (PAD)
+  Source Clock:      a/load_data_in[30]_AND_3_o falling
+
+  Data Path: a/temp_30_LDC to regtempA<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_30_LDC (a/temp_30_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_301 (a/temp_30)
+     OBUF:I->O                 0.000          regtempA_30_OBUF (regtempA<30>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[29]_AND_5_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_29_LDC (LATCH)
+  Destination:       regtempA<29> (PAD)
+  Source Clock:      a/load_data_in[29]_AND_5_o falling
+
+  Data Path: a/temp_29_LDC to regtempA<29>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_29_LDC (a/temp_29_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_291 (a/temp_29)
+     OBUF:I->O                 0.000          regtempA_29_OBUF (regtempA<29>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[28]_AND_7_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_28_LDC (LATCH)
+  Destination:       regtempA<28> (PAD)
+  Source Clock:      a/load_data_in[28]_AND_7_o falling
+
+  Data Path: a/temp_28_LDC to regtempA<28>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_28_LDC (a/temp_28_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_281 (a/temp_28)
+     OBUF:I->O                 0.000          regtempA_28_OBUF (regtempA<28>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[27]_AND_9_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_27_LDC (LATCH)
+  Destination:       regtempA<27> (PAD)
+  Source Clock:      a/load_data_in[27]_AND_9_o falling
+
+  Data Path: a/temp_27_LDC to regtempA<27>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_27_LDC (a/temp_27_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_271 (a/temp_27)
+     OBUF:I->O                 0.000          regtempA_27_OBUF (regtempA<27>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[26]_AND_11_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_26_LDC (LATCH)
+  Destination:       regtempA<26> (PAD)
+  Source Clock:      a/load_data_in[26]_AND_11_o falling
+
+  Data Path: a/temp_26_LDC to regtempA<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_26_LDC (a/temp_26_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_261 (a/temp_26)
+     OBUF:I->O                 0.000          regtempA_26_OBUF (regtempA<26>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[25]_AND_13_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_25_LDC (LATCH)
+  Destination:       regtempA<25> (PAD)
+  Source Clock:      a/load_data_in[25]_AND_13_o falling
+
+  Data Path: a/temp_25_LDC to regtempA<25>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_25_LDC (a/temp_25_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_251 (a/temp_25)
+     OBUF:I->O                 0.000          regtempA_25_OBUF (regtempA<25>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[24]_AND_15_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_24_LDC (LATCH)
+  Destination:       regtempA<24> (PAD)
+  Source Clock:      a/load_data_in[24]_AND_15_o falling
+
+  Data Path: a/temp_24_LDC to regtempA<24>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_24_LDC (a/temp_24_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_241 (a/temp_24)
+     OBUF:I->O                 0.000          regtempA_24_OBUF (regtempA<24>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[23]_AND_17_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_23_LDC (LATCH)
+  Destination:       regtempA<23> (PAD)
+  Source Clock:      a/load_data_in[23]_AND_17_o falling
+
+  Data Path: a/temp_23_LDC to regtempA<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_23_LDC (a/temp_23_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_231 (a/temp_23)
+     OBUF:I->O                 0.000          regtempA_23_OBUF (regtempA<23>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[22]_AND_19_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_22_LDC (LATCH)
+  Destination:       regtempA<22> (PAD)
+  Source Clock:      a/load_data_in[22]_AND_19_o falling
+
+  Data Path: a/temp_22_LDC to regtempA<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_22_LDC (a/temp_22_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_221 (a/temp_22)
+     OBUF:I->O                 0.000          regtempA_22_OBUF (regtempA<22>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[21]_AND_21_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_21_LDC (LATCH)
+  Destination:       regtempA<21> (PAD)
+  Source Clock:      a/load_data_in[21]_AND_21_o falling
+
+  Data Path: a/temp_21_LDC to regtempA<21>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_21_LDC (a/temp_21_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_211 (a/temp_21)
+     OBUF:I->O                 0.000          regtempA_21_OBUF (regtempA<21>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[20]_AND_23_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_20_LDC (LATCH)
+  Destination:       regtempA<20> (PAD)
+  Source Clock:      a/load_data_in[20]_AND_23_o falling
+
+  Data Path: a/temp_20_LDC to regtempA<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_20_LDC (a/temp_20_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_201 (a/temp_20)
+     OBUF:I->O                 0.000          regtempA_20_OBUF (regtempA<20>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[19]_AND_25_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_19_LDC (LATCH)
+  Destination:       regtempA<19> (PAD)
+  Source Clock:      a/load_data_in[19]_AND_25_o falling
+
+  Data Path: a/temp_19_LDC to regtempA<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_19_LDC (a/temp_19_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_191 (a/temp_19)
+     OBUF:I->O                 0.000          regtempA_19_OBUF (regtempA<19>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[18]_AND_27_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_18_LDC (LATCH)
+  Destination:       regtempA<18> (PAD)
+  Source Clock:      a/load_data_in[18]_AND_27_o falling
+
+  Data Path: a/temp_18_LDC to regtempA<18>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_18_LDC (a/temp_18_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_181 (a/temp_18)
+     OBUF:I->O                 0.000          regtempA_18_OBUF (regtempA<18>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[17]_AND_29_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_17_LDC (LATCH)
+  Destination:       regtempA<17> (PAD)
+  Source Clock:      a/load_data_in[17]_AND_29_o falling
+
+  Data Path: a/temp_17_LDC to regtempA<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_17_LDC (a/temp_17_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_171 (a/temp_17)
+     OBUF:I->O                 0.000          regtempA_17_OBUF (regtempA<17>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[16]_AND_31_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_16_LDC (LATCH)
+  Destination:       regtempA<16> (PAD)
+  Source Clock:      a/load_data_in[16]_AND_31_o falling
+
+  Data Path: a/temp_16_LDC to regtempA<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_16_LDC (a/temp_16_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_161 (a/temp_16)
+     OBUF:I->O                 0.000          regtempA_16_OBUF (regtempA<16>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[15]_AND_33_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_15_LDC (LATCH)
+  Destination:       regtempA<15> (PAD)
+  Source Clock:      a/load_data_in[15]_AND_33_o falling
+
+  Data Path: a/temp_15_LDC to regtempA<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_15_LDC (a/temp_15_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_151 (a/temp_15)
+     OBUF:I->O                 0.000          regtempA_15_OBUF (regtempA<15>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[14]_AND_35_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_14_LDC (LATCH)
+  Destination:       regtempA<14> (PAD)
+  Source Clock:      a/load_data_in[14]_AND_35_o falling
+
+  Data Path: a/temp_14_LDC to regtempA<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_14_LDC (a/temp_14_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_141 (a/temp_14)
+     OBUF:I->O                 0.000          regtempA_14_OBUF (regtempA<14>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[13]_AND_37_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_13_LDC (LATCH)
+  Destination:       regtempA<13> (PAD)
+  Source Clock:      a/load_data_in[13]_AND_37_o falling
+
+  Data Path: a/temp_13_LDC to regtempA<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_13_LDC (a/temp_13_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_131 (a/temp_13)
+     OBUF:I->O                 0.000          regtempA_13_OBUF (regtempA<13>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[12]_AND_39_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_12_LDC (LATCH)
+  Destination:       regtempA<12> (PAD)
+  Source Clock:      a/load_data_in[12]_AND_39_o falling
+
+  Data Path: a/temp_12_LDC to regtempA<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_12_LDC (a/temp_12_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_121 (a/temp_12)
+     OBUF:I->O                 0.000          regtempA_12_OBUF (regtempA<12>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[11]_AND_41_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_11_LDC (LATCH)
+  Destination:       regtempA<11> (PAD)
+  Source Clock:      a/load_data_in[11]_AND_41_o falling
+
+  Data Path: a/temp_11_LDC to regtempA<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_11_LDC (a/temp_11_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_111 (a/temp_11)
+     OBUF:I->O                 0.000          regtempA_11_OBUF (regtempA<11>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[10]_AND_43_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_10_LDC (LATCH)
+  Destination:       regtempA<10> (PAD)
+  Source Clock:      a/load_data_in[10]_AND_43_o falling
+
+  Data Path: a/temp_10_LDC to regtempA<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_10_LDC (a/temp_10_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_101 (a/temp_10)
+     OBUF:I->O                 0.000          regtempA_10_OBUF (regtempA<10>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[9]_AND_45_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_9_LDC (LATCH)
+  Destination:       regtempA<9> (PAD)
+  Source Clock:      a/load_data_in[9]_AND_45_o falling
+
+  Data Path: a/temp_9_LDC to regtempA<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_9_LDC (a/temp_9_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_91 (a/temp_9)
+     OBUF:I->O                 0.000          regtempA_9_OBUF (regtempA<9>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[8]_AND_47_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_8_LDC (LATCH)
+  Destination:       regtempA<8> (PAD)
+  Source Clock:      a/load_data_in[8]_AND_47_o falling
+
+  Data Path: a/temp_8_LDC to regtempA<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_8_LDC (a/temp_8_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_81 (a/temp_8)
+     OBUF:I->O                 0.000          regtempA_8_OBUF (regtempA<8>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[7]_AND_49_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_7_LDC (LATCH)
+  Destination:       regtempA<7> (PAD)
+  Source Clock:      a/load_data_in[7]_AND_49_o falling
+
+  Data Path: a/temp_7_LDC to regtempA<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_7_LDC (a/temp_7_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_71 (a/temp_7)
+     OBUF:I->O                 0.000          regtempA_7_OBUF (regtempA<7>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[6]_AND_51_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_6_LDC (LATCH)
+  Destination:       regtempA<6> (PAD)
+  Source Clock:      a/load_data_in[6]_AND_51_o falling
+
+  Data Path: a/temp_6_LDC to regtempA<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_6_LDC (a/temp_6_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_61 (a/temp_6)
+     OBUF:I->O                 0.000          regtempA_6_OBUF (regtempA<6>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[5]_AND_53_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_5_LDC (LATCH)
+  Destination:       regtempA<5> (PAD)
+  Source Clock:      a/load_data_in[5]_AND_53_o falling
+
+  Data Path: a/temp_5_LDC to regtempA<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_5_LDC (a/temp_5_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_51 (a/temp_5)
+     OBUF:I->O                 0.000          regtempA_5_OBUF (regtempA<5>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[4]_AND_55_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_4_LDC (LATCH)
+  Destination:       regtempA<4> (PAD)
+  Source Clock:      a/load_data_in[4]_AND_55_o falling
+
+  Data Path: a/temp_4_LDC to regtempA<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_4_LDC (a/temp_4_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_41 (a/temp_4)
+     OBUF:I->O                 0.000          regtempA_4_OBUF (regtempA<4>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[3]_AND_57_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_3_LDC (LATCH)
+  Destination:       regtempA<3> (PAD)
+  Source Clock:      a/load_data_in[3]_AND_57_o falling
+
+  Data Path: a/temp_3_LDC to regtempA<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_3_LDC (a/temp_3_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_31 (a/temp_3)
+     OBUF:I->O                 0.000          regtempA_3_OBUF (regtempA<3>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[2]_AND_59_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_2_LDC (LATCH)
+  Destination:       regtempA<2> (PAD)
+  Source Clock:      a/load_data_in[2]_AND_59_o falling
+
+  Data Path: a/temp_2_LDC to regtempA<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_2_LDC (a/temp_2_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_21 (a/temp_2)
+     OBUF:I->O                 0.000          regtempA_2_OBUF (regtempA<2>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[1]_AND_61_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_1_LDC (LATCH)
+  Destination:       regtempA<1> (PAD)
+  Source Clock:      a/load_data_in[1]_AND_61_o falling
+
+  Data Path: a/temp_1_LDC to regtempA<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_1_LDC (a/temp_1_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_11 (a/temp_1)
+     OBUF:I->O                 0.000          regtempA_1_OBUF (regtempA<1>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'a/load_data_in[0]_AND_63_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            a/temp_0_LDC (LATCH)
+  Destination:       regtempA<0> (PAD)
+  Source Clock:      a/load_data_in[0]_AND_63_o falling
+
+  Data Path: a/temp_0_LDC to regtempA<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  a/temp_0_LDC (a/temp_0_LDC)
+     LUT3:I0->O            3   0.124   0.413  a/temp_01 (a/temp_0)
+     OBUF:I->O                 0.000          regtempA_0_OBUF (regtempA<0>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[31]_AND_1_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.870ns (Levels of Logic = 2)
+  Source:            b/temp_31_LDC (LATCH)
+  Destination:       regtempB<31> (PAD)
+  Source Clock:      b/load_data_in[31]_AND_1_o falling
+
+  Data Path: b/temp_31_LDC to regtempB<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_31_LDC (b/temp_31_LDC)
+     LUT3:I0->O            2   0.124   0.405  b/temp_311 (b/temp_31)
+     OBUF:I->O                 0.000          regtempB_31_OBUF (regtempB<31>)
+    ----------------------------------------
+    Total                      1.870ns (0.749ns logic, 1.121ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[30]_AND_3_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_30_LDC (LATCH)
+  Destination:       regtempB<30> (PAD)
+  Source Clock:      b/load_data_in[30]_AND_3_o falling
+
+  Data Path: b/temp_30_LDC to regtempB<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_30_LDC (b/temp_30_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_301 (b/temp_30)
+     OBUF:I->O                 0.000          regtempB_30_OBUF (regtempB<30>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[29]_AND_5_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_29_LDC (LATCH)
+  Destination:       regtempB<29> (PAD)
+  Source Clock:      b/load_data_in[29]_AND_5_o falling
+
+  Data Path: b/temp_29_LDC to regtempB<29>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_29_LDC (b/temp_29_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_291 (b/temp_29)
+     OBUF:I->O                 0.000          regtempB_29_OBUF (regtempB<29>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[28]_AND_7_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_28_LDC (LATCH)
+  Destination:       regtempB<28> (PAD)
+  Source Clock:      b/load_data_in[28]_AND_7_o falling
+
+  Data Path: b/temp_28_LDC to regtempB<28>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_28_LDC (b/temp_28_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_281 (b/temp_28)
+     OBUF:I->O                 0.000          regtempB_28_OBUF (regtempB<28>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[27]_AND_9_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_27_LDC (LATCH)
+  Destination:       regtempB<27> (PAD)
+  Source Clock:      b/load_data_in[27]_AND_9_o falling
+
+  Data Path: b/temp_27_LDC to regtempB<27>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_27_LDC (b/temp_27_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_271 (b/temp_27)
+     OBUF:I->O                 0.000          regtempB_27_OBUF (regtempB<27>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[26]_AND_11_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_26_LDC (LATCH)
+  Destination:       regtempB<26> (PAD)
+  Source Clock:      b/load_data_in[26]_AND_11_o falling
+
+  Data Path: b/temp_26_LDC to regtempB<26>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_26_LDC (b/temp_26_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_261 (b/temp_26)
+     OBUF:I->O                 0.000          regtempB_26_OBUF (regtempB<26>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[25]_AND_13_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_25_LDC (LATCH)
+  Destination:       regtempB<25> (PAD)
+  Source Clock:      b/load_data_in[25]_AND_13_o falling
+
+  Data Path: b/temp_25_LDC to regtempB<25>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_25_LDC (b/temp_25_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_251 (b/temp_25)
+     OBUF:I->O                 0.000          regtempB_25_OBUF (regtempB<25>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[24]_AND_15_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_24_LDC (LATCH)
+  Destination:       regtempB<24> (PAD)
+  Source Clock:      b/load_data_in[24]_AND_15_o falling
+
+  Data Path: b/temp_24_LDC to regtempB<24>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_24_LDC (b/temp_24_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_241 (b/temp_24)
+     OBUF:I->O                 0.000          regtempB_24_OBUF (regtempB<24>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[23]_AND_17_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_23_LDC (LATCH)
+  Destination:       regtempB<23> (PAD)
+  Source Clock:      b/load_data_in[23]_AND_17_o falling
+
+  Data Path: b/temp_23_LDC to regtempB<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_23_LDC (b/temp_23_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_231 (b/temp_23)
+     OBUF:I->O                 0.000          regtempB_23_OBUF (regtempB<23>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[22]_AND_19_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_22_LDC (LATCH)
+  Destination:       regtempB<22> (PAD)
+  Source Clock:      b/load_data_in[22]_AND_19_o falling
+
+  Data Path: b/temp_22_LDC to regtempB<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_22_LDC (b/temp_22_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_221 (b/temp_22)
+     OBUF:I->O                 0.000          regtempB_22_OBUF (regtempB<22>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[21]_AND_21_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_21_LDC (LATCH)
+  Destination:       regtempB<21> (PAD)
+  Source Clock:      b/load_data_in[21]_AND_21_o falling
+
+  Data Path: b/temp_21_LDC to regtempB<21>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_21_LDC (b/temp_21_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_211 (b/temp_21)
+     OBUF:I->O                 0.000          regtempB_21_OBUF (regtempB<21>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[20]_AND_23_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_20_LDC (LATCH)
+  Destination:       regtempB<20> (PAD)
+  Source Clock:      b/load_data_in[20]_AND_23_o falling
+
+  Data Path: b/temp_20_LDC to regtempB<20>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_20_LDC (b/temp_20_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_201 (b/temp_20)
+     OBUF:I->O                 0.000          regtempB_20_OBUF (regtempB<20>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[19]_AND_25_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_19_LDC (LATCH)
+  Destination:       regtempB<19> (PAD)
+  Source Clock:      b/load_data_in[19]_AND_25_o falling
+
+  Data Path: b/temp_19_LDC to regtempB<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_19_LDC (b/temp_19_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_191 (b/temp_19)
+     OBUF:I->O                 0.000          regtempB_19_OBUF (regtempB<19>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[18]_AND_27_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_18_LDC (LATCH)
+  Destination:       regtempB<18> (PAD)
+  Source Clock:      b/load_data_in[18]_AND_27_o falling
+
+  Data Path: b/temp_18_LDC to regtempB<18>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_18_LDC (b/temp_18_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_181 (b/temp_18)
+     OBUF:I->O                 0.000          regtempB_18_OBUF (regtempB<18>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[17]_AND_29_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_17_LDC (LATCH)
+  Destination:       regtempB<17> (PAD)
+  Source Clock:      b/load_data_in[17]_AND_29_o falling
+
+  Data Path: b/temp_17_LDC to regtempB<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_17_LDC (b/temp_17_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_171 (b/temp_17)
+     OBUF:I->O                 0.000          regtempB_17_OBUF (regtempB<17>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[16]_AND_31_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_16_LDC (LATCH)
+  Destination:       regtempB<16> (PAD)
+  Source Clock:      b/load_data_in[16]_AND_31_o falling
+
+  Data Path: b/temp_16_LDC to regtempB<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_16_LDC (b/temp_16_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_161 (b/temp_16)
+     OBUF:I->O                 0.000          regtempB_16_OBUF (regtempB<16>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[15]_AND_33_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_15_LDC (LATCH)
+  Destination:       regtempB<15> (PAD)
+  Source Clock:      b/load_data_in[15]_AND_33_o falling
+
+  Data Path: b/temp_15_LDC to regtempB<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_15_LDC (b/temp_15_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_151 (b/temp_15)
+     OBUF:I->O                 0.000          regtempB_15_OBUF (regtempB<15>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[14]_AND_35_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_14_LDC (LATCH)
+  Destination:       regtempB<14> (PAD)
+  Source Clock:      b/load_data_in[14]_AND_35_o falling
+
+  Data Path: b/temp_14_LDC to regtempB<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_14_LDC (b/temp_14_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_141 (b/temp_14)
+     OBUF:I->O                 0.000          regtempB_14_OBUF (regtempB<14>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[13]_AND_37_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_13_LDC (LATCH)
+  Destination:       regtempB<13> (PAD)
+  Source Clock:      b/load_data_in[13]_AND_37_o falling
+
+  Data Path: b/temp_13_LDC to regtempB<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_13_LDC (b/temp_13_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_131 (b/temp_13)
+     OBUF:I->O                 0.000          regtempB_13_OBUF (regtempB<13>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[12]_AND_39_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_12_LDC (LATCH)
+  Destination:       regtempB<12> (PAD)
+  Source Clock:      b/load_data_in[12]_AND_39_o falling
+
+  Data Path: b/temp_12_LDC to regtempB<12>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_12_LDC (b/temp_12_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_121 (b/temp_12)
+     OBUF:I->O                 0.000          regtempB_12_OBUF (regtempB<12>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[11]_AND_41_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_11_LDC (LATCH)
+  Destination:       regtempB<11> (PAD)
+  Source Clock:      b/load_data_in[11]_AND_41_o falling
+
+  Data Path: b/temp_11_LDC to regtempB<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_11_LDC (b/temp_11_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_111 (b/temp_11)
+     OBUF:I->O                 0.000          regtempB_11_OBUF (regtempB<11>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[10]_AND_43_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_10_LDC (LATCH)
+  Destination:       regtempB<10> (PAD)
+  Source Clock:      b/load_data_in[10]_AND_43_o falling
+
+  Data Path: b/temp_10_LDC to regtempB<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_10_LDC (b/temp_10_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_101 (b/temp_10)
+     OBUF:I->O                 0.000          regtempB_10_OBUF (regtempB<10>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[9]_AND_45_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_9_LDC (LATCH)
+  Destination:       regtempB<9> (PAD)
+  Source Clock:      b/load_data_in[9]_AND_45_o falling
+
+  Data Path: b/temp_9_LDC to regtempB<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_9_LDC (b/temp_9_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_91 (b/temp_9)
+     OBUF:I->O                 0.000          regtempB_9_OBUF (regtempB<9>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[8]_AND_47_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_8_LDC (LATCH)
+  Destination:       regtempB<8> (PAD)
+  Source Clock:      b/load_data_in[8]_AND_47_o falling
+
+  Data Path: b/temp_8_LDC to regtempB<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_8_LDC (b/temp_8_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_81 (b/temp_8)
+     OBUF:I->O                 0.000          regtempB_8_OBUF (regtempB<8>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[7]_AND_49_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_7_LDC (LATCH)
+  Destination:       regtempB<7> (PAD)
+  Source Clock:      b/load_data_in[7]_AND_49_o falling
+
+  Data Path: b/temp_7_LDC to regtempB<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_7_LDC (b/temp_7_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_71 (b/temp_7)
+     OBUF:I->O                 0.000          regtempB_7_OBUF (regtempB<7>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[6]_AND_51_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_6_LDC (LATCH)
+  Destination:       regtempB<6> (PAD)
+  Source Clock:      b/load_data_in[6]_AND_51_o falling
+
+  Data Path: b/temp_6_LDC to regtempB<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_6_LDC (b/temp_6_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_61 (b/temp_6)
+     OBUF:I->O                 0.000          regtempB_6_OBUF (regtempB<6>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[5]_AND_53_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_5_LDC (LATCH)
+  Destination:       regtempB<5> (PAD)
+  Source Clock:      b/load_data_in[5]_AND_53_o falling
+
+  Data Path: b/temp_5_LDC to regtempB<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_5_LDC (b/temp_5_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_51 (b/temp_5)
+     OBUF:I->O                 0.000          regtempB_5_OBUF (regtempB<5>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[4]_AND_55_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_4_LDC (LATCH)
+  Destination:       regtempB<4> (PAD)
+  Source Clock:      b/load_data_in[4]_AND_55_o falling
+
+  Data Path: b/temp_4_LDC to regtempB<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_4_LDC (b/temp_4_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_41 (b/temp_4)
+     OBUF:I->O                 0.000          regtempB_4_OBUF (regtempB<4>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[3]_AND_57_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_3_LDC (LATCH)
+  Destination:       regtempB<3> (PAD)
+  Source Clock:      b/load_data_in[3]_AND_57_o falling
+
+  Data Path: b/temp_3_LDC to regtempB<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_3_LDC (b/temp_3_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_31 (b/temp_3)
+     OBUF:I->O                 0.000          regtempB_3_OBUF (regtempB<3>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[2]_AND_59_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_2_LDC (LATCH)
+  Destination:       regtempB<2> (PAD)
+  Source Clock:      b/load_data_in[2]_AND_59_o falling
+
+  Data Path: b/temp_2_LDC to regtempB<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_2_LDC (b/temp_2_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_21 (b/temp_2)
+     OBUF:I->O                 0.000          regtempB_2_OBUF (regtempB<2>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[1]_AND_61_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_1_LDC (LATCH)
+  Destination:       regtempB<1> (PAD)
+  Source Clock:      b/load_data_in[1]_AND_61_o falling
+
+  Data Path: b/temp_1_LDC to regtempB<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_1_LDC (b/temp_1_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_11 (b/temp_1)
+     OBUF:I->O                 0.000          regtempB_1_OBUF (regtempB<1>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b/load_data_in[0]_AND_63_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.878ns (Levels of Logic = 2)
+  Source:            b/temp_0_LDC (LATCH)
+  Destination:       regtempB<0> (PAD)
+  Source Clock:      b/load_data_in[0]_AND_63_o falling
+
+  Data Path: b/temp_0_LDC to regtempB<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.625   0.716  b/temp_0_LDC (b/temp_0_LDC)
+     LUT3:I0->O            3   0.124   0.413  b/temp_01 (b/temp_0)
+     OBUF:I->O                 0.000          regtempB_0_OBUF (regtempB<0>)
+    ----------------------------------------
+    Total                      1.878ns (0.749ns logic, 1.129ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               1.353ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       out<2> (PAD)
+
+  Data Path: rst to out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.001   0.829  rst_IBUF (rst_IBUF)
+     LUT5:I1->O            1   0.124   0.399  seqcomp/Mmux_out11 (out_0_OBUF)
+     OBUF:I->O                 0.000          out_0_OBUF (out<0>)
+    ----------------------------------------
+    Total                      1.353ns (0.125ns logic, 1.228ns route)
+                                       (9.2% logic, 90.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------------------+---------+---------+---------+---------+
+                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------+---------+---------+---------+---------+
+a/load_data_in[0]_AND_63_o |         |    1.495|         |         |
+a/load_data_in[10]_AND_43_o|         |    1.495|         |         |
+a/load_data_in[11]_AND_41_o|         |    1.495|         |         |
+a/load_data_in[12]_AND_39_o|         |    1.495|         |         |
+a/load_data_in[13]_AND_37_o|         |    1.495|         |         |
+a/load_data_in[14]_AND_35_o|         |    1.495|         |         |
+a/load_data_in[15]_AND_33_o|         |    1.495|         |         |
+a/load_data_in[16]_AND_31_o|         |    1.495|         |         |
+a/load_data_in[17]_AND_29_o|         |    1.495|         |         |
+a/load_data_in[18]_AND_27_o|         |    1.495|         |         |
+a/load_data_in[19]_AND_25_o|         |    1.495|         |         |
+a/load_data_in[1]_AND_61_o |         |    1.495|         |         |
+a/load_data_in[20]_AND_23_o|         |    1.495|         |         |
+a/load_data_in[21]_AND_21_o|         |    1.495|         |         |
+a/load_data_in[22]_AND_19_o|         |    1.495|         |         |
+a/load_data_in[23]_AND_17_o|         |    1.495|         |         |
+a/load_data_in[24]_AND_15_o|         |    1.495|         |         |
+a/load_data_in[25]_AND_13_o|         |    1.495|         |         |
+a/load_data_in[26]_AND_11_o|         |    1.495|         |         |
+a/load_data_in[27]_AND_9_o |         |    1.495|         |         |
+a/load_data_in[28]_AND_7_o |         |    1.495|         |         |
+a/load_data_in[29]_AND_5_o |         |    1.495|         |         |
+a/load_data_in[2]_AND_59_o |         |    1.495|         |         |
+a/load_data_in[30]_AND_3_o |         |    1.495|         |         |
+a/load_data_in[31]_AND_1_o |         |    1.495|         |         |
+a/load_data_in[3]_AND_57_o |         |    1.495|         |         |
+a/load_data_in[4]_AND_55_o |         |    1.495|         |         |
+a/load_data_in[5]_AND_53_o |         |    1.495|         |         |
+a/load_data_in[6]_AND_51_o |         |    1.495|         |         |
+a/load_data_in[7]_AND_49_o |         |    1.495|         |         |
+a/load_data_in[8]_AND_47_o |         |    1.495|         |         |
+a/load_data_in[9]_AND_45_o |         |    1.495|         |         |
+b/load_data_in[0]_AND_63_o |         |    1.495|         |         |
+b/load_data_in[10]_AND_43_o|         |    1.495|         |         |
+b/load_data_in[11]_AND_41_o|         |    1.495|         |         |
+b/load_data_in[12]_AND_39_o|         |    1.495|         |         |
+b/load_data_in[13]_AND_37_o|         |    1.495|         |         |
+b/load_data_in[14]_AND_35_o|         |    1.495|         |         |
+b/load_data_in[15]_AND_33_o|         |    1.495|         |         |
+b/load_data_in[16]_AND_31_o|         |    1.495|         |         |
+b/load_data_in[17]_AND_29_o|         |    1.495|         |         |
+b/load_data_in[18]_AND_27_o|         |    1.495|         |         |
+b/load_data_in[19]_AND_25_o|         |    1.495|         |         |
+b/load_data_in[1]_AND_61_o |         |    1.495|         |         |
+b/load_data_in[20]_AND_23_o|         |    1.495|         |         |
+b/load_data_in[21]_AND_21_o|         |    1.495|         |         |
+b/load_data_in[22]_AND_19_o|         |    1.495|         |         |
+b/load_data_in[23]_AND_17_o|         |    1.495|         |         |
+b/load_data_in[24]_AND_15_o|         |    1.495|         |         |
+b/load_data_in[25]_AND_13_o|         |    1.495|         |         |
+b/load_data_in[26]_AND_11_o|         |    1.495|         |         |
+b/load_data_in[27]_AND_9_o |         |    1.495|         |         |
+b/load_data_in[28]_AND_7_o |         |    1.495|         |         |
+b/load_data_in[29]_AND_5_o |         |    1.495|         |         |
+b/load_data_in[2]_AND_59_o |         |    1.495|         |         |
+b/load_data_in[30]_AND_3_o |         |    1.495|         |         |
+b/load_data_in[31]_AND_1_o |         |    1.495|         |         |
+b/load_data_in[3]_AND_57_o |         |    1.495|         |         |
+b/load_data_in[4]_AND_55_o |         |    1.495|         |         |
+b/load_data_in[5]_AND_53_o |         |    1.495|         |         |
+b/load_data_in[6]_AND_51_o |         |    1.495|         |         |
+b/load_data_in[7]_AND_49_o |         |    1.495|         |         |
+b/load_data_in[8]_AND_47_o |         |    1.495|         |         |
+b/load_data_in[9]_AND_45_o |         |    1.495|         |         |
+clk                        |    1.746|         |         |         |
+---------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 20.91 secs
+ 
+--> 
+
+
+Total memory usage is 505032 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

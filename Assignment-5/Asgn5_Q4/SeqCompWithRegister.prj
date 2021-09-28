@@ -1,0 +1,3 @@
+verilog work "shiftregleft.v"
+verilog work "seqcomp.v"
+verilog work "seqcompwithreg.v"

@@ -1,0 +1,5 @@
+verilog work "shiftregleft.v"
+verilog work "seqcomp.v"
+verilog work "seqcompwithreg.v"
+verilog work "master_testbench.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

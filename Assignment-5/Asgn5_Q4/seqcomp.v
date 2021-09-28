@@ -9,13 +9,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module SequentialComparator(a_bit, b_bit, op, out, clk, rst);
 	input a_bit, b_bit, rst, clk, op;
-	output reg[2:0] out; // L-E-G signal in order
-	reg[1:0] next_state, present_state;
+	output reg [2:0] out; // L-E-G signal in order
+	reg [2:0] next_state, present_state;
 	
 	/** Machine Description:
 		- Input : a_bit, b_bit, next bits of A and B respectively from MSB to LSB.
-		- Type : Moore
-		- States : S0, S1, S2 representating A==B, A<B, A>B respectively.
+		- Type : Mealy
+		- States : S0, S1, S2 representating A==B (temp), A<B (temp), A>B (temp) respectively.
+				   : SFL, SFE, SFG representating A<B(final state), A==B(final state), A>B(final state) respectively.
 	*/
 	parameter S0 = 3'b000, S1 = 3'b001, S2 = 3'b010, SFE = 3'b011, SFL = 3'b100, SFG = 3'b110;
 	
@@ -73,7 +74,6 @@ module SequentialComparator(a_bit, b_bit, op, out, clk, rst);
 			out = 3'b001; // when in a final greater state, any input will give 001
 		else
 			out = 3'b000; // default
-			
 	end
 		
 endmodule
