@@ -1,0 +1,5 @@
+verilog work "mux2to1.v"
+verilog work "dff.v"
+verilog work "lfsr.v"
+verilog work "test_lfsr.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

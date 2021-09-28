@@ -1,0 +1,4 @@
+verilog work "two_compl.v"
+verilog work "shiftreg.v"
+verilog work "test_2scomplement.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

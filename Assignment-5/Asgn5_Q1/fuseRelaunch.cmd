@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/shared_xlnx/Asgn5_Q1/test_lfsr_isim_beh.exe" -prj "/home/ise/shared_xlnx/Asgn5_Q1/test_lfsr_beh.prj" "work.test_lfsr" "work.glbl" 

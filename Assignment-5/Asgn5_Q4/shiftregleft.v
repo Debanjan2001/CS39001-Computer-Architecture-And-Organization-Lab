@@ -13,7 +13,8 @@ module ShiftRegLeft(out, temp, data_in, clk, load);
 	output reg out;
 	output reg [31:0] temp;
 	
-	always @ (posedge clk) begin
+	// Left Shift Logic + Asynchronous Load
+	always @ (posedge clk or posedge load) begin
 		if(load) 
 			temp <= data_in;
 		else begin

@@ -1,63 +1,69 @@
 `timescale 1ns / 1ps
-
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Group:21
+// Members:  Debanjan Saha [19CS30014], Pritkumar Godhani [19CS10048]
+//  
+// Module Name: Testbench for Sequential Two's Complementor
+// Project Name: Assignment-5 Question 2
 //
-// Create Date:   19:34:54 09/26/2021
-// Design Name:   TwosComplementor
-// Module Name:   /home/ise/shared_xlnx/Asgn5_Q2/test_2scomplement.v
-// Project Name:  Asgn5_Q2
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: TwosComplementor
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 
 module test_2scomplement;
 
 	// Inputs
 	reg clk;
-	reg rst1, rst2;
-	reg [7:0] data1;
+	reg rst;
+	reg [15:0] data;
 	reg load;
-
+	reg on;
 	// Outputs
 	wire out_bit;
-	wire dout1;
+	wire serial_out;
+	wire [15:0] regtemp;
+	
+	// Result
+	reg [15:0] bitstring_out;
+	integer count = 1'd0;
 		
-	ShiftRegRight sr1(dout1, data1, clk, rst2, load);
+	ShiftRegRight sr1(serial_out, regtemp, data, clk, load);
 	
 	// Instantiate the Unit Under Test (UUT)
 	TwosComplementor uut (
-		.in_bit(dout1), 
+		.in_bit(serial_out), 
 		.out_bit(out_bit), 
 		.clk(clk), 
-		.rst(rst1)
+		.rst(rst)
 	);
+	// Start the clock
 	always #1 clk = ~clk;
-	always #2 $display("out-bit = %b", out_bit);
 	
+	// printing on negative edge to avoid transistional changes on the posedge
+	always @ (negedge clk)
+		if(on) begin
+			$display("ShiftReg: %b, Output = %b", regtemp, out_bit);
+			if(count > 0) begin
+				bitstring_out[count-1] = out_bit;
+				$display("Current 2's Complement [Accumulated Output Bits] = %b", bitstring_out);
+			end
+			count = count + 1'd1;
+		end
+		
 	initial begin
 		// Initialize Inputs
-		data1 = 8'b0;
-		clk = 1'b0;
-		rst1 = 1'b0;
-		rst2 = 1'b0;
+		clk = 0;
+		rst = 1'b0;
+		data = 16'b0;
 		load = 1'b0;
-
-		// Add stimulus here
+		on = 1'b0;
 		
-		#1 data1 = 8'b00100100; load = 1; rst1 = 1;
-		#5 load = 0; rst1 = 0;
+		// Load A, B into the shift register and keep resetting the FSM until the loading completes
+		#1 data = 16'b01011; load = 1'b1; rst = 1'b1;
+		// Once loading is completing start the FSM and put signal on to 1 to start printing
+		#5 load = 1'b0; rst = 1'b0; on = 1'b1;
+		
+		// once 16 bits are shifted finish the testing
+		#33 $finish;
+
 	end
       
 endmodule

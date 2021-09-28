@@ -1,21 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    06:35:45 09/26/2021 
-// Design Name: 
-// Module Name:    dff 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Group:21
+// Members: Pritkumar Godhani [19CS10048], Debanjan Saha [19CS30014] 
+//  
+// Module Name: D-Flip Flop [auxiliary module]
+// Project Name: Assignment-5 Question 1
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DFF(Q, D, CLK, RST);
