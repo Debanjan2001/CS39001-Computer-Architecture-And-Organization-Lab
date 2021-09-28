@@ -1,72 +1,62 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Group:21
+// Members: Pritkumar Godhani [19CS10048], Debanjan Saha [19CS30014] 
+//  
+// Module Name: Testbench for Multiple of Three Detector
+// Project Name: Assignment-5 Question 3
 //
-// Create Date:   21:00:04 09/26/2021
-// Design Name:   MultThreeDetector
-// Module Name:   /home/ise/shared_xlnx/Asgn5_Q3/test_mult3.v
-// Project Name:  Asgn5_Q3
-// Target Device:  
-// Tool versions:  
-// Description: Test Fixture Left for Q3.
-//
-// Verilog Test Fixture created by ISE for module: MultThreeDetector
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 
 module test_mult3;
 
 	// Inputs
-	reg in_bit;
 	reg clk;
-	reg rst1, rst2;
-	reg [7:0] data;
+	reg rst;
+	reg [15:0] data;
 	reg load;
 	reg on;
 
 	// Outputs
 	wire out_bit;
 	wire serial_out;
+	wire [15:0] reg_temp;
 	
-	ShiftRegLeft sreg(serial_out, data, clk, rst2, load);
+	// Instantiate the Left Shift Register to feed bits one by one
+	ShiftRegLeft sreg(serial_out, reg_temp, data, clk, load);
 	
 	// Instantiate the Unit Under Test (UUT)
 	MultThreeDetector uut (
 		.out_bit(out_bit), 
 		.in_bit(serial_out), 
 		.clk(clk), 
-		.rst(rst1)
+		.rst(rst)
 	);
+	
+	// Start the Clock
 	always #1 clk = ~clk;
+	
+	// Print the output of the FSM once signal on is active
 	always @(negedge clk) 
-		if(on) $display("output = %b", out_bit);
+		if(on) $display("register temp = %b, output = %b", reg_temp, out_bit);
 	
 	initial begin
 		// Initialize Inputs
 		on = 1'b0;
 		clk = 1'b0;
-		rst1 = 1'b0;
-		rst2 = 1'b0;
-		data = 8'b0;
+		rst = 1'b0;
+		data = 16'b0;
 		load = 1'b0;
 		
-		#1 data = 8'b00000011; load = 1'b1; rst1 = 1'b1;
-		#5 load = 1'b0; rst1 = 1'b0; 
+		// Load the input on the shift register, keep resetting the FSM before Shift Register finishes loading
+		#1 data = 16'b1111; load = 1'b1; rst = 1'b1;
 		
-		// started shifting, signal on is active so printing starts
-		#0.5 on = 1'b1;
-
+		// Once loaded, switch rst to 0 and FSM starts
+		#5 load = 1'b0; rst = 1'b0; on = 1'b1;
 
 		// finish after 8 bits have been shifted
-      #18 $finish;
+      #33 $finish;
 		// Add stimulus here
 
 	end

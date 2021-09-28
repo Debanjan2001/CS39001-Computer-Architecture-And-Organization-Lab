@@ -1,0 +1,34 @@
+ISim log file
+Running: /home/ise/shared_xlnx/Asgn5_Q3/test_mult3_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/Asgn5_Q3/test_mult3_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+register temp = 0000000000001111, output = x
+register temp = 0000000000011110, output = 1
+register temp = 0000000000111100, output = 1
+register temp = 0000000001111000, output = 1
+register temp = 0000000011110000, output = 1
+register temp = 0000000111100000, output = 1
+register temp = 0000001111000000, output = 1
+register temp = 0000011110000000, output = 1
+register temp = 0000111100000000, output = 1
+register temp = 0001111000000000, output = 1
+register temp = 0011110000000000, output = 1
+register temp = 0111100000000000, output = 1
+register temp = 1111000000000000, output = 1
+register temp = 1110000000000000, output = 0
+register temp = 1100000000000000, output = 1
+register temp = 1000000000000000, output = 0
+register temp = 0000000000000000, output = 1
+Stopped at time : 39 ns : File "/home/ise/shared_xlnx/Asgn5_Q3/test_mult3.v" Line 59
+# exit 0

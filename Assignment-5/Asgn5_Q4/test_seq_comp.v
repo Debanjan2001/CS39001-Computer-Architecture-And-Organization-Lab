@@ -1,26 +1,12 @@
 `timescale 1ns / 1ps
-
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Group:21
+// Members:  Debanjan Saha [19CS30014], Pritkumar Godhani [19CS10048] 
+//  
+// Module Name: Testbench for SequentialComparator
+// Project Name: Assignment-5 Question 4
 //
-// Create Date:   07:23:44 09/27/2021
-// Design Name:   SequentialComparator
-// Module Name:   /home/ise/shared_xlnx/Asgn5_Q4/test_seq_comp.v
-// Project Name:  Asgn5_Q4
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: SequentialComparator
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 
 module test_seq_comp;
 
@@ -28,47 +14,50 @@ module test_seq_comp;
 	reg clk;
 	reg rst;
 	reg rst2;
-	reg [7:0] data1, data2;
+	reg [31:0] A, B;
 	reg load;
 	reg on;
 
 	// Outputs
 	wire [2:0] out;
-	wire dout1, dout2;
+	wire A_out, B_out;
+	wire [31:0] regtemp_A, regtemp_B;
 	
-	ShiftRegLeft a(dout1, data1, clk, rst2, load);
-	ShiftRegLeft b(dout2, data2, clk, rst2, load);
+	// Instantiate the Shift Register for A and B
+	ShiftRegLeft a(A_out, regtemp_A, A, clk, load);
+	ShiftRegLeft b(B_out, regtemp_B, B, clk, load);
 
 	// Instantiate the Unit Under Test (UUT)
 	SequentialComparator uut (
-		.a_bit(dout1), 
-		.b_bit(dout2), 
+		.a_bit(A_out), 
+		.b_bit(B_out), 
 		.out(out), 
 		.clk(clk), 
 		.rst(rst)
 	);
+	// start the clock
 	always #1 clk = ~clk;
+
+	// printing on negative edge to avoid transistional changes on the posedge
 	always @ (negedge clk)
-		if(on) $display("LEG = %b", out);
+		if(on) $display("ShiftRegA: %b, ShiftRegB: %b, L-E-G = %b",regtemp_A, regtemp_B, out);
+		
 	initial begin
 		// Initialize Inputs
 		clk = 0;
 		rst = 1'b0;
-		rst2 = 1'b0;
-		data1 = 8'b0;
-		data2 = 8'b0;
+		A = 32'b0;
+		B = 32'b0;
 		load = 1'b0;
 		on = 1'b0;
 		
-
-		// Wait 100 ns for global reset to finish
-		#1 data1 = 8'b00001001; data2 = 8'b00001011; load = 1'b1; rst = 1'b1;
-		#5 load = 1'b0; rst = 1'b0; 
-		#0.5 on = 1'b1;
+		// Load A, B into the shift register and keep resetting the FSM until the loading completes
+		#1 A = 32'b11001; B = 32'b01011; load = 1'b1; rst = 1'b1;
+		// Once loading is completing start the FSM and put signal on to 1 to start printing
+		#5 load = 1'b0; rst = 1'b0; on = 1'b1;
 		
-		
-       
-		#20 $finish;
+		// once 32 bits are shifted finish the testing
+		#65 $finish;
 
 	end
       
