@@ -80,13 +80,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1632819491" xil_pn:in_ck="-3082518069685102791" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1632819491">
+    <transform xil_pn:end_ts="1632834506" xil_pn:in_ck="-3082518069685102791" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1632834506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="dff.v"/>
       <outfile xil_pn:name="mux2to1.v"/>
       <outfile xil_pn:name="seqcomp.v"/>
@@ -105,40 +101,30 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1632819491" xil_pn:in_ck="-3082518069685102791" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1632819491">
+    <transform xil_pn:end_ts="1632834506" xil_pn:in_ck="-3082518069685102791" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1632834506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="dff.v"/>
       <outfile xil_pn:name="mux2to1.v"/>
       <outfile xil_pn:name="seqcomp.v"/>
       <outfile xil_pn:name="shiftregleft.v"/>
       <outfile xil_pn:name="test_seq_comp.v"/>
     </transform>
-    <transform xil_pn:end_ts="1632819495" xil_pn:in_ck="-3082518069685102791" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6512643837682876969" xil_pn:start_ts="1632819491">
+    <transform xil_pn:end_ts="1632834510" xil_pn:in_ck="-3082518069685102791" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6512643837682876969" xil_pn:start_ts="1632834506">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_seq_comp_beh.prj"/>
       <outfile xil_pn:name="test_seq_comp_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1632819495" xil_pn:in_ck="6204775365865009253" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-305295446849331380" xil_pn:start_ts="1632819495">
+    <transform xil_pn:end_ts="1632834511" xil_pn:in_ck="6204775365865009253" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-305295446849331380" xil_pn:start_ts="1632834510">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_seq_comp_isim_beh.wdb"/>
@@ -174,7 +160,9 @@
     <transform xil_pn:end_ts="1632825392" xil_pn:in_ck="-281068420845586273" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="4938112562993403435" xil_pn:start_ts="1632825371">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SequentialComparator.lso"/>
       <outfile xil_pn:name="SequentialComparator.ngc"/>
@@ -195,6 +183,7 @@
     <transform xil_pn:end_ts="1632825432" xil_pn:in_ck="-4609772138690900455" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2639001241365004191" xil_pn:start_ts="1632825413">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="SequentialComparator.bld"/>
       <outfile xil_pn:name="SequentialComparator.ngd"/>
       <outfile xil_pn:name="SequentialComparator_ngdbuild.xrpt"/>
@@ -205,6 +194,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="SequentialComparator.pcf"/>
       <outfile xil_pn:name="SequentialComparator_map.map"/>
       <outfile xil_pn:name="SequentialComparator_map.mrp"/>
@@ -218,6 +208,7 @@
     <transform xil_pn:end_ts="1632825597" xil_pn:in_ck="-3851034022975612365" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1632825493">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="SequentialComparator.ncd"/>
       <outfile xil_pn:name="SequentialComparator.pad"/>
       <outfile xil_pn:name="SequentialComparator.par"/>
@@ -232,6 +223,7 @@
     <transform xil_pn:end_ts="1632825597" xil_pn:in_ck="-4609772138690900586" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1632825556">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="SequentialComparator.twr"/>
       <outfile xil_pn:name="SequentialComparator.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

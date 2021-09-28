@@ -15,6 +15,7 @@ module test_seq_comp;
 	reg rst;
 	reg rst2;
 	reg [31:0] A, B;
+	reg op;
 	reg load;
 	reg on;
 
@@ -31,6 +32,7 @@ module test_seq_comp;
 	SequentialComparator uut (
 		.a_bit(A_out), 
 		.b_bit(B_out), 
+		.op(op),
 		.out(out), 
 		.clk(clk), 
 		.rst(rst)
@@ -40,7 +42,7 @@ module test_seq_comp;
 
 	// printing on negative edge to avoid transistional changes on the posedge
 	always @ (negedge clk)
-		if(on) $display("ShiftRegA: %b, ShiftRegB: %b, L-E-G = %b",regtemp_A, regtemp_B, out);
+		if(on) $display("ShiftRegA: %b, ShiftRegB: %b, OP = %b, L-E-G = %b", regtemp_A, regtemp_B, op, out);
 		
 	initial begin
 		// Initialize Inputs
@@ -50,16 +52,18 @@ module test_seq_comp;
 		B = 32'b0;
 		load = 1'b0;
 		on = 1'b0;
+		op = 1'b0;
 		
 		// Load A, B into the shift register and keep resetting the FSM until the loading completes
 		#1 A = 32'b11001; B = 32'b01011; load = 1'b1; rst = 1'b1;
 		// Once loading is completing start the FSM and put signal on to 1 to start printing
-		#5 load = 1'b0; rst = 1'b0; on = 1'b1;
+		#5 load = 1'b0; rst = 1'b0; on = 1'b1; op = 1'b0;
 		
 		// once 32 bits are shifted finish the testing
-		#65 $finish;
+		#64 op = 1'b1; on = 1'b0; 
+		#1 $display("All 32 bits shifted. OP = %b. FINAL L-E-G: %b", op ,out);
+		#1 $finish;
 
 	end
       
 endmodule
-
