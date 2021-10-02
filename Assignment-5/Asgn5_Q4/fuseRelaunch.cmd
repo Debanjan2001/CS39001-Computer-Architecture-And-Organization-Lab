@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/shared_xlnx/Asgn5_Q4/master_testbench_isim_beh.exe" -prj "/home/ise/shared_xlnx/Asgn5_Q4/master_testbench_beh.prj" "work.master_testbench" "work.glbl" 

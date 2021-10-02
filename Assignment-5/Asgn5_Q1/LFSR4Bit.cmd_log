@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q1/LFSR4Bit.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q1/LFSR4Bit.syr" 

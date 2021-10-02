@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q2/TwosComplementor.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q2/TwosComplementor.syr" 

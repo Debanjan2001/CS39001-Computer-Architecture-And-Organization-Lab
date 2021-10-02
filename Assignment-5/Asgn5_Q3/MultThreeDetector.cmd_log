@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q3/MultThreeDetector.syr" 

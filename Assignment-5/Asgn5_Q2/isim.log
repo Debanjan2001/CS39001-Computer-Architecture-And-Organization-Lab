@@ -1,0 +1,50 @@
+ISim log file
+Running: /home/ise/shared_xlnx/Asgn5_Q2/test_2scomplement_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/Asgn5_Q2/test_2scomplement_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ShiftReg: 0000000000001011, Output = x
+ShiftReg: 0000000000000101, Output = 1
+Current bitstr = xxxxxxxxxxxxxxx1
+ShiftReg: 0000000000000010, Output = 0
+Current bitstr = xxxxxxxxxxxxxx01
+ShiftReg: 0000000000000001, Output = 1
+Current bitstr = xxxxxxxxxxxxx101
+ShiftReg: 0000000000000000, Output = 0
+Current bitstr = xxxxxxxxxxxx0101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxxxxxxxx10101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxxxxxxx110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxxxxxx1110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxxxxx11110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxxxx111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxxx1111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxxx11111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxxx111111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xxx1111111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = xx11111111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = x111111111110101
+ShiftReg: 0000000000000000, Output = 1
+Current bitstr = 1111111111110101
+Stopped at time : 39 ns : File "/home/ise/shared_xlnx/Asgn5_Q2/test_2scomplement.v" Line 79
+# exit 0

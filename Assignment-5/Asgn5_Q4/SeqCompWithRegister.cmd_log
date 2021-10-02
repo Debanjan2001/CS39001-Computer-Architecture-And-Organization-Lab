@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.xst" -ofn "/home/ise/shared_xlnx/Asgn5_Q4/SeqCompWithRegister.syr" 
