@@ -4,7 +4,10 @@ module booth_mult (
 
     input [7:0] multiplicand, multiplier;
     output reg [15:0] result;
-    input clk, rst, start;
+    input clk, rst;
+    
+    // whether to start the computation or not.
+    input start;
 
     // Denotes whether module is active and computing product or not.
     output reg active;
@@ -22,11 +25,11 @@ module booth_mult (
     // count of how many bits read so far.
     reg [3:0] count;
 
+    // what is the state '10' or '01'
     reg [1:0] state;
     reg [7:0] temp;
 
     always @(posedge clk or posedge rst) begin
-        $display("count = %d, A = %b, Q = %b, M = %b, start=%d, state=%b",count, A, Q, M, start, state);
         if(rst) begin
             active <= 1'b0;
             result <= 16'b0; 
@@ -45,33 +48,31 @@ module booth_mult (
             Q <= multiplier;
             Q_prev <= 1'b0;
             M <= multiplicand;
-            state <= 2'b0;
         end
 
         else if(active) begin
             state = {Q[0], Q_prev};
             case (state)
                 2'b10: begin
-                    temp = A + (~M) + 1'b1;
-                    {A, Q, Q_prev} = {temp[7], temp, Q};
+                    // QQ_prev =  10
+                    temp = A + (~M) + 1'b1;   // A - M is equivalent to adding 2's compliment of M
+                    {A, Q, Q_prev} <= {temp[7], temp, Q};
                 end
                 2'b01:begin
-                     temp = A + M;
-                    {A, Q, Q_prev} = {temp[7], temp, Q};
+                    // QQ_prev =  01
+                    temp = A + M;  
+                    {A, Q, Q_prev} <= {temp[7], temp, Q};
                 end
                    
                 default: begin
-                    {A, Q, Q_prev} = {A[7], A, Q};   
+                    // QQ_prev =  11 or 00 
+                    {A, Q, Q_prev} <= {A[7], A, Q};   
                 end
-
             endcase
-            // Q_prev = Q[0];
-            // Q = {A[0],Q[7:1]};
-            // A = {A[7],A[7:1]};
-            count = count - 1; 
+
+            count <= count - 1; 
             active <= (count > 0);
             result <= {A,Q};
-
         end
     end
     
@@ -105,17 +106,19 @@ module booth_tb();
     initial begin
         clk = 1'b0;
         rst = 1'b0;
-        multiplier = 6;
-        multiplicand = -4;
+        multiplier = 1;
+        multiplicand = -5;
+
+        $display("Multiplier = %b, Multiplicand = %b",multiplier, multiplicand );
         start = 1'b0;
 
         // load into module
         #1 rst = 1'b1;
         
-        // see the power of module.
+        // module starts product computation now.
         #1 rst = 1'b0;
         #1 start = 1'b1;
-        #1 start = 0;
+        #1 start = 1'b0;
 
         #20 $finish; 
     end
