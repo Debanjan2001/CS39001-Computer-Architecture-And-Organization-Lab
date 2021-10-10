@@ -24,7 +24,7 @@
 static const char *ng0 = "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v";
 static const char *ng1 = "Product = %b, IsActive = %b";
 static unsigned int ng2[] = {0U, 0U};
-static int ng3[] = {6, 0};
+static int ng3[] = {2, 0};
 static int ng4[] = {4, 0};
 static const char *ng5 = "Multiplier = %b, Multiplicand = %b \n";
 static unsigned int ng6[] = {1U, 0U};

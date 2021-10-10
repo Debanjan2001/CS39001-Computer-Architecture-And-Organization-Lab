@@ -4,3 +4,12 @@ map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off BoothMultWithShiftReg_map.ncd BoothMultWithShiftReg.ncd BoothMultWithShiftReg.pcf 
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml BoothMultWithShiftReg.twx BoothMultWithShiftReg.ncd -o BoothMultWithShiftReg.twr BoothMultWithShiftReg.pcf 
 xst -intstyle ise -ifn "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.xst" -ofn "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 BoothMultWithShiftReg.ngc BoothMultWithShiftReg.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o BoothMultWithShiftReg_map.ncd BoothMultWithShiftReg.ngd BoothMultWithShiftReg.pcf 
+par -w -intstyle ise -ol high -mt off BoothMultWithShiftReg_map.ncd BoothMultWithShiftReg.ncd BoothMultWithShiftReg.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml BoothMultWithShiftReg.twx BoothMultWithShiftReg.ncd -o BoothMultWithShiftReg.twr BoothMultWithShiftReg.pcf 
+xst -intstyle ise -ifn "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.xst" -ofn "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 BoothMultWithShiftReg.ngc BoothMultWithShiftReg.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o BoothMultWithShiftReg_map.ncd BoothMultWithShiftReg.ngd BoothMultWithShiftReg.pcf 
+par -w -intstyle ise -ol high -mt off BoothMultWithShiftReg_map.ncd BoothMultWithShiftReg.ncd BoothMultWithShiftReg.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml BoothMultWithShiftReg.twx BoothMultWithShiftReg.ncd -o BoothMultWithShiftReg.twr BoothMultWithShiftReg.pcf 

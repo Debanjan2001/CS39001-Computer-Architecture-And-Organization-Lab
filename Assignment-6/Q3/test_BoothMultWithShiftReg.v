@@ -49,7 +49,7 @@ module test_BoothMultWithShiftReg;
         start = 1'b0;
 
         // Set the Multiplier and Multiplicand
-        multiplier = 6;
+        multiplier = 2;
         multiplicand = -4;
 
         // Sanity Check 
