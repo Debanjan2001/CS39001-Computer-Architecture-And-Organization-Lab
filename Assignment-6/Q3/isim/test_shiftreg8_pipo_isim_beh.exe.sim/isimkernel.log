@@ -1,0 +1,29 @@
+Command line:
+   test_shiftreg8_pipo_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  48305
+
+Sun Oct 10 11:41:02 2021
+
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 184.23 Meg
+
+ Total Signals          : 18
+ Total Nets             : 32
+ Total Signal Drivers   : 10
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 139
+Total Line Count : 35
+
+ Total Simulation Time: 0.08 sec
+
+ Current Memory Usage: 259.731 Meg
+
+Sun Oct 10 11:42:38 2021
+

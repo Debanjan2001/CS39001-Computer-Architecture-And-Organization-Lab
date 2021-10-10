@@ -1,0 +1,5 @@
+verilog isim_temp "shiftreg8_pipo.v"
+verilog isim_temp "BoothMultiplier.v"
+verilog isim_temp "BoothMultWithShiftReg.v"
+verilog isim_temp "test_BoothMultWithShiftReg.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,31 @@
+ISim log file
+Running: /home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Multiplier = 00000110, Multiplicand = 11111100 
+
+Finished circuit initialization process.
+Product = xxxxxxxxxxxxxxxx, IsActive = x
+Product = 0000000000000000, IsActive = 0
+Product = 0000000000000000, IsActive = 0
+Product = 0000000000000000, IsActive = 0
+Product = 0000000000000000, IsActive = 1
+Product = 0000000000000110, IsActive = 1
+Product = 0000000000000011, IsActive = 1
+Product = 0000001000000001, IsActive = 1
+Product = 0000000100000000, IsActive = 1
+Product = 1111111010000000, IsActive = 1
+Product = 1111111101000000, IsActive = 1
+Product = 1111111110100000, IsActive = 1
+Product = 1111111111010000, IsActive = 1
+Product = 1111111111101000, IsActive = 0
+Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
+# exit 0
