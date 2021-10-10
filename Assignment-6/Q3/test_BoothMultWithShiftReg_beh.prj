@@ -1,0 +1,5 @@
+verilog work "shiftreg8_pipo.v"
+verilog work "BoothMultiplier.v"
+verilog work "BoothMultWithShiftReg.v"
+verilog work "test_BoothMultWithShiftReg.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

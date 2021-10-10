@@ -1,0 +1,448 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: BoothMultWithShiftReg.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BoothMultWithShiftReg.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BoothMultWithShiftReg"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : BoothMultWithShiftReg
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/bob/Desktop/coa-lab/Assignment-6/Q3/shiftreg8_pipo.v" into library work
+Parsing module <shiftreg8_pipo>.
+Analyzing Verilog file "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultiplier.v" into library work
+Parsing module <BoothMultiplier>.
+Analyzing Verilog file "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.v" into library work
+Parsing module <BoothMultWithShiftReg>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <BoothMultWithShiftReg>.
+
+Elaborating module <shiftreg8_pipo>.
+
+Elaborating module <BoothMultiplier>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <BoothMultWithShiftReg>.
+    Related source file is "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.v".
+    Summary:
+	no macro.
+Unit <BoothMultWithShiftReg> synthesized.
+
+Synthesizing Unit <shiftreg8_pipo>.
+    Related source file is "/home/bob/Desktop/coa-lab/Assignment-6/Q3/shiftreg8_pipo.v".
+    Found 8-bit register for signal <out>.
+    Found 8-bit register for signal <temp>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shiftreg8_pipo> synthesized.
+
+Synthesizing Unit <BoothMultiplier>.
+    Related source file is "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultiplier.v".
+    Found 16-bit register for signal <result>.
+    Found 4-bit register for signal <count>.
+    Found 8-bit register for signal <A>.
+    Found 8-bit register for signal <Q>.
+    Found 8-bit register for signal <M>.
+    Found 1-bit register for signal <Q_prev>.
+    Found 1-bit register for signal <active>.
+    Found 4-bit subtractor for signal <count[3]_GND_3_o_sub_11_OUT> created at line 97.
+    Found 8-bit adder for signal <n0073> created at line 75.
+    Found 8-bit adder for signal <A[7]_GND_3_o_add_2_OUT> created at line 75.
+    Found 8-bit adder for signal <A[7]_M[7]_add_3_OUT> created at line 82.
+    Found 4-bit comparator greater for signal <GND_3_o_count[3]_LessThan_10_o> created at line 96
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <BoothMultiplier> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 11
+ 1-bit register                                        : 2
+ 16-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 7
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BoothMultiplier>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <BoothMultiplier> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit adder carry in                                  : 1
+# Counters                                             : 1
+ 4-bit down counter                                    : 1
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <A_6> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <A_7> 
+INFO:Xst:2261 - The FF/Latch <result_0> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <Q_prev> 
+
+Optimizing unit <BoothMultWithShiftReg> ...
+
+Optimizing unit <shiftreg8_pipo> ...
+
+Optimizing unit <BoothMultiplier> ...
+INFO:Xst:2261 - The FF/Latch <result_14> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <result_15> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BoothMultWithShiftReg, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : BoothMultWithShiftReg.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 101
+#      GND                         : 1
+#      LUT2                        : 49
+#      LUT3                        : 9
+#      LUT4                        : 1
+#      LUT5                        : 3
+#      LUT6                        : 7
+#      MUXCY                       : 14
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 75
+#      FDC                         : 16
+#      FDCE                        : 59
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 36
+#      IBUF                        : 19
+#      OBUF                        : 17
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              75  out of  126800     0%  
+ Number of Slice LUTs:                   69  out of  63400     0%  
+    Number used as Logic:                69  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     93
+   Number with an unused Flip Flop:      18  out of     93    19%  
+   Number with an unused LUT:            24  out of     93    25%  
+   Number of fully used LUT-FF pairs:    51  out of     93    54%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          37
+ Number of bonded IOBs:                  37  out of    210    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 75    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.006ns (Maximum Frequency: 332.723MHz)
+   Minimum input arrival time before clock: 1.392ns
+   Maximum output required time after clock: 0.930ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.006ns (frequency: 332.723MHz)
+  Total number of paths / destination ports: 327 / 94
+-------------------------------------------------------------------------
+Delay:               3.006ns (Levels of Logic = 10)
+  Source:            BMULT_0/A_0 (FF)
+  Destination:       BMULT_0/A_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: BMULT_0/A_0 to BMULT_0/A_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.478   0.556  BMULT_0/A_0 (BMULT_0/A_0)
+     LUT2:I0->O            1   0.124   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_lut<0> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<0> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<1> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<2> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<3> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<4> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<5> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<5>)
+     MUXCY:CI->O           0   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<6> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<6>)
+     XORCY:CI->O           1   0.510   0.536  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_xor<7> (BMULT_0/A[7]_M[7]_add_3_OUT<7>)
+     LUT6:I4->O            1   0.124   0.000  BMULT_0/A[7]_GND_3_o_mux_17_OUT<6>21 (BMULT_0/A[7]_GND_3_o_mux_17_OUT<6>)
+     FDCE:D                    0.030          BMULT_0/A_6
+    ----------------------------------------
+    Total                      3.006ns (1.914ns logic, 1.092ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 201 / 201
+-------------------------------------------------------------------------
+Offset:              1.392ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       BMULT_0/count_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: start to BMULT_0/count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   0.001   0.576  start_IBUF (start_IBUF)
+     LUT2:I1->O           35   0.124   0.552  BMULT_0/_n0080_inv1 (BMULT_0/_n0080_inv)
+     FDCE:CE                   0.139          BMULT_0/A_0
+    ----------------------------------------
+    Total                      1.392ns (0.264ns logic, 1.128ns route)
+                                       (19.0% logic, 81.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              0.930ns (Levels of Logic = 1)
+  Source:            BMULT_0/result_0 (FF)
+  Destination:       product<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: BMULT_0/result_0 to product<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.478   0.452  BMULT_0/result_0 (BMULT_0/result_0)
+     OBUF:I->O                 0.000          product_0_OBUF (product<0>)
+    ----------------------------------------
+    Total                      0.930ns (0.478ns logic, 0.452ns route)
+                                       (51.4% logic, 48.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.006|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.66 secs
+ 
+--> 
+
+
+Total memory usage is 494172 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

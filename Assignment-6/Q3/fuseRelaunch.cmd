@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.exe" -prj "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg_beh.prj" "work.test_BoothMultWithShiftReg" "work.glbl" 

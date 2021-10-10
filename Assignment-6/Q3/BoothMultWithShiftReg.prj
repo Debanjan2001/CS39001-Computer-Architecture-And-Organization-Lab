@@ -1,0 +1,3 @@
+verilog work "shiftreg8_pipo.v"
+verilog work "BoothMultiplier.v"
+verilog work "BoothMultWithShiftReg.v"
