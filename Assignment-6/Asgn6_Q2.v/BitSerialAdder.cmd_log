@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn6_Q2.v/BitSerialAdder.xst" -ofn "/home/ise/shared_xlnx/Asgn6_Q2.v/BitSerialAdder.syr" 

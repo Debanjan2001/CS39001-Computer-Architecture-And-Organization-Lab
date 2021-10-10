@@ -1,0 +1,2 @@
+verilog work "mux2to1.v"
+verilog work "barrel_shifter.v"

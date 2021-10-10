@@ -1,0 +1,5 @@
+verilog work "shiftregout.v"
+verilog work "shiftreg.v"
+verilog work "full_adder.v"
+verilog work "dff.v"
+verilog work "serial_adder.v"

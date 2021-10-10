@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/Asgn6_Q1/BarrelShifter.xst" -ofn "/home/ise/shared_xlnx/Asgn6_Q1/BarrelShifter.syr" 

@@ -1,0 +1,28 @@
+Command line:
+   test_bitserialadder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  39379
+
+Sat Oct  9 17:00:17 2021
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 198.586 Meg
+
+ Total Signals          : 54
+ Total Nets             : 66
+ Total Signal Drivers   : 23
+ Total Blocks           : 8
+ Total Primitive Blocks : 6
+ Total Processes        : 31
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 193
+
+ Total Simulation Time: 0.07 sec
+
+ Current Memory Usage: 276.185 Meg
+
+Sat Oct  9 17:00:56 2021
+
