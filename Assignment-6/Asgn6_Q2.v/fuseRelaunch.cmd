@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder_isim_beh.exe" -prj "/home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder_beh.prj" "work.test_bitserialadder" "work.glbl" 

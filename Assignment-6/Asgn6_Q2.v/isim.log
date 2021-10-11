@@ -1,0 +1,114 @@
+ISim log file
+Running: /home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+clk = 0, ShiftRegisterA = xxxxxxxx, ShiftRegisterB = xxxxxxxx, Carry Out = x, Sum = xxxxxxxx
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = xxxxxxxx
+Loading...
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = xxxxxxxx
+clk = 1, ShiftRegisterA = 10000000, ShiftRegisterB = 00000001, Carry Out = 0, Sum = 00000000
+clk = 0, ShiftRegisterA = 10000000, ShiftRegisterB = 00000001, Carry Out = 0, Sum = 00000000
+Loading Done
+clk = 1, ShiftRegisterA = 01000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = x0000000
+clk = 0, ShiftRegisterA = 01000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = x0000000
+clk = 1, ShiftRegisterA = 00100000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 1x000000
+clk = 0, ShiftRegisterA = 00100000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 1x000000
+clk = 1, ShiftRegisterA = 00010000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 01x00000
+clk = 0, ShiftRegisterA = 00010000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 01x00000
+clk = 1, ShiftRegisterA = 00001000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 001x0000
+clk = 0, ShiftRegisterA = 00001000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 001x0000
+clk = 1, ShiftRegisterA = 00000100, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 0001x000
+clk = 0, ShiftRegisterA = 00000100, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 0001x000
+clk = 1, ShiftRegisterA = 00000010, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 00001x00
+clk = 0, ShiftRegisterA = 00000010, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 00001x00
+clk = 1, ShiftRegisterA = 00000001, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 000001x0
+clk = 0, ShiftRegisterA = 00000001, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 000001x0
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 0000001x
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 0000001x
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 10000001
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = 10000001
+Stopped at time : 46 ns : File "/home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder.v" Line 71
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+clk = 0, ShiftRegisterA = xxxxxxxx, ShiftRegisterB = xxxxxxxx, Carry Out = x, Sum = xxxxxxxx
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = xxxxxxxx
+Loading...
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = xxxxxxxx
+clk = 1, ShiftRegisterA = 11111111, ShiftRegisterB = 00000001, Carry Out = 0, Sum = 00000000
+clk = 0, ShiftRegisterA = 11111111, ShiftRegisterB = 00000001, Carry Out = 0, Sum = 00000000
+Loading Done
+clk = 1, ShiftRegisterA = 01111111, ShiftRegisterB = 00000000, Carry Out = 0, Sum = x0000000
+clk = 0, ShiftRegisterA = 01111111, ShiftRegisterB = 00000000, Carry Out = 0, Sum = x0000000
+clk = 1, ShiftRegisterA = 00111111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0x000000
+clk = 0, ShiftRegisterA = 00111111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0x000000
+clk = 1, ShiftRegisterA = 00011111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 00x00000
+clk = 0, ShiftRegisterA = 00011111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 00x00000
+clk = 1, ShiftRegisterA = 00001111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 000x0000
+clk = 0, ShiftRegisterA = 00001111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 000x0000
+clk = 1, ShiftRegisterA = 00000111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0000x000
+clk = 0, ShiftRegisterA = 00000111, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0000x000
+clk = 1, ShiftRegisterA = 00000011, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 00000x00
+clk = 0, ShiftRegisterA = 00000011, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 00000x00
+clk = 1, ShiftRegisterA = 00000001, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 000000x0
+clk = 0, ShiftRegisterA = 00000001, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 000000x0
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0000000x
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0000000x
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 00000000
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 00000000
+Stopped at time : 46 ns : File "/home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder.v" Line 71
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+clk = 0, ShiftRegisterA = xxxxxxxx, ShiftRegisterB = xxxxxxxx, Carry Out = x, Sum = xxxxxxxx
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = xxxxxxxx
+Loading...
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 0, Sum = xxxxxxxx
+clk = 1, ShiftRegisterA = 11001101, ShiftRegisterB = 11000100, Carry Out = 0, Sum = 00000000
+clk = 0, ShiftRegisterA = 11001101, ShiftRegisterB = 11000100, Carry Out = 0, Sum = 00000000
+Loading Done
+clk = 1, ShiftRegisterA = 01100110, ShiftRegisterB = 01100010, Carry Out = 0, Sum = x0000000
+clk = 0, ShiftRegisterA = 01100110, ShiftRegisterB = 01100010, Carry Out = 0, Sum = x0000000
+clk = 1, ShiftRegisterA = 00110011, ShiftRegisterB = 00110001, Carry Out = 0, Sum = 1x000000
+clk = 0, ShiftRegisterA = 00110011, ShiftRegisterB = 00110001, Carry Out = 0, Sum = 1x000000
+clk = 1, ShiftRegisterA = 00011001, ShiftRegisterB = 00011000, Carry Out = 0, Sum = 01x00000
+clk = 0, ShiftRegisterA = 00011001, ShiftRegisterB = 00011000, Carry Out = 0, Sum = 01x00000
+clk = 1, ShiftRegisterA = 00001100, ShiftRegisterB = 00001100, Carry Out = 1, Sum = 001x0000
+clk = 0, ShiftRegisterA = 00001100, ShiftRegisterB = 00001100, Carry Out = 1, Sum = 001x0000
+clk = 1, ShiftRegisterA = 00000110, ShiftRegisterB = 00000110, Carry Out = 1, Sum = 0001x000
+clk = 0, ShiftRegisterA = 00000110, ShiftRegisterB = 00000110, Carry Out = 1, Sum = 0001x000
+clk = 1, ShiftRegisterA = 00000011, ShiftRegisterB = 00000011, Carry Out = 0, Sum = 10001x00
+clk = 0, ShiftRegisterA = 00000011, ShiftRegisterB = 00000011, Carry Out = 0, Sum = 10001x00
+clk = 1, ShiftRegisterA = 00000001, ShiftRegisterB = 00000001, Carry Out = 0, Sum = 010001x0
+clk = 0, ShiftRegisterA = 00000001, ShiftRegisterB = 00000001, Carry Out = 0, Sum = 010001x0
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0010001x
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 0010001x
+clk = 1, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 10010001
+clk = 0, ShiftRegisterA = 00000000, ShiftRegisterB = 00000000, Carry Out = 1, Sum = 10010001
+Stopped at time : 46 ns : File "/home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder.v" Line 71
+# exit 0

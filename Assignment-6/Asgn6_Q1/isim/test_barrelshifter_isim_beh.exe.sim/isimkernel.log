@@ -1,0 +1,28 @@
+Command line:
+   test_barrelshifter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  41311
+
+Thu Oct  7 13:08:23 2021
+
+
+ Elaboration Time: 0.12 sec
+
+ Current Memory Usage: 198.853 Meg
+
+ Total Signals          : 142
+ Total Nets             : 72
+ Total Signal Drivers   : 55
+ Total Blocks           : 43
+ Total Primitive Blocks : 41
+ Total Processes        : 97
+ Total Traceable Variables  : 61
+ Total Scalar Nets and Variables : 204
+
+ Total Simulation Time: 0.13 sec
+
+ Current Memory Usage: 276.451 Meg
+
+Thu Oct  7 13:08:49 2021
+
