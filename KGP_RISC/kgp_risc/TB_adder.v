@@ -20,7 +20,7 @@ module TB_adder;
 
 	// Outputs
 	wire [31:0] sum;
-	wire cout;
+	wire cout, of;
 
 	// Instantiate the Unit Under Test (UUT)
 	Adder uut (
@@ -28,7 +28,8 @@ module TB_adder;
 		.B(B), 
 		.sum(sum), 
 		.cin(cin), 
-		.cout(cout)
+		.cout(cout),
+		.of(of)
 	);
 
 	initial begin
@@ -36,10 +37,11 @@ module TB_adder;
 		A = 32'b0;
 		B = 32'b0;
 		cin = 1'b0;
-		$monitor("A=%b, B=%b, CarryIn=%b, CarryOut=%b, Sum=%b", A, B, cin, cout, sum);
+		$monitor("A=%b, B=%b, CarryIn=%b, CarryOut=%b, Sum=%b, Overflow=%b", A, B, cin, cout, sum, of);
 		#100;
 		#1 A = 32'b11001100110010011100110011001001; B = 32'b00110010011100110011100111001001; cin = 1'b0;
-		#5 #1 A = 32'b11001100110010011100110011001001; B = 32'b11110010011100110011100111001001; cin = 1'b0;
+		#5 A = 32'b11001100110010011100110011001001; B = 32'b11110010011100110011100111001001; cin = 1'b0;
+		#6 A = 32'b01111100110010011100110011001001; B = 32'b01110010011100110011100111001001; cin = 1'b0;
 		#10 $finish;
 
 	end

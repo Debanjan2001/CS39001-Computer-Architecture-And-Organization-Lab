@@ -1,0 +1,28 @@
+Command line:
+   TB_logicshifter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  45240
+
+Mon Nov  8 01:06:47 2021
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 198.578 Meg
+
+ Total Signals          : 18
+ Total Nets             : 110
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 11
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 255
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 276.177 Meg
+
+Mon Nov  8 01:07:20 2021
+

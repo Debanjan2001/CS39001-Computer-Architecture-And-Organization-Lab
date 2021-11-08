@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_adder_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_adder_isim_beh.wdb 
+Running: /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -13,8 +13,31 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-A=00000000000000000000000000000000, B=00000000000000000000000000000000, CarryIn=0, CarryOut=0, Sum=00000000000000000000000000000000
-A=11001100110010011100110011001001, B=00110010011100110011100111001001, CarryIn=0, CarryOut=0, Sum=11111111001111010000011010010010
-A=11001100110010011100110011001001, B=11110010011100110011100111001001, CarryIn=0, CarryOut=1, Sum=10111111001111010000011010010010
-Stopped at time : 117 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_adder.v" Line 43
+A = 00000000000000000000000000000000, B = 00000000000000000000000000000000, Res = 00000000000000000000000000000000, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 1, negFlag = 0, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111111001111010000011010010010, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11001101100011001100011000110111, OP = 001, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 01100110010011100110011001001000, OP = 100, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 11111001100110010011100110011001, OP = 101, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 00000000010000010000100011001001, OP = 010, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111110101110101111010100000000, OP = 011, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+Stopped at time : 164 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu.v" Line 80
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+A = 00000000000000000000000000000000, B = 00000000000000000000000000000000, Res = 00000000000000000000000000000000, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 1, negFlag = 0, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111111001111010000011010010010, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11001101100011001100011000110111, OP = 001, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 01100110010011100110011001001000, OP = 100, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 00011001100110010011100110011001, OP = 100, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 11111001100110010011100110011001, OP = 101, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 00000000010000010000100011001001, OP = 010, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111110101110101111010100000000, OP = 011, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
+Stopped at time : 164 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu.v" Line 80
 # exit 0

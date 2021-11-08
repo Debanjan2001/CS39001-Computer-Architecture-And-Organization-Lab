@@ -2,27 +2,27 @@ Command line:
    TB_adder_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49454
+     -socket  45420
 
-Mon Nov  8 00:39:07 2021
+Mon Nov  8 09:28:19 2021
 
 
- Elaboration Time: 0.05 sec
+ Elaboration Time: 0.04 sec
 
- Current Memory Usage: 198.574 Meg
+ Current Memory Usage: 198.578 Meg
 
- Total Signals          : 20
- Total Nets             : 111
- Total Signal Drivers   : 10
+ Total Signals          : 19
+ Total Nets             : 112
+ Total Signal Drivers   : 11
  Total Blocks           : 3
  Total Primitive Blocks : 2
- Total Processes        : 11
- Total Traceable Variables  : 21
- Total Scalar Nets and Variables : 256
+ Total Processes        : 14
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 292
 
  Total Simulation Time: 0.05 sec
 
- Current Memory Usage: 276.173 Meg
+ Current Memory Usage: 276.177 Meg
 
-Mon Nov  8 00:39:22 2021
+Mon Nov  8 09:28:35 2021
 

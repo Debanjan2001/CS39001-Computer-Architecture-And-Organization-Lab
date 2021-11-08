@@ -1,0 +1,7 @@
+verilog work "twoscomplement.v"
+verilog work "logicshifter.v"
+verilog work "arithmeticshifter.v"
+verilog work "adder.v"
+verilog work "alu.v"
+verilog work "TB_alu.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
