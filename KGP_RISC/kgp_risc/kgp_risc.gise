@@ -22,13 +22,22 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="kgp_risc.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_adder_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_adder_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TB_adder_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_adder_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_alu_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_alu_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TB_alu_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_alu_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_arithshift_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_arithshift_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_logicshifter_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_logicshifter_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TB_twoscomp_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TB_twoscomp_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
   </files>
 
@@ -36,35 +45,39 @@
     <transform xil_pn:end_ts="1636331850" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1636331850">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
-    <transform xil_pn:end_ts="1636331936" xil_pn:in_ck="-930133167814868355" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1636331936">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="TB_adder.v"/>
-      <outfile xil_pn:name="adder.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1636331850" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5385539480613195724" xil_pn:start_ts="1636331850">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1636331850" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3724332969024039914" xil_pn:start_ts="1636331850">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1636331850" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2210664456318563355" xil_pn:start_ts="1636331850">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1636331872" xil_pn:in_ck="-930133167814868355" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1636331872">
+    <transform xil_pn:end_ts="1636363834" xil_pn:in_ck="-326535179935913715" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1636363834">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TB_adder.v"/>
+      <outfile xil_pn:name="TB_alu.v"/>
+      <outfile xil_pn:name="TB_arithshift.v"/>
+      <outfile xil_pn:name="TB_logicshifter.v"/>
+      <outfile xil_pn:name="TB_twoscomp.v"/>
       <outfile xil_pn:name="adder.v"/>
+      <outfile xil_pn:name="alu.v"/>
+      <outfile xil_pn:name="arithmeticshifter.v"/>
+      <outfile xil_pn:name="logicshifter.v"/>
+      <outfile xil_pn:name="twoscomplement.v"/>
     </transform>
-    <transform xil_pn:end_ts="1636331878" xil_pn:in_ck="-930133167814868355" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1728204005040684601" xil_pn:start_ts="1636331872">
+    <transform xil_pn:end_ts="1636363746" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4085849225819207058" xil_pn:start_ts="1636363746">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636363746" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3090971444458133108" xil_pn:start_ts="1636363746">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1636363691" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4046463402058801603" xil_pn:start_ts="1636363691">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1636363835" xil_pn:in_ck="-326535179935913715" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1636363834">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -72,20 +85,41 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TB_adder_beh.prj"/>
-      <outfile xil_pn:name="TB_adder_isim_beh.exe"/>
+      <outfile xil_pn:name="TB_adder.v"/>
+      <outfile xil_pn:name="TB_alu.v"/>
+      <outfile xil_pn:name="TB_arithshift.v"/>
+      <outfile xil_pn:name="TB_logicshifter.v"/>
+      <outfile xil_pn:name="TB_twoscomp.v"/>
+      <outfile xil_pn:name="adder.v"/>
+      <outfile xil_pn:name="alu.v"/>
+      <outfile xil_pn:name="arithmeticshifter.v"/>
+      <outfile xil_pn:name="logicshifter.v"/>
+      <outfile xil_pn:name="twoscomplement.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1636363839" xil_pn:in_ck="-326535179935913715" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9040736994848592629" xil_pn:start_ts="1636363835">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TB_alu_beh.prj"/>
+      <outfile xil_pn:name="TB_alu_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1636331878" xil_pn:in_ck="2809242849340959524" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4385710134395752682" xil_pn:start_ts="1636331878">
+    <transform xil_pn:end_ts="1636363839" xil_pn:in_ck="5426213562495587947" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2029070787693212078" xil_pn:start_ts="1636363839">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TB_adder_isim_beh.wdb"/>
+      <outfile xil_pn:name="TB_alu_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
   </transforms>
 
