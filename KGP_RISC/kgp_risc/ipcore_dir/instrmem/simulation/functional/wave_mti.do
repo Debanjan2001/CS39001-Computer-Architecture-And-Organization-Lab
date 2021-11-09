@@ -11,7 +11,6 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 
       add wave -noupdate /instrmem_tb/status
-      add wave -noupdate /instrmem_tb/instrmem_synth_inst/bmg_port/RSTA
       add wave -noupdate /instrmem_tb/instrmem_synth_inst/bmg_port/CLKA
       add wave -noupdate /instrmem_tb/instrmem_synth_inst/bmg_port/ADDRA
       add wave -noupdate /instrmem_tb/instrmem_synth_inst/bmg_port/DOUTA

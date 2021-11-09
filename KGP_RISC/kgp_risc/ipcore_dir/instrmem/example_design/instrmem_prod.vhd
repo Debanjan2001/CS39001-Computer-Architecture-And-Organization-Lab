@@ -78,12 +78,12 @@
 --    C_FAMILY                    :  artix7 
 --    C_XDEVICEFAMILY             :  artix7 
 --    C_INTERFACE_TYPE            :  0 
---    C_ENABLE_32BIT_ADDRESS      :  1 
+--    C_ENABLE_32BIT_ADDRESS      :  0 
 --    C_AXI_TYPE                  :  1 
 --    C_AXI_SLAVE_TYPE            :  0 
 --    C_AXI_ID_WIDTH              :  4 
 --    C_MEM_TYPE                  :  3 
---    C_BYTE_SIZE                 :  8 
+--    C_BYTE_SIZE                 :  9 
 --    C_ALGORITHM                 :  1 
 --    C_PRIM_TYPE                 :  1 
 --    C_LOAD_INIT_FILE            :  1 
@@ -91,7 +91,7 @@
 --    C_USE_DEFAULT_DATA          :  0 
 --    C_DEFAULT_DATA              :  0 
 --    C_RST_TYPE                  :  SYNC 
---    C_HAS_RSTA                  :  1 
+--    C_HAS_RSTA                  :  0 
 --    C_RST_PRIORITY_A            :  CE 
 --    C_RSTRAM_A                  :  0 
 --    C_INITA_VAL                 :  0 
@@ -102,9 +102,9 @@
 --    C_WRITE_MODE_A              :  WRITE_FIRST 
 --    C_WRITE_WIDTH_A             :  32 
 --    C_READ_WIDTH_A              :  32 
---    C_WRITE_DEPTH_A             :  32 
---    C_READ_DEPTH_A              :  32 
---    C_ADDRA_WIDTH               :  32 
+--    C_WRITE_DEPTH_A             :  1024 
+--    C_READ_DEPTH_A              :  1024 
+--    C_ADDRA_WIDTH               :  10 
 --    C_HAS_RSTB                  :  0 
 --    C_RST_PRIORITY_B            :  CE 
 --    C_RSTRAM_B                  :  0 
@@ -116,9 +116,9 @@
 --    C_WRITE_MODE_B              :  WRITE_FIRST 
 --    C_WRITE_WIDTH_B             :  32 
 --    C_READ_WIDTH_B              :  32 
---    C_WRITE_DEPTH_B             :  32 
---    C_READ_DEPTH_B              :  32 
---    C_ADDRB_WIDTH               :  32 
+--    C_WRITE_DEPTH_B             :  1024 
+--    C_READ_DEPTH_B              :  1024 
+--    C_ADDRB_WIDTH               :  10 
 --    C_HAS_MEM_OUTPUT_REGS_A     :  0 
 --    C_HAS_MEM_OUTPUT_REGS_B     :  0 
 --    C_HAS_MUX_OUTPUT_REGS_A     :  0 
@@ -157,7 +157,7 @@ ENTITY instrmem_prod IS
     ENA        : IN STD_LOGIC;  --optional port
     REGCEA     : IN STD_LOGIC;  --optional port
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     DINA       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     DOUTA      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -167,7 +167,7 @@ ENTITY instrmem_prod IS
     ENB        : IN STD_LOGIC;  --optional port
     REGCEB     : IN STD_LOGIC;  --optional port
     WEB        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRB      : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    ADDRB      : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     DINB       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     DOUTB      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -176,7 +176,7 @@ ENTITY instrmem_prod IS
     INJECTDBITERR  : IN STD_LOGIC; --optional port
     SBITERR        : OUT STD_LOGIC; --optional port
     DBITERR        : OUT STD_LOGIC; --optional port
-    RDADDRECC      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0); --optional port
+    RDADDRECC      : OUT STD_LOGIC_VECTOR(9 DOWNTO 0); --optional port
  -- AXI BMG Input and Output Port Declarations
 
     -- AXI Global Signals
@@ -218,7 +218,7 @@ ENTITY instrmem_prod IS
     S_AXI_INJECTDBITERR            : IN  STD_LOGIC;
     S_AXI_SBITERR                  : OUT STD_LOGIC;
     S_AXI_DBITERR                  : OUT STD_LOGIC;
-    S_AXI_RDADDRECC                : OUT STD_LOGIC_VECTOR(31  DOWNTO 0);
+    S_AXI_RDADDRECC                : OUT STD_LOGIC_VECTOR(9  DOWNTO 0);
     S_ARESETN                      : IN  STD_LOGIC
 
 
@@ -231,14 +231,13 @@ ARCHITECTURE xilinx OF instrmem_prod IS
 
   COMPONENT instrmem_exdes IS
   PORT (
-
       --Port A
-    RSTA           : IN STD_LOGIC;  --opt port
-    ADDRA          : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
   
     DOUTA          : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 
     CLKA       : IN STD_LOGIC
+
 
 
 
@@ -249,14 +248,13 @@ BEGIN
 
   bmg0 : instrmem_exdes
     PORT MAP (
-
       --Port A
-      RSTA       => RSTA,
       ADDRA      => ADDRA,
   
       DOUTA      => DOUTA,
 
       CLKA       => CLKA
+
 
 
       );

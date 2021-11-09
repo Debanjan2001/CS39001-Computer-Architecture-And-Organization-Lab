@@ -54,7 +54,6 @@
 wcfg new
 isim set radix hex
 wave add /instrmem_tb/status
-      wave add  /instrmem_tb/instrmem_synth_inst/BMG_PORT/RSTA
       wave add  /instrmem_tb/instrmem_synth_inst/BMG_PORT/CLKA
       wave add  /instrmem_tb/instrmem_synth_inst/BMG_PORT/ADDRA
       wave add  /instrmem_tb/instrmem_synth_inst/BMG_PORT/DOUTA

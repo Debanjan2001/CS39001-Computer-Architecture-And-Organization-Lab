@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/instrmem.v"
+verilog work "TB_imem.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

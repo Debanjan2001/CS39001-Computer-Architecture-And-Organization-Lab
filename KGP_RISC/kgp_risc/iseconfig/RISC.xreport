@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-11-09T07:56:03</DateModified>
+  <DateModified>2021-11-09T17:29:11</DateModified>
   <ModuleName>RISC</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/iseconfig/RISC.xreport</SavedFilePath>

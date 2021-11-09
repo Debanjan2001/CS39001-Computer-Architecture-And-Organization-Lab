@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_isim_beh.wdb 
+Running: /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -7,37 +7,132 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 
 ----------------------------------------------------------------------
 This is a Full version of ISim.
+WARNING:  For instance dpath/regToWrite/, width 32 of formal port A is not equal to width 5 of actual constant.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 48.  For instance dpath/regToWrite/, width 32 of formal port B is not equal to width 5 of actual signal RS.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 43.  For instance dpath/regToWrite/, width 32 of formal port out is not equal to width 5 of actual signal writeReg.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 49.  For instance dpath/immSelect/, width 32 of formal port A is not equal to width 16 of actual signal IMM_LS.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 49.  For instance dpath/immSelect/, width 32 of formal port B is not equal to width 16 of actual signal IMM_I.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 63.  For instance dpath/immSelect/, width 32 of formal port out is not equal to width 16 of actual signal imm.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 48.  For instance dpath/firstALUIn/, width 32 of formal port A is not equal to width 5 of actual signal RT.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 48.  For instance dpath/firstALUIn/, width 32 of formal port B is not equal to width 5 of actual signal RS.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 48.  For instance dpath/secondALUIn/, width 32 of formal port A is not equal to width 5 of actual signal RT.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 84.  For instance dpath/dmem/, width 32 of formal port dina is not equal to width 1 of actual signal readRegData1.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 78.  For instance dpath/dmem/, width 32 of formal port douta is not equal to width 1 of actual signal memReadData.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 78.  For instance dpath/memDataWrite/, width 32 of formal port A is not equal to width 1 of actual signal memReadData.
+WARNING: File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 48.  For instance dpath/nextinstr/, width 32 of formal port regData is not equal to width 5 of actual signal RS.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module TB_Master.uut.dpath.imem.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module TB_Master.uut.dpath.dmem.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+branch = xxx
+regAddr1 =  x, regAddr2 =  x
+regAddr1 =  0, regAddr2 =  0
 Finished circuit initialization process.
-A = 00000000000000000000000000000000, B = 00000000000000000000000000000000, Res = 00000000000000000000000000000000, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 1, negFlag = 0, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111111001111010000011010010010, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11001101100011001100011000110111, OP = 001, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 01100110010011100110011001001000, OP = 100, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 11111001100110010011100110011001, OP = 101, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 00000000010000010000100011001001, OP = 010, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111110101110101111010100000000, OP = 011, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-Stopped at time : 164 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu.v" Line 80
-ISim P.20131013 (signature 0xfbc00daa)
-----------------------------------------------------------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
-
-
-----------------------------------------------------------------------
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-A = 00000000000000000000000000000000, B = 00000000000000000000000000000000, Res = 00000000000000000000000000000000, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 1, negFlag = 0, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111111001111010000011010010010, OP = 000, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11001101100011001100011000110111, OP = 001, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 01100110010011100110011001001000, OP = 100, cin = 0, dir = 0, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 00011001100110010011100110011001, OP = 100, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00000000000000000000000000000011, Res = 11111001100110010011100110011001, OP = 101, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 00000000010000010000100011001001, OP = 010, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-A = 11001100110010011100110011001001, B = 00110010011100110011100111001001, Res = 11111110101110101111010100000000, OP = 011, cin = 0, dir = 1, carryFlag = 0, zeroFlag = 0, negFlag = 1, overflowFlag = 0
-Stopped at time : 164 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu.v" Line 80
-# exit 0
+branch = 000
+regAddr1 = 28, regAddr2 =  0
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
+branch = 010
