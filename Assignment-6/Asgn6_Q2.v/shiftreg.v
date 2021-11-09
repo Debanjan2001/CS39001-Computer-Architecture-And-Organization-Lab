@@ -1,21 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    13:12:42 10/07/2021 
-// Design Name: 
-// Module Name:    shiftreg 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Group:21
+// Members:  Pritkumar Godhani [19CS10048],  Debanjan Saha [19CS30014]
+//  
+// Module Name: Parallel In Serial Out Shift Register module
+// Project Name: Assignment-6 Question 1
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ShiftRegPISO(out, data, in, clk, load, rst);

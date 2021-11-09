@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: BoothMultWithShiftReg.prj
@@ -108,11 +108,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bob/Desktop/coa-lab/Assignment-6/Q3/shiftreg8_pipo.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/shiftreg8_pipo.v" into library work
 Parsing module <shiftreg8_pipo>.
-Analyzing Verilog file "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultiplier.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/BoothMultiplier.v" into library work
 Parsing module <BoothMultiplier>.
-Analyzing Verilog file "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/BoothMultWithShiftReg.v" into library work
 Parsing module <BoothMultWithShiftReg>.
 
 =========================================================================
@@ -130,39 +130,38 @@ Elaborating module <BoothMultiplier>.
 =========================================================================
 
 Synthesizing Unit <BoothMultWithShiftReg>.
-    Related source file is "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultWithShiftReg.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/BoothMultWithShiftReg.v".
     Summary:
 	no macro.
 Unit <BoothMultWithShiftReg> synthesized.
 
 Synthesizing Unit <shiftreg8_pipo>.
-    Related source file is "/home/bob/Desktop/coa-lab/Assignment-6/Q3/shiftreg8_pipo.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/shiftreg8_pipo.v".
     Found 8-bit register for signal <out>.
     Found 8-bit register for signal <temp>.
     Summary:
 	inferred  16 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
 Unit <shiftreg8_pipo> synthesized.
 
 Synthesizing Unit <BoothMultiplier>.
-    Related source file is "/home/bob/Desktop/coa-lab/Assignment-6/Q3/BoothMultiplier.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/BoothMultiplier.v".
     Found 16-bit register for signal <result>.
     Found 4-bit register for signal <count>.
     Found 8-bit register for signal <A>.
     Found 8-bit register for signal <Q>.
-    Found 8-bit register for signal <M>.
     Found 1-bit register for signal <Q_prev>.
+    Found 8-bit register for signal <M>.
     Found 1-bit register for signal <active>.
-    Found 4-bit subtractor for signal <count[3]_GND_3_o_sub_11_OUT> created at line 97.
-    Found 8-bit adder for signal <n0073> created at line 75.
-    Found 8-bit adder for signal <A[7]_GND_3_o_add_2_OUT> created at line 75.
-    Found 8-bit adder for signal <A[7]_M[7]_add_3_OUT> created at line 82.
-    Found 4-bit comparator greater for signal <GND_3_o_count[3]_LessThan_10_o> created at line 96
+    Found 4-bit subtractor for signal <count[3]_GND_3_o_sub_12_OUT> created at line 97.
+    Found 8-bit adder for signal <n0080> created at line 75.
+    Found 8-bit adder for signal <A[7]_GND_3_o_add_3_OUT> created at line 75.
+    Found 8-bit adder for signal <A[7]_M[7]_add_4_OUT> created at line 82.
+    Found 4-bit comparator greater for signal <GND_3_o_count[3]_LessThan_11_o> created at line 96
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  46 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred   6 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 Unit <BoothMultiplier> synthesized.
 
 =========================================================================
@@ -179,11 +178,8 @@ Macro Statistics
  8-bit register                                        : 7
 # Comparators                                          : 1
  4-bit comparator greater                              : 1
-# Multiplexers                                         : 8
- 1-bit 2-to-1 multiplexer                              : 2
- 16-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 4
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -209,25 +205,23 @@ Macro Statistics
  Flip-Flops                                            : 74
 # Comparators                                          : 1
  4-bit comparator greater                              : 1
-# Multiplexers                                         : 7
- 1-bit 2-to-1 multiplexer                              : 2
- 16-bit 2-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 4
+# Multiplexers                                         : 1
+ 8-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <Q_prev> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <result_0> 
 INFO:Xst:2261 - The FF/Latch <A_6> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <A_7> 
-INFO:Xst:2261 - The FF/Latch <result_0> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <Q_prev> 
+INFO:Xst:2261 - The FF/Latch <result_14> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <result_15> 
 
 Optimizing unit <BoothMultWithShiftReg> ...
 
 Optimizing unit <shiftreg8_pipo> ...
 
 Optimizing unit <BoothMultiplier> ...
-INFO:Xst:2261 - The FF/Latch <result_14> in Unit <BoothMultiplier> is equivalent to the following FF/Latch, which will be removed : <result_15> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -263,19 +257,20 @@ Top Level Output File Name         : BoothMultWithShiftReg.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 101
+# BELS                             : 73
 #      GND                         : 1
-#      LUT2                        : 49
-#      LUT3                        : 9
+#      INV                         : 1
+#      LUT2                        : 21
+#      LUT3                        : 8
 #      LUT4                        : 1
-#      LUT5                        : 3
-#      LUT6                        : 7
+#      LUT5                        : 7
+#      LUT6                        : 3
 #      MUXCY                       : 14
 #      VCC                         : 1
 #      XORCY                       : 16
 # FlipFlops/Latches                : 75
-#      FDC                         : 16
-#      FDCE                        : 59
+#      FDR                         : 18
+#      FDRE                        : 57
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 36
@@ -290,15 +285,15 @@ Selected Device : 7a100tcsg324-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:              75  out of  126800     0%  
- Number of Slice LUTs:                   69  out of  63400     0%  
-    Number used as Logic:                69  out of  63400     0%  
+ Number of Slice LUTs:                   41  out of  63400     0%  
+    Number used as Logic:                41  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     93
-   Number with an unused Flip Flop:      18  out of     93    19%  
-   Number with an unused LUT:            24  out of     93    25%  
-   Number of fully used LUT-FF pairs:    51  out of     93    54%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:     94
+   Number with an unused Flip Flop:      19  out of     94    20%  
+   Number with an unused LUT:            53  out of     94    56%  
+   Number of fully used LUT-FF pairs:    22  out of     94    23%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          37
@@ -340,8 +335,8 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 3.006ns (Maximum Frequency: 332.723MHz)
-   Minimum input arrival time before clock: 1.392ns
-   Maximum output required time after clock: 0.930ns
+   Minimum input arrival time before clock: 1.859ns
+   Maximum output required time after clock: 0.936ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -351,7 +346,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 3.006ns (frequency: 332.723MHz)
-  Total number of paths / destination ports: 327 / 94
+  Total number of paths / destination ports: 329 / 92
 -------------------------------------------------------------------------
 Delay:               3.006ns (Levels of Logic = 10)
   Source:            BMULT_0/A_0 (FF)
@@ -363,60 +358,60 @@ Delay:               3.006ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             4   0.478   0.556  BMULT_0/A_0 (BMULT_0/A_0)
-     LUT2:I0->O            1   0.124   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_lut<0> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_lut<0>)
-     MUXCY:S->O            1   0.472   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<0> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<0>)
-     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<1> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<1>)
-     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<2> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<2>)
-     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<3> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<3>)
-     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<4> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<4>)
-     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<5> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<5>)
-     MUXCY:CI->O           0   0.029   0.000  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<6> (BMULT_0/Madd_A[7]_M[7]_add_3_OUT_cy<6>)
-     XORCY:CI->O           1   0.510   0.536  BMULT_0/Madd_A[7]_M[7]_add_3_OUT_xor<7> (BMULT_0/A[7]_M[7]_add_3_OUT<7>)
-     LUT6:I4->O            1   0.124   0.000  BMULT_0/A[7]_GND_3_o_mux_17_OUT<6>21 (BMULT_0/A[7]_GND_3_o_mux_17_OUT<6>)
-     FDCE:D                    0.030          BMULT_0/A_6
+     FDRE:C->Q             4   0.478   0.556  BMULT_0/A_0 (BMULT_0/A_0)
+     LUT2:I0->O            1   0.124   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_lut<0> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<0> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<1> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<2> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<3> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<4> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<5> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<5>)
+     MUXCY:CI->O           0   0.029   0.000  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<6> (BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_cy<6>)
+     XORCY:CI->O           1   0.510   0.536  BMULT_0/Madd_A[7]_GND_3_o_add_3_OUT_Madd_xor<7> (BMULT_0/A[7]_GND_3_o_add_3_OUT<7>)
+     LUT5:I3->O            1   0.124   0.000  BMULT_0/Q[0]_A[7]_select_9_OUT<0>1 (BMULT_0/Q[0]_A[7]_select_9_OUT<7>)
+     FDRE:D                    0.030          BMULT_0/A_6
     ----------------------------------------
     Total                      3.006ns (1.914ns logic, 1.092ns route)
                                        (63.7% logic, 36.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 201 / 201
+  Total number of paths / destination ports: 197 / 155
 -------------------------------------------------------------------------
-Offset:              1.392ns (Levels of Logic = 2)
-  Source:            start (PAD)
-  Destination:       BMULT_0/count_3 (FF)
+Offset:              1.859ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       BMULT_0/count_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: start to BMULT_0/count_3
+  Data Path: rst to BMULT_0/count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            44   0.001   0.576  start_IBUF (start_IBUF)
-     LUT2:I1->O           35   0.124   0.552  BMULT_0/_n0080_inv1 (BMULT_0/_n0080_inv)
-     FDCE:CE                   0.139          BMULT_0/A_0
+     IBUF:I->O            37   0.001   0.690  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           25   0.124   0.550  BMULT_0/Mcount_count_val1 (BMULT_0/Mcount_count_val)
+     FDRE:R                    0.494          BMULT_0/count_0
     ----------------------------------------
-    Total                      1.392ns (0.264ns logic, 1.128ns route)
-                                       (19.0% logic, 81.0% route)
+    Total                      1.859ns (0.619ns logic, 1.240ns route)
+                                       (33.3% logic, 66.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Offset:              0.930ns (Levels of Logic = 1)
-  Source:            BMULT_0/result_0 (FF)
+Offset:              0.936ns (Levels of Logic = 1)
+  Source:            BMULT_0/Q_prev (FF)
   Destination:       product<0> (PAD)
   Source Clock:      clk rising
 
-  Data Path: BMULT_0/result_0 to product<0>
+  Data Path: BMULT_0/Q_prev to product<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             9   0.478   0.452  BMULT_0/result_0 (BMULT_0/result_0)
+     FDRE:C->Q            10   0.478   0.458  BMULT_0/Q_prev (BMULT_0/Q_prev)
      OBUF:I->O                 0.000          product_0_OBUF (product<0>)
     ----------------------------------------
-    Total                      0.930ns (0.478ns logic, 0.452ns route)
-                                       (51.4% logic, 48.6% route)
+    Total                      0.936ns (0.478ns logic, 0.458ns route)
+                                       (51.1% logic, 48.9% route)
 
 =========================================================================
 
@@ -434,13 +429,13 @@ clk            |    3.006|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.66 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.08 secs
  
 --> 
 
 
-Total memory usage is 494172 kilobytes
+Total memory usage is 601852 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

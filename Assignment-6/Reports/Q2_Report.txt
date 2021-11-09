@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: BitSerialAdder.prj
@@ -108,15 +108,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/shared_xlnx/Asgn6_Q2.v/shiftregout.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/shiftregout.v" into library work
 Parsing module <ShiftRegSIPO>.
-Analyzing Verilog file "/home/ise/shared_xlnx/Asgn6_Q2.v/shiftreg.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/shiftreg.v" into library work
 Parsing module <ShiftRegPISO>.
-Analyzing Verilog file "/home/ise/shared_xlnx/Asgn6_Q2.v/full_adder.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/full_adder.v" into library work
 Parsing module <FullAdder>.
-Analyzing Verilog file "/home/ise/shared_xlnx/Asgn6_Q2.v/dff.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/dff.v" into library work
 Parsing module <DFF>.
-Analyzing Verilog file "/home/ise/shared_xlnx/Asgn6_Q2.v/serial_adder.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/serial_adder.v" into library work
 Parsing module <BitSerialAdder>.
 
 =========================================================================
@@ -138,13 +138,13 @@ Elaborating module <DFF>.
 =========================================================================
 
 Synthesizing Unit <BitSerialAdder>.
-    Related source file is "/home/ise/shared_xlnx/Asgn6_Q2.v/serial_adder.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/serial_adder.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <BitSerialAdder> synthesized.
 
 Synthesizing Unit <ShiftRegPISO>.
-    Related source file is "/home/ise/shared_xlnx/Asgn6_Q2.v/shiftreg.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/shiftreg.v".
     Found 1-bit register for signal <out>.
     Found 8-bit register for signal <data>.
     Summary:
@@ -153,20 +153,19 @@ Synthesizing Unit <ShiftRegPISO>.
 Unit <ShiftRegPISO> synthesized.
 
 Synthesizing Unit <ShiftRegSIPO>.
-    Related source file is "/home/ise/shared_xlnx/Asgn6_Q2.v/shiftregout.v".
-WARNING:Xst:647 - Input <load> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/shiftregout.v".
     Found 8-bit register for signal <out>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <ShiftRegSIPO> synthesized.
 
 Synthesizing Unit <FullAdder>.
-    Related source file is "/home/ise/shared_xlnx/Asgn6_Q2.v/full_adder.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/full_adder.v".
     Summary:
 Unit <FullAdder> synthesized.
 
 Synthesizing Unit <DFF>.
-    Related source file is "/home/ise/shared_xlnx/Asgn6_Q2.v/dff.v".
+    Related source file is "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/dff.v".
     Found 1-bit register for signal <Q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -323,7 +322,7 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 1.362ns (Maximum Frequency: 734.214MHz)
-   Minimum input arrival time before clock: 1.818ns
+   Minimum input arrival time before clock: 1.791ns
    Maximum output required time after clock: 0.891ns
    Maximum combinational path delay: No path found
 
@@ -357,7 +356,7 @@ Delay:               1.362ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 87 / 48
 -------------------------------------------------------------------------
-Offset:              1.818ns (Levels of Logic = 2)
+Offset:              1.791ns (Levels of Logic = 2)
   Source:            load (PAD)
   Destination:       b/data_7 (FF)
   Destination Clock: clk rising
@@ -366,12 +365,12 @@ Offset:              1.818ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            28   0.001   0.688  load_IBUF (load_IBUF)
+     IBUF:I->O            20   0.001   0.661  load_IBUF (load_IBUF)
      LUT2:I0->O           18   0.124   0.511  b/_n00121 (b/_n0012)
      FDR:R                     0.494          b/data_0
     ----------------------------------------
-    Total                      1.818ns (0.619ns logic, 1.199ns route)
-                                       (34.1% logic, 65.9% route)
+    Total                      1.791ns (0.619ns logic, 1.172ns route)
+                                       (34.6% logic, 65.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -408,15 +407,15 @@ clk            |    1.362|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 16.77 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 16.65 secs
  
 --> 
 
 
-Total memory usage is 600888 kilobytes
+Total memory usage is 601476 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

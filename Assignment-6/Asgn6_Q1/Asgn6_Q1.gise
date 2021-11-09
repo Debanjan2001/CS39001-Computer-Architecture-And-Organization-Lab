@@ -29,6 +29,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="BarrelShifter.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="BarrelShifter.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="BarrelShifter.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="BarrelShifter_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="BarrelShifter_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="BarrelShifter_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -53,6 +54,10 @@
     <transform xil_pn:end_ts="1633612079" xil_pn:in_ck="7414920517718470084" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1633612079">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="barrel_shifter.v"/>
       <outfile xil_pn:name="mux2to1.v"/>
       <outfile xil_pn:name="test_barrelshifter.v"/>
@@ -72,6 +77,11 @@
     <transform xil_pn:end_ts="1633612093" xil_pn:in_ck="7414920517718470084" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1633612093">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="barrel_shifter.v"/>
       <outfile xil_pn:name="mux2to1.v"/>
       <outfile xil_pn:name="test_barrelshifter.v"/>
@@ -79,7 +89,10 @@
     <transform xil_pn:end_ts="1633612098" xil_pn:in_ck="7414920517718470084" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3449833438741180565" xil_pn:start_ts="1633612093">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
@@ -90,6 +103,7 @@
     <transform xil_pn:end_ts="1633612098" xil_pn:in_ck="-5184009137531594021" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1876799519205504216" xil_pn:start_ts="1633612098">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -124,7 +138,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1633815645" xil_pn:in_ck="-285681262197535980" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5458146649179055067" xil_pn:start_ts="1633815623">
+    <transform xil_pn:end_ts="1633819349" xil_pn:in_ck="-285681262197535980" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5458146649179055067" xil_pn:start_ts="1633819328">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BarrelShifter.lso"/>
