@@ -24,16 +24,12 @@ Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 66: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 74: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 5-bit.
-WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 87: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 1-bit.
 WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 58: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 5-bit.
-WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 75: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 5-bit.
 WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 84: Size mismatch in connection of port <dina>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 85: Size mismatch in connection of port <douta>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 89: Size mismatch in connection of port <regData>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 92: Size mismatch in connection of port <regData>. Formal port size is 32-bit while actual signal size is 5-bit.
 Completed static elaboration
-Fuse Memory Usage: 97156 KB
-Fuse CPU Usage: 1420 ms
+Fuse Memory Usage: 97152 KB
+Fuse CPU Usage: 1740 ms
 Compiling module PC
 Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
 Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
@@ -63,6 +59,6 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 26 Verilog Units
 Built simulation executable /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master_isim_beh.exe
-Fuse Memory Usage: 103500 KB
-Fuse CPU Usage: 1780 ms
-GCC CPU Usage: 3120 ms
+Fuse Memory Usage: 103496 KB
+Fuse CPU Usage: 2180 ms
+GCC CPU Usage: 3970 ms

@@ -51,19 +51,19 @@ module TB_datamem;
 		addra = 0;
 		dina = 0;
 
-		#100
+		#20
 		addra = 10'b1;
 		
-		#100
+		#20
 		wea = 1'b1;
 		addra = 10'b10;
 		dina = 32'b101;
 		
-		#100
+		#20
 		wea = 1'b0;
 		addra = 10'b100;
 		
-		#100
+		#20
 		wea = 1'b0;
 		addra = 10'b10;
         

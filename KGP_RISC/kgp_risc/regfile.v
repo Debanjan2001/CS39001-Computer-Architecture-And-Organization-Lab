@@ -35,7 +35,7 @@ module RegFile(
 	integer i;
 
 	always @(posedge clk or posedge rst) begin
-		regBank[0] = 32'b0;
+		regBank[0] = 32'd0;
 		if(rst) begin
 			for(i=0;i<32;i=i+1)
 				regBank[i] = 32'd0;
@@ -56,14 +56,15 @@ module RegFile(
 			regData1 = regBank[regAddr1];
 		end
 
-		if(regAddr2 >= 32 ) begin
+		if(regAddr2 >= 32) begin
 			regData2 = 32'hXXXXXXXX;
 		end
 		else begin
 			regData2 = regBank[regAddr2];
 		end
 		
-		$display("regAddr1 = %d, regAddr2 = %d", regAddr1, regAddr2);
+		//$display("regAddr1 = %d, regAddr2 = %d", regAddr1, regAddr2);
+		//$display("resOut = %b", regBank[12]);
 	end
 
 	

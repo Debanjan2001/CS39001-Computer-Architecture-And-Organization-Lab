@@ -8,16 +8,16 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;instrmem&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;DataMem&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;instrmem&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;DataMem&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;instrmem&apos;...</arg>
+<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;DataMem&apos;...</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/ipcore_dir/tmp/_cg/instrmem/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/ipcore_dir/tmp/_cg/DataMem/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
 </msg>
 
 <msg type="info" file="sim" num="949" delta="old" >Finished generation of ASY schematic symbol.

@@ -27,9 +27,9 @@ module RISC(CLK, RST, resOut, PC);
 	wire [4:0] opcode, funccode;
 	wire [31:0] instrAddr, nextInstrAddr;
 	assign PC = instrAddr;
-	always @(CLK) begin
+	/*always @(CLK) begin
 		$display("branch = %b", branch);
-	end
+	end*/
 	PC pc(CLK, RST, nextInstrAddr, instrAddr);
 	Datapath dpath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, CLK, RST, instrAddr, nextInstrAddr, resOut);
 	Control control(opcode, funccode, memToReg, branch, memWrite, memRead, ALUFrc, ALUSrc, ALUOp, brLink, regWrite);
