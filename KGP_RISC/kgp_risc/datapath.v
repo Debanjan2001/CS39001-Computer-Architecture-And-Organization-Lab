@@ -71,13 +71,13 @@ module Datapath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, r
 	wire carryFlag, negFlag, zeroFlag;
 	wire overflowFlag;
 	wire extendOut;
-	Mux2To1 firstALUIn(RT, RS, ALUFrc, aluIn1);
-	Mux3To1 secondALUIn(RT, imm_ex, shamt_ex, ALUSrc, aluIn2);
+	Mux2To1 firstALUIn(regReadData2, regReadData1, ALUFrc, aluIn1);
+	Mux3To1 secondALUIn(regReadData2, imm_ex, shamt_ex, ALUSrc, aluIn2);
 	ALU alu(aluIn1, aluIn2, ALUResOp, aluRes, ALUCin, ALUDir, carryFlag, zeroFlag, negFlag, overflowFlag);
 	
-	wire memReadData;
+	wire [31:0] memReadData;
 	DataMem dmem(
-		.clka(clk), 
+		.clka(~clk), 
 		.rsta(rst), 
 		.wea(memWrite), 
 		.addra(aluRes[9:0]), 
@@ -85,6 +85,9 @@ module Datapath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, r
 		.douta(memReadData)
 	);
 	Mux2To1 memDataWrite(memReadData, aluRes, memToReg, memALUData);
+	always @(clk) begin
+		$display("ALURES=%b, DATAREAD=%b, resOut=%b", aluRes, memReadData, resOut);
+	end
 	
 	NextInstr nextinstr(rst, branch, carryFlag, negFlag, zeroFlag, funccode[2:0], instrAddr, LABEL, RS, nextInstrAddr, brLinkAddr);
 endmodule

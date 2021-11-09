@@ -28,7 +28,6 @@ static int ng3[] = {32, 0};
 static int ng4[] = {1, 0};
 static int ng5[] = {12, 0};
 static unsigned int ng6[] = {4294967295U, 4294967295U};
-static const char *ng7 = "regAddr1 = %d, regAddr2 = %d";
 
 
 
@@ -777,13 +776,7 @@ LAB25:    xsi_set_current_line(63, ng0);
     t17 = (t0 + 2728);
     xsi_vlogvar_assign_value(t17, t6, 0, 0, 32);
 
-LAB23:    xsi_set_current_line(66, ng0);
-    t2 = (t0 + 1368U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 1528U);
-    t4 = *((char **)t2);
-    xsi_vlogfile_write(1, 0, 0, ng7, 3, t0, (char)118, t3, 5, (char)118, t4, 5);
-    goto LAB2;
+LAB23:    goto LAB2;
 
 LAB7:    t9 = (t6 + 4);
     *((unsigned int *)t6) = 1;
