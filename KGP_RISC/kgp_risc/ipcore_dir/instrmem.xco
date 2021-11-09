@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Tue Nov  9 08:11:20 2021
+# Date: Tue Nov  9 14:23:37 2021
 #
 ##############################################################
 #
@@ -45,7 +45,7 @@ CSET assume_synchronous_clk=false
 CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
-CSET byte_size=8
+CSET byte_size=9
 CSET coe_file=/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/instrdata.coe
 CSET collision_warnings=ALL
 CSET component_name=instrmem
@@ -53,7 +53,7 @@ CSET disable_collision_warnings=false
 CSET disable_out_of_range_warnings=false
 CSET ecc=false
 CSET ecctype=No_ECC
-CSET enable_32bit_address=true
+CSET enable_32bit_address=false
 CSET enable_a=Always_Enabled
 CSET enable_b=Always_Enabled
 CSET error_injection_type=Single_Bit_Error_Injection
@@ -95,9 +95,9 @@ CSET use_byte_write_enable=false
 CSET use_error_injection_pins=false
 CSET use_regcea_pin=false
 CSET use_regceb_pin=false
-CSET use_rsta_pin=true
+CSET use_rsta_pin=false
 CSET use_rstb_pin=false
-CSET write_depth_a=32
+CSET write_depth_a=1024
 CSET write_width_a=32
 CSET write_width_b=32
 # END Parameters
@@ -105,4 +105,4 @@ CSET write_width_b=32
 MISC pkg_timestamp=2012-11-19T16:22:25Z
 # END Extra information
 GENERATE
-# CRC: e12c5057
+# CRC: 3a2c7c69

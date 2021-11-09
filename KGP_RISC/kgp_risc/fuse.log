@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_isim_beh.exe" -prj "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_beh.prj" "work.TB_alu" "work.glbl" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master_isim_beh.exe -prj /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master_beh.prj work.TB_Master work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
@@ -7,23 +7,62 @@ Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-
 Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/logicshifter.v" into library work
 Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/arithmeticshifter.v" into library work
 Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/adder.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/signext.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/regfile.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/nextinstr.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/mux3to1.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/mux2to1.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/ipcore_dir/instrmem.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/ipcore_dir/DataMem.v" into library work
 Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/alu.v" into library work
-Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/pc.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/control.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/alucontrol.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.v" into library work
+Analyzing Verilog file "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 66: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 74: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 87: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 58: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 75: Size mismatch in connection of port <A>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 84: Size mismatch in connection of port <dina>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 85: Size mismatch in connection of port <douta>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/datapath.v" Line 89: Size mismatch in connection of port <regData>. Formal port size is 32-bit while actual signal size is 5-bit.
 Completed static elaboration
-Fuse Memory Usage: 94916 KB
-Fuse CPU Usage: 1190 ms
+Fuse Memory Usage: 97156 KB
+Fuse CPU Usage: 1420 ms
+Compiling module PC
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="artix...
+Compiling module instrmem
+Compiling module Mux2To1
+Compiling module RegFile
+Compiling module SignExt
+Compiling module Mux3To1
 Compiling module Adder
 Compiling module Complementor
 Compiling module LogicShifter
 Compiling module ArithmeticShifter
 Compiling module ALU
-Compiling module TB_alu
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="artix...
+Compiling module DataMem
+Compiling module NextInstr
+Compiling module Datapath
+Compiling module Control
+Compiling module ALUControl
+Compiling module RISC
+Compiling module TB_Master
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 7 Verilog Units
-Built simulation executable /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_alu_isim_beh.exe
-Fuse Memory Usage: 98244 KB
-Fuse CPU Usage: 1260 ms
-GCC CPU Usage: 270 ms
+Compiled 26 Verilog Units
+Built simulation executable /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master_isim_beh.exe
+Fuse Memory Usage: 103500 KB
+Fuse CPU Usage: 1780 ms
+GCC CPU Usage: 3120 ms

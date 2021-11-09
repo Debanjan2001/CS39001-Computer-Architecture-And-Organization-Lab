@@ -27,24 +27,27 @@ module RegFile(
 	input [31:0] writeData,
 	input regWrite,
 	output reg [31:0] regData1,
-	output reg [31:0] regData2
+	output reg [31:0] regData2,
+	output [31:0] resOut
 );
 
 	reg [31:0] regBank[31:0];
 	integer i;
 
 	always @(posedge clk or posedge rst) begin
-
+		regBank[0] = 32'b0;
 		if(rst) begin
 			for(i=0;i<32;i=i+1)
 				regBank[i] = 32'd0;
 		end
 
-		else if(regWrite) begin
+		else if(regWrite && writeAddr > 0 && writeAddr < 32) begin
 			regBank[writeAddr] = writeData;
 		end
 	end
-
+	
+	assign resOut = regBank[12];
+	
 	always @(*) begin
 		if(regAddr1 >= 32 ) begin
 			regData1 = 32'hXXXXXXXX;
@@ -59,7 +62,9 @@ module RegFile(
 		else begin
 			regData2 = regBank[regAddr2];
 		end
+		
+		$display("regAddr1 = %d, regAddr2 = %d", regAddr1, regAddr2);
 	end
 
-
+	
 endmodule

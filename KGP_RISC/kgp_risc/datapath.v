@@ -18,21 +18,21 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Datapath(ALUResOp, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, clk, rst, instrAddr, nextInstrAddr);
+module Datapath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, clk, rst, instrAddr, nextInstrAddr, resOut);
 	// Define Inputs and Outputs
-	input [2:0] ALUResOp;
+	input [2:0] ALUResOp, branch;
+	input ALUCin, ALUDir;
 	input brLink, memToReg, memRead, memWrite, regWrite, ALUFrc;
 	input [1:0] ALUSrc;
 	input clk, rst;
 	input [31:0] instrAddr;
-	output [31:0] nextInstrAddr;
+	output [31:0] nextInstrAddr, resOut;
 	output [4:0] opcode, funccode;
 	
 	wire [31:0] instr;
 	instrmem imem(
 		.clka(clk), 
-		.rsta(rst), 
-		.addra(instrAddr), 
+		.addra(instrAddr[9:0]), 
 		.douta(instr)
 	);
 	
@@ -45,10 +45,19 @@ module Datapath(ALUResOp, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc,
 	wire [31:0] memALUData;
 	wire [31:0] regReadData1, regReadData2;
 	// RS, RT, IMM_I, IMM_LS, SHAMT, LABEL, etc have to be replaced with corresponding instructions
+	wire [4:0] RS, RT, SHAMT;
+	wire [15:0] IMM_I, IMM_LS;
+	wire [23:0] LABEL;
+	assign RS = instr[26:22];
+	assign RT = instr[21:17];
+	assign SHAMT = instr[16:12];
+	assign IMM_I = instr[21:6];
+	assign IMM_LS = instr[16:1];
+	assign LABEL = instr[26:3];
 	
 	Mux2To1 regToWrite(5'b11111, RS, brLink, writeReg);
 	Mux2To1 dataToWrite(brLinkAddr, memALUData, brLink, writeData);
-	RegFile rfile(rst, clk, RS, RT, writeReg, writeData, regWrite, regReadData1, regReadData2);
+	RegFile rfile(rst, clk, RS, RT, writeReg, writeData, regWrite, regReadData1, regReadData2, resOut);
 	
 	wire [31:0] aluIn1, aluIn2;
 	wire [15:0] imm;
@@ -58,7 +67,7 @@ module Datapath(ALUResOp, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc,
 	SignExt signex(imm, imm_ex);
 	assign shamt_ex = {27'b0, SHAMT};
 	
-	wire aluRes;
+	wire [31:0] aluRes;
 	wire carryFlag, negFlag, zeroFlag;
 	wire overflowFlag;
 	wire extendOut;
@@ -71,11 +80,11 @@ module Datapath(ALUResOp, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc,
 		.clka(clk), 
 		.rsta(rst), 
 		.wea(memWrite), 
-		.addr(aluRes[9:0]), 
+		.addra(aluRes[9:0]), 
 		.dina(readRegData1), 
 		.douta(memReadData)
 	);
 	Mux2To1 memDataWrite(memReadData, aluRes, memToReg, memALUData);
 	
-	NextInstr nextinstr();
+	NextInstr nextinstr(rst, branch, carryFlag, negFlag, zeroFlag, funccode[2:0], instrAddr, LABEL, RS, nextInstrAddr, brLinkAddr);
 endmodule

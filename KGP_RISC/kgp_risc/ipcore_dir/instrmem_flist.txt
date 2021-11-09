@@ -1,4 +1,5 @@
 # Output products list for <instrmem>
+_xmsgs/pn_parser.xmsgs
 instrmem/blk_mem_gen_v7_3_readme.txt
 instrmem/doc/blk_mem_gen_v7_3_vinfo.html
 instrmem/doc/pg058-blk-mem-gen.pdf
