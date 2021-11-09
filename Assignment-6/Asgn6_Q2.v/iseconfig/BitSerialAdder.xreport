@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-10-09T21:35:48</DateModified>
+  <DateModified>2021-10-09T22:35:51</DateModified>
   <ModuleName>BitSerialAdder</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/shared_xlnx/Asgn6_Q2.v/iseconfig/BitSerialAdder.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/shared_xlnx/Asgn6_Q2.v/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/iseconfig/BitSerialAdder.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q2.v/</ImplementationReportsDirectory>
   <DateInitialized>2021-10-08T13:07:09</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

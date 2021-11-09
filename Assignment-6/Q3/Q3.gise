@@ -143,17 +143,13 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1633846128" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1633846128">
+    <transform xil_pn:end_ts="1633818372" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1633818372">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1633864390" xil_pn:in_ck="9204205227853253501" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1633864390">
+    <transform xil_pn:end_ts="1633818391" xil_pn:in_ck="9204205227853253501" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1633818391">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.v"/>
       <outfile xil_pn:name="BoothMultiplier.v"/>
       <outfile xil_pn:name="shiftreg8_pipo.v"/>
@@ -161,26 +157,21 @@
       <outfile xil_pn:name="test_BoothMultiplier.v"/>
       <outfile xil_pn:name="test_shiftreg8_pipo.v"/>
     </transform>
-    <transform xil_pn:end_ts="1633864107" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6640796867104604940" xil_pn:start_ts="1633864107">
+    <transform xil_pn:end_ts="1633818373" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6640796867104604940" xil_pn:start_ts="1633818373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1633864107" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8510088888364859178" xil_pn:start_ts="1633864107">
+    <transform xil_pn:end_ts="1633818373" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8510088888364859178" xil_pn:start_ts="1633818373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1633864107" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5298805953960710385" xil_pn:start_ts="1633864107">
+    <transform xil_pn:end_ts="1633818373" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5298805953960710385" xil_pn:start_ts="1633818373">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1633864107" xil_pn:in_ck="9204205227853253501" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1633864107">
+    <transform xil_pn:end_ts="1633818391" xil_pn:in_ck="9204205227853253501" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1633818391">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.v"/>
       <outfile xil_pn:name="BoothMultiplier.v"/>
       <outfile xil_pn:name="shiftreg8_pipo.v"/>
@@ -188,25 +179,20 @@
       <outfile xil_pn:name="test_BoothMultiplier.v"/>
       <outfile xil_pn:name="test_shiftreg8_pipo.v"/>
     </transform>
-    <transform xil_pn:end_ts="1633864109" xil_pn:in_ck="9204205227853253501" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8972280013836814215" xil_pn:start_ts="1633864107">
+    <transform xil_pn:end_ts="1633818395" xil_pn:in_ck="9204205227853253501" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8972280013836814215" xil_pn:start_ts="1633818391">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="test_BoothMultWithShiftReg_beh.prj"/>
       <outfile xil_pn:name="test_BoothMultWithShiftReg_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1633864109" xil_pn:in_ck="-4918023319648324530" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2832857765891998614" xil_pn:start_ts="1633864109">
+    <transform xil_pn:end_ts="1633818395" xil_pn:in_ck="-4918023319648324530" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2832857765891998614" xil_pn:start_ts="1633818395">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -241,11 +227,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1633864074" xil_pn:in_ck="1903008202893867504" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2489821502604742002" xil_pn:start_ts="1633864065">
+    <transform xil_pn:end_ts="1633819403" xil_pn:in_ck="1903008202893867504" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2489821502604742002" xil_pn:start_ts="1633819380">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.lso"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.ngc"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.ngr"/>
@@ -267,6 +251,8 @@
     <transform xil_pn:end_ts="1633864101" xil_pn:in_ck="2102941048761719518" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-284489017021386494" xil_pn:start_ts="1633864094">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.bld"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.ngd"/>
       <outfile xil_pn:name="BoothMultWithShiftReg_ngdbuild.xrpt"/>
@@ -277,6 +263,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.pcf"/>
       <outfile xil_pn:name="BoothMultWithShiftReg_map.map"/>
       <outfile xil_pn:name="BoothMultWithShiftReg_map.mrp"/>
@@ -290,6 +277,7 @@
     <transform xil_pn:end_ts="1633864162" xil_pn:in_ck="202158267004237089" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1633864128">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.ncd"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.pad"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.par"/>
@@ -304,6 +292,7 @@
     <transform xil_pn:end_ts="1633864162" xil_pn:in_ck="686598746157315623" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1633864149">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.twr"/>
       <outfile xil_pn:name="BoothMultWithShiftReg.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

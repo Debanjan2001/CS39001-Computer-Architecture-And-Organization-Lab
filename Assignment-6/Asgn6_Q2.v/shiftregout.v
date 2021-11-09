@@ -1,25 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    13:22:20 10/07/2021 
-// Design Name: 
-// Module Name:    shiftregout 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Group:21
+// Members:  Pritkumar Godhani [19CS10048],  Debanjan Saha [19CS30014]
+//  
+// Module Name: Serial In Parallel Out Shift Register module
+// Project Name: Assignment-6 Question 1
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ShiftRegSIPO(out, in, clk, rst, load);
-	input clk, rst, load, in;
+module ShiftRegSIPO(out, in, clk, rst);
+	input clk, rst, in;
 	output reg [7:0] out;
 	
 	always @ (posedge clk) begin

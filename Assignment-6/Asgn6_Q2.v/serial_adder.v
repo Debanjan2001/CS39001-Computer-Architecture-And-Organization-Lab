@@ -1,21 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    13:27:11 10/07/2021 
-// Design Name: 
-// Module Name:    serial_adder 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
+// Group:21
+// Members:  Pritkumar Godhani [19CS10048],  Debanjan Saha [19CS30014]
+//  
+// Module Name: Bit Serial Adder main module
+// Project Name: Assignment-6 Question 1
 //
 //////////////////////////////////////////////////////////////////////////////////
 module BitSerialAdder(sum, nextcarry, A_shiftdata, B_shiftdata, A, B, clk, load, rst);
@@ -39,7 +28,7 @@ module BitSerialAdder(sum, nextcarry, A_shiftdata, B_shiftdata, A, B, clk, load,
 	ShiftRegPISO a(a_in, A_shiftdata, A, clk, load, rst);
 	ShiftRegPISO b(b_in, B_shiftdata, B, clk, load, rst);
 	
-	ShiftRegSIPO out(sum, bitsum, clk, load, rst);
+	ShiftRegSIPO out(sum, bitsum, clk, rst);
 	
 	FullAdder fa(bitsum, cout, a_in, b_in, nextcarry);
 	

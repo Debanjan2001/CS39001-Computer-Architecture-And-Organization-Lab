@@ -1,138 +1,15 @@
 ISim log file
-Running: /home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.wdb 
+Running: /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/test_BoothMultWithShiftReg_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Multiplier = 00000110, Multiplicand = 11111100 
-
-Finished circuit initialization process.
-Product = xxxxxxxxxxxxxxxx, IsActive = x
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 1
-Product = 0000000000000110, IsActive = 1
-Product = 0000000000000011, IsActive = 1
-Product = 0000001000000001, IsActive = 1
-Product = 0000000100000000, IsActive = 1
-Product = 1111111010000000, IsActive = 1
-Product = 1111111101000000, IsActive = 1
-Product = 1111111110100000, IsActive = 1
-Product = 1111111111010000, IsActive = 1
-Product = 1111111111101000, IsActive = 0
-Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
-ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Multiplier = 00011001, Multiplicand = 11111100 
-
-Finished circuit initialization process.
-Product = xxxxxxxxxxxxxxxx, IsActive = x
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 1
-Product = 0000000000011001, IsActive = 1
-Product = 0000001000001100, IsActive = 1
-Product = 1111111100000110, IsActive = 1
-Product = 1111111110000011, IsActive = 1
-Product = 0000000111000001, IsActive = 1
-Product = 0000000011100000, IsActive = 1
-Product = 1111111001110000, IsActive = 1
-Product = 1111111100111000, IsActive = 1
-Product = 1111111110011100, IsActive = 0
-Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
-ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Multiplier = 00011001, Multiplicand = 00010001 
-
-Finished circuit initialization process.
-Product = xxxxxxxxxxxxxxxx, IsActive = x
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 1
-Product = 0000000000011001, IsActive = 1
-Product = 1111011110001100, IsActive = 1
-Product = 0000010001000110, IsActive = 1
-Product = 0000001000100011, IsActive = 1
-Product = 1111100010010001, IsActive = 1
-Product = 1111110001001000, IsActive = 1
-Product = 0000011010100100, IsActive = 1
-Product = 0000001101010010, IsActive = 1
-Product = 0000000110101001, IsActive = 0
-Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
-ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Multiplier = 00001111, Multiplicand = 00010001 
-
-Finished circuit initialization process.
-Product = xxxxxxxxxxxxxxxx, IsActive = x
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 1
-Product = 0000000000001111, IsActive = 1
-Product = 1111011110000111, IsActive = 1
-Product = 1111101111000011, IsActive = 1
-Product = 1111110111100001, IsActive = 1
-Product = 1111111011110000, IsActive = 1
-Product = 0000011111111000, IsActive = 1
-Product = 0000001111111100, IsActive = 1
-Product = 0000000111111110, IsActive = 1
-Product = 0000000011111111, IsActive = 0
-Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
-ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Multiplier = 00001111, Multiplicand = 11101111 
-
-Finished circuit initialization process.
-Product = xxxxxxxxxxxxxxxx, IsActive = x
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 0
-Product = 0000000000000000, IsActive = 1
-Product = 0000000000001111, IsActive = 1
-Product = 0000100010000111, IsActive = 1
-Product = 0000010001000011, IsActive = 1
-Product = 0000001000100001, IsActive = 1
-Product = 0000000100010000, IsActive = 1
-Product = 1111100000001000, IsActive = 1
-Product = 1111110000000100, IsActive = 1
-Product = 1111111000000010, IsActive = 1
-Product = 1111111100000001, IsActive = 0
-Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
-ISim P.20131013 (signature 0xfbc00daa)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Multiplier = 00000010, Multiplicand = 11111100 
@@ -152,5 +29,5 @@ Product = 1111111111000000, IsActive = 1
 Product = 1111111111100000, IsActive = 1
 Product = 1111111111110000, IsActive = 1
 Product = 1111111111111000, IsActive = 0
-Stopped at time : 280 ns : File "/home/bob/Desktop/coa-lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
+Stopped at time : 280 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/test_BoothMultWithShiftReg.v" Line 78
 # exit 0

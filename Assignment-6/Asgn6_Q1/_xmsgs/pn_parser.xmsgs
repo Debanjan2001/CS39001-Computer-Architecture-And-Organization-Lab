@@ -8,10 +8,10 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/shared_xlnx/Asgn6_Q1/barrel_shifter.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q1/barrel_shifter.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/shared_xlnx/Asgn6_Q1/mux2to1.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Asgn6_Q1/mux2to1.v&quot; into library work</arg>
 </msg>
 
 </messages>
