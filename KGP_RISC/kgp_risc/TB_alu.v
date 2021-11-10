@@ -37,6 +37,7 @@ module TB_alu;
 	wire zeroFlag;
 	wire negFlag;
 	wire overflowFlag;
+	wire updateCarry;
 
 	// Instantiate the Unit Under Test (UUT)
 	ALU uut (
@@ -49,7 +50,8 @@ module TB_alu;
 		.carryFlag(carryFlag), 
 		.zeroFlag(zeroFlag), 
 		.negFlag(negFlag), 
-		.overflowFlag(overflowFlag)
+		.overflowFlag(overflowFlag),
+		.updateCarry(updateCarry)
 	);
 
 	initial begin

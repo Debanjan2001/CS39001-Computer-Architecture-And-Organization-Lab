@@ -6,14 +6,15 @@
 // Description: 	 32-Bit ALU supporting Addition, Two's Complement, Bitwise AND & XOR, Logic and Airhtmetic Shifts
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ALU(reg1, reg2, op, res, cin, dir, carryFlag, zeroFlag, negFlag, overflowFlag);
+module ALU(reg1, reg2, op, res, cin, dir, carryFlag, zeroFlag, negFlag, overflowFlag, updateCarry);
 	input [2:0] op;
 	input	cin, dir;
 	input [31:0] reg1, reg2;
 	output reg [31:0] res;
-	output reg carryFlag, zeroFlag, negFlag, overflowFlag;
+	output reg carryFlag, zeroFlag, negFlag, overflowFlag, updateCarry;
 	wire [31:0] sum, shiftL, shiftA, compA;
 	wire cout, of;
+	wire carryLatchIn;
 	Adder adder(reg1, reg2, sum, cin, cout, of);
 	Complementor comp(reg2, compA);
 	LogicShifter logicshift(reg1, reg2, shiftL, dir);
@@ -27,36 +28,52 @@ module ALU(reg1, reg2, op, res, cin, dir, carryFlag, zeroFlag, negFlag, overflow
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
 				overflowFlag = of;
+				updateCarry = 1'b1;
 				end
 				
 			COMP: begin
 				res = compA;
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
+				carryFlag = 1'b0;
+				overflowFlag = 1'b0;
+				updateCarry = 1'b0;
 				end
 			
 			AND: begin
 				res = reg1 & reg2;
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
+				carryFlag = 1'b0;
+				overflowFlag = 1'b0;
+				updateCarry = 1'b0;
 				end
 			
 			XOR: begin
 				res = reg1 ^ reg2;
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
+				carryFlag = 1'b0;
+				overflowFlag = 1'b0;
+				updateCarry = 1'b0;
 				end
 				
 			SHIFT_L: begin
 				res = shiftL;
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
+				carryFlag = 1'b0;
+				overflowFlag = 1'b0;
+				updateCarry = 1'b0;
 				end
 			
 			SHIFT_A: begin
 				res = shiftA;
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
+				carryFlag = 1'b0;
+				overflowFlag = 1'b0;
+				updateCarry = 1'b0;
 				end
 				
 			default: begin
@@ -65,9 +82,12 @@ module ALU(reg1, reg2, op, res, cin, dir, carryFlag, zeroFlag, negFlag, overflow
 				overflowFlag = 1'b0;
 				zeroFlag = (reg1 == 32'b0) ? 1'b1 : 1'b0;
 				negFlag = (reg1[31] == 1'b1) ? 1'b1 : 1'b0;
+				updateCarry = 1'b0;
 				end
 		endcase
 	end
+	
+	
 
 
 endmodule
