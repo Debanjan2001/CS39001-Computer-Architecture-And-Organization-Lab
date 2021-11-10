@@ -44,10 +44,11 @@ module TB_Master;
 		CLK = 1'b0;
 		RST = 1'b1;
 
-		#100
+		#50
 		RST = 1'b0;
 		
-		#1000 $finish();
+		$monitor("resOut=%b", resOut);
+		#4000 $finish();
 
 	end
       

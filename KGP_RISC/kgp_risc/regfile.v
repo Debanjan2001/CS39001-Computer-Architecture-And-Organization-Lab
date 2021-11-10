@@ -35,7 +35,6 @@ module RegFile(
 	integer i;
 
 	always @(posedge clk or posedge rst) begin
-		regBank[0] = 32'd0;
 		if(rst) begin
 			for(i=0;i<32;i=i+1)
 				regBank[i] = 32'd0;
@@ -43,6 +42,10 @@ module RegFile(
 
 		else if(regWrite && writeAddr > 0 && writeAddr < 32) begin
 			regBank[writeAddr] = writeData;
+		end
+		
+		else if(writeAddr == 0) begin
+			regBank[writeAddr] = 32'd0;
 		end
 	end
 	

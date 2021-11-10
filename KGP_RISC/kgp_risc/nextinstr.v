@@ -70,7 +70,7 @@ module NextInstr(
 						if(carry)
 							nextInstrAddr = {8'd0,label};
 						else
-							nextInstrAddr = 32'd0;
+							nextInstrAddr = pc_1;
 					end
 					
 					// bcny L
@@ -78,11 +78,11 @@ module NextInstr(
 						if(carry == 0)
 							nextInstrAddr = {8'd0,label};
 						else
-							nextInstrAddr = 32'd0;
+							nextInstrAddr = pc_1;
 					end
 					
 					else begin
-						nextInstrAddr = 32'd0;
+						nextInstrAddr = pc_1;
 					end
 		
 				end
@@ -93,7 +93,7 @@ module NextInstr(
 						if(negative)
 							nextInstrAddr = {13'd0,label[18:0]};
 						else
-							nextInstrAddr = 32'd0;
+							nextInstrAddr = pc_1;
 					end
 					
 					// bz rs, L
@@ -101,7 +101,7 @@ module NextInstr(
 						if(zero)
 								nextInstrAddr = {13'd0,label[18:0]};
 							else
-								nextInstrAddr = 32'd0;
+								nextInstrAddr = pc_1;
 					
 					end
 					
@@ -109,12 +109,12 @@ module NextInstr(
 						if(zero == 0)
 								nextInstrAddr = {13'd0,label[18:0]};
 							else
-								nextInstrAddr = 32'd0;
+								nextInstrAddr = pc_1;
 					
 					end
 					
 					else begin
-						nextInstrAddr = 32'd0;
+						nextInstrAddr = pc_1;
 					end
 				
 				end
