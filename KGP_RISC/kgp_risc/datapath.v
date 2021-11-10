@@ -18,20 +18,20 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Datapath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, clk, rst, instrAddr, nextInstrAddr, resOut);
+module Datapath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, clk, rst, instrAddr, nextInstrAddr, resOut, memclk);
 	// Define Inputs and Outputs
 	input [2:0] ALUResOp, branch;
 	input ALUCin, ALUDir;
 	input brLink, memToReg, memRead, memWrite, regWrite, ALUFrc;
 	input [1:0] ALUSrc;
-	input clk, rst;
+	input clk, rst, memclk;
 	input [31:0] instrAddr;
 	output [31:0] nextInstrAddr, resOut;
 	output [4:0] opcode, funccode;
 	
 	wire [31:0] instr;
 	instrmem imem(
-		.clka(clk), 
+		.clka(memclk), 
 		.addra(instrAddr[9:0]), 
 		.douta(instr)
 	);
@@ -72,10 +72,9 @@ module Datapath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, r
 	Mux2To1 firstALUIn(regReadData2, regReadData1, ALUFrc, aluIn1);
 	Mux3To1 secondALUIn(regReadData2, imm_ex, SHAMT, ALUSrc, aluIn2);
 	ALU alu(aluIn1, aluIn2, ALUResOp, aluRes, ALUCin, ALUDir, carryFlag, zeroFlag, negFlag, overflowFlag, updateCarry);
-	
 	wire [31:0] memReadData;
 	DataMem dmem(
-		.clka(~clk), 
+		.clka(memclk), 
 		.rsta(rst), 
 		.wea(memWrite), 
 		.addra(aluRes[9:0]), 

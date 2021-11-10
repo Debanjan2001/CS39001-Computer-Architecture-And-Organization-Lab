@@ -18,8 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module RISC(CLK, RST, resOut, PC);
-	input CLK, RST;
+module RISC(CLK, MEMCLK, RST, resOut, PC);
+	input CLK, RST, MEMCLK;
 	output [31:0] resOut, PC;
 	wire brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUCin, ALUDir;
 	wire [2:0] ALUResOp, branch;
@@ -31,7 +31,7 @@ module RISC(CLK, RST, resOut, PC);
 		$display("branch = %b", branch);
 	end*/
 	PC pc(CLK, RST, nextInstrAddr, instrAddr);
-	Datapath dpath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, CLK, RST, instrAddr, nextInstrAddr, resOut);
+	Datapath dpath(ALUResOp, ALUCin, ALUDir, brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUSrc, branch, opcode, funccode, CLK, RST, instrAddr, nextInstrAddr, resOut, MEMCLK);
 	Control control(opcode, funccode, memToReg, branch, memWrite, memRead, ALUFrc, ALUSrc, ALUOp, brLink, regWrite);
 	ALUControl alucontrol(ALUOp, funccode, ALUCin, ALUDir, ALUResOp);
 endmodule
