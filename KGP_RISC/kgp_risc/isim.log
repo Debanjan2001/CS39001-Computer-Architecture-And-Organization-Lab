@@ -19,6 +19,8 @@ Block Memory Generator CORE Generator module TB_Master.uut.dpath.imem.inst.\nati
  Block Memory Generator data initialization complete.
 Block Memory Generator CORE Generator module TB_Master.uut.dpath.dmem.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Finished circuit initialization process.
-# run all
-Stopped at time : 4050 ns : File "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/TB_Master.v" Line 50
+resOut=00000000000000000000000000000000
+resOut=00000000000000000000010011010000
+resOut=00000000000000000000000100110100
+resOut=00000000000000000000000000000000
 # exit 0

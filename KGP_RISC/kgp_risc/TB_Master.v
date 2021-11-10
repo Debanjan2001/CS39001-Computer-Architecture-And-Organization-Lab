@@ -26,6 +26,7 @@ module TB_Master;
 
 	// Inputs
 	reg CLK;
+	reg MEMCLK;
 	reg RST;
 	
 	// Outputs
@@ -34,15 +35,19 @@ module TB_Master;
 	// Instantiate the Unit Under Test (UUT)
 	RISC uut (
 		.CLK(CLK), 
+		.MEMCLK(MEMCLK),
 		.RST(RST),
 		.resOut(resOut),
 		.PC(PC)
 	);
+	
 	always #10 CLK = ~CLK;
+	always #1 MEMCLK = ~MEMCLK;
 	initial begin
 		// Initialize Inputs
 		CLK = 1'b0;
 		RST = 1'b1;
+		MEMCLK = 1'b0;
 
 		#50
 		RST = 1'b0;

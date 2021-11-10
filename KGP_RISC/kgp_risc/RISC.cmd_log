@@ -4,3 +4,15 @@ xst -intstyle ise -ifn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-
 xst -intstyle ise -ifn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.xst" -ofn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.syr" 
 xst -intstyle ise -ifn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.xst" -ofn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.syr" 
 xst -intstyle ise -ifn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.xst" -ofn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.xst" -ofn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-1 RISC.ngc RISC.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RISC_map.ncd RISC.ngd RISC.pcf 
+par -w -intstyle ise -ol high -mt off RISC_map.ncd RISC.ncd RISC.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml RISC.twx RISC.ncd -o RISC.twr RISC.pcf 
+netgen -intstyle ise -s 1  -pcf RISC.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim RISC.ncd RISC_timesim.v 
+xst -intstyle ise -ifn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.xst" -ofn "/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/kgp_risc/RISC.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-1 RISC.ngc RISC.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o RISC_map.ncd RISC.ngd RISC.pcf 
+par -w -intstyle ise -ol high -mt off RISC_map.ncd RISC.ncd RISC.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml RISC.twx RISC.ncd -o RISC.twr RISC.pcf 
+netgen -intstyle ise -s 1  -pcf RISC.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim RISC.ncd RISC_timesim.v 
