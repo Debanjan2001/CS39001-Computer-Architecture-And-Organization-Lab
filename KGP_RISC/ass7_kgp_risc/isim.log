@@ -1,0 +1,33 @@
+ISim log file
+Running: /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/TB_risc_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/TB_risc_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module TB_risc.uut.dpath.imem.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module TB_risc.uut.dpath.dmem.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.
+resOut = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+resOut = 00000000000000000000010011010000
+resOut = 00000000000000000000000100110100
+resOut = 00000000000000000000000000000000
+resOut = 00000000000000000000001110011100
+resOut = 00000000000000000000001001101000
+resOut = 00000000000000000000000100110100
+resOut = 00000000000000000000000000000000
+resOut = 00000000000000000000000100110100
+resOut = 00000000000000000000000000000000
+resOut = 00000000000000000000000100110100
+# exit 0
