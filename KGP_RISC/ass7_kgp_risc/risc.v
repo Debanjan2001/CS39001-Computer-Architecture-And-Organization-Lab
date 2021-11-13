@@ -6,15 +6,16 @@
 // Description:     final top level module with the PC, datapath, and controls connected
 //
 //////////////////////////////////////////////////////////////////////////////////
-module RISC(CLK, MEMCLK, RST, resOut, PC_);
+module RISC(CLK, MEMCLK, RST, resOut);//, PC_);
 	input CLK, RST, MEMCLK;
-	output [31:0] resOut, PC_;
+	output [31:0] resOut;
+   //output [31:0] PC_;
 	wire brLink, memToReg, memRead, memWrite, regWrite, ALUFrc, ALUCin, ALUDir;
 	wire [2:0] ALUResOp, branch;
 	wire [1:0] ALUSrc, ALUOp;
 	wire [4:0] opcode, funccode;
 	wire [31:0] instrAddr, nextInstrAddr;
-	assign PC_ = instrAddr;
+	//assign PC_ = instrAddr;
 	/*always @(CLK) begin
 		$display("branch = %b", branch);
 	end*/
