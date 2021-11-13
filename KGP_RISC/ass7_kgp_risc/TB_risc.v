@@ -28,7 +28,7 @@ module TB_risc;
 	always #10 CLK = ~CLK;
 	always #1 MEMCLK = ~MEMCLK;
 	always @(posedge CLK) begin
-		if(RST == 1'b0) $display("resOut = %b, PC = %b, Instr = %b", resOut, uut.instrAddr, uut.dpath.instr);
+		if(RST == 1'b0) $display("resOut = %b, PC = %b, Instr = %b, $31 = %b", resOut, uut.instrAddr, uut.dpath.instr, uut.dpath.rfile.regBank[31]);
 	end
 	initial begin
 		// Initialize Inputs

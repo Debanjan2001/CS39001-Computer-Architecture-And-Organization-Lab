@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Thu Nov 11 01:54:29 2021
+# Date: Sat Nov 13 05:32:33 2021
 #
 ##############################################################
 #
@@ -46,7 +46,7 @@ CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
 CSET byte_size=9
-CSET coe_file=/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/gcd_instrdata.coe
+CSET coe_file=/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/all_test_instrmem.coe
 CSET collision_warnings=ALL
 CSET component_name=InstrMem
 CSET disable_collision_warnings=false
@@ -105,4 +105,4 @@ CSET write_width_b=32
 MISC pkg_timestamp=2012-11-19T16:22:25Z
 # END Extra information
 GENERATE
-# CRC: b2da131b
+# CRC: 14452efc

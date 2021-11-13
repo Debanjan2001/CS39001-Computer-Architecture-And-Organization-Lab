@@ -7,6 +7,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module RegFile(
+	// Inputs
    input rst,
 	input clk,
 	input [4:0] regAddr1,
@@ -14,6 +15,7 @@ module RegFile(
 	input [4:0] writeAddr,
 	input [31:0] writeData,
 	input regWrite,
+	// Outputs
 	output reg [31:0] regData1,
 	output reg [31:0] regData2,
 	output reg [31:0] resOut
@@ -27,11 +29,10 @@ module RegFile(
 			for(i=0;i<32;i=i+1)
 				regBank[i] = 32'd0;
 		end
-
 		else if(regWrite) begin
 			regBank[writeAddr] = writeData;
-         resOut = regBank[12];
 		end
+		resOut = regBank[12];
     end	
 	always @(*) begin
 		/*if(regAddr1 >= 32 ) begin

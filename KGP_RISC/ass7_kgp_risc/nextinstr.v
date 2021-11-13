@@ -7,6 +7,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module NextInstr(
+	// Inputs
 	input rst,	
 	input [2:0] branch,
 	input carry,
@@ -16,12 +17,17 @@ module NextInstr(
 	input [31:0] pc,
 	input [23:0] label,
 	input [31:0] regData,
+	// Outputs
 	output reg [31:0] nextInstrAddr,
 	output reg [31:0] brLinkAddr
 );
 	wire [31:0] pc_1;
 	parameter BTYP1 = 3'b001, BTYP2 = 3'b010, BTYP3 = 3'b100;
+	
+	// Increment the Program Counter
 	assign pc_1 = pc + 1;
+	
+	// Set the next instruction depending on branch instructions
 	always @(*) begin
 		
 		if(rst) begin
@@ -30,8 +36,8 @@ module NextInstr(
 		end
 		
 		else begin
+			brLinkAddr = pc_1;
 			case(branch) 
-				
 				// br rs
 				BTYP1: begin
 					nextInstrAddr = regData[31:0];
@@ -111,8 +117,6 @@ module NextInstr(
 					nextInstrAddr = pc_1;
 				end
 			endcase
-			
-			brLinkAddr = pc_1;
 			
 		end
 		

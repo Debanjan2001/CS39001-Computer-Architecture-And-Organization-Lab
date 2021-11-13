@@ -8,17 +8,15 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Datapath |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|datapath.v/alu - ALU</ClosedNode>
-         <ClosedNode>/RISC |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|risc.v</ClosedNode>
-         <ClosedNode>/RISC |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|risc.v/dpath - Datapath/alu - ALU</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>alucontrol - ALUControl (/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/alucontrol.v)</SelectedItem>
+         <SelectedItem>rfile - RegFile (/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/regfile.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000a7000000020000000000000000000000000200000064ffffffff000000810000000300000002000000a70000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001bd000000020000000000000000000000000200000064ffffffff000000810000000300000002000001bd0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>alucontrol - ALUControl (/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/alucontrol.v)</CurrentItem>
+      <CurrentItem>rfile - RegFile (/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/regfile.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -45,7 +43,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000028e000000040101000100000000000000000000000064ffffffff000000810000000000000004000000510000000100000000000000290000000100000000000000840000000100000000000001900000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001ee000000040101000100000000000000000000000064ffffffff000000810000000000000004000000510000000100000000000000290000000100000000000000840000000100000000000000f00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>adder.v</CurrentItem>
    </ItemView>
@@ -78,22 +76,34 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001dc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/TB_adders |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_adders.v</ClosedNode>
+         <ClosedNode>/TB_alu |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_alu.v</ClosedNode>
+         <ClosedNode>/TB_arithshifter |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_arithshifter.v</ClosedNode>
+         <ClosedNode>/TB_control |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_control.v</ClosedNode>
+         <ClosedNode>/TB_datamem |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_datamem.v</ClosedNode>
+         <ClosedNode>/TB_instrmem |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_instrmem.v</ClosedNode>
+         <ClosedNode>/TB_logicshifter |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_logicshifter.v</ClosedNode>
+         <ClosedNode>/TB_nextinstr |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_nextinstr.v</ClosedNode>
+         <ClosedNode>/TB_pc |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_pc.v</ClosedNode>
+         <ClosedNode>/TB_regfile |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_regfile.v</ClosedNode>
+         <ClosedNode>/TB_risc |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_risc.v/uut - RISC/dpath - Datapath</ClosedNode>
          <ClosedNode>/TB_risc |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_risc.v/uut - RISC/dpath - Datapath/alu - ALU</ClosedNode>
+         <ClosedNode>/TB_twoscomp |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_twoscomp.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>TB_risc (/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/TB_risc.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >8</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000017d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000017d0000000100000003000000000000000100000003</ViewHeaderState>
-      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000015d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000015d0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>TB_risc (/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/TB_risc.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
@@ -102,13 +112,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001dc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -119,7 +129,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001dc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -170,13 +180,13 @@
          <ClosedNode>CORE Generator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001dc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
@@ -192,5 +202,44 @@
       <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000014c0000011d01000000060100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
+   <ItemView engineview="PostTransSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/TB_adders |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_adders.v</ClosedNode>
+         <ClosedNode>/TB_alu |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_alu.v</ClosedNode>
+         <ClosedNode>/TB_arithshifter |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_arithshifter.v</ClosedNode>
+         <ClosedNode>/TB_control |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_control.v</ClosedNode>
+         <ClosedNode>/TB_datamem |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_datamem.v</ClosedNode>
+         <ClosedNode>/TB_instrmem |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_instrmem.v</ClosedNode>
+         <ClosedNode>/TB_logicshifter |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_logicshifter.v</ClosedNode>
+         <ClosedNode>/TB_nextinstr |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_nextinstr.v</ClosedNode>
+         <ClosedNode>/TB_pc |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_pc.v</ClosedNode>
+         <ClosedNode>/TB_regfile |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_regfile.v</ClosedNode>
+         <ClosedNode>/TB_risc |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_risc.v</ClosedNode>
+         <ClosedNode>/TB_twoscomp |home|ise|shared_xlnx|CS39001-Computer-Architecture-And-Organization-Lab|KGP_RISC|ass7_kgp_risc|TB_twoscomp.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000011f000000020000000000000000000000000200000064ffffffff0000008100000003000000020000011f0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="PostTransSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
 </Project>

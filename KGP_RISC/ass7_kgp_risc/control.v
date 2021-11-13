@@ -7,12 +7,19 @@
 //						 note: some optimization may be possible from the branch, ALUOp, brLink
 //////////////////////////////////////////////////////////////////////////////////
 module Control(opcode, funccode, memToReg, branch, memWrite, memRead, ALUFrc, ALUSrc, ALUOp, brLink, regWrite);
+	// Inputs
 	input [4:0] opcode, funccode;
+	
+	// Outputs
 	output reg memToReg, memWrite, ALUFrc, brLink, regWrite;
-    output reg memRead;
+   output reg memRead;
 	output reg [1:0] ALUSrc, ALUOp;
 	output reg [2:0] branch;
+	
+	// Parameters for different instruction types
 	parameter  R=5'b00000, I=5'b00001, LS=5'b00010, BR1=5'b00011, BR2=5'b00100, BR3=5'b00101;
+	
+	// Set different control lines for different instruction types
 	always @(*) begin
 		case (opcode)
 			R: begin
@@ -64,7 +71,7 @@ module Control(opcode, funccode, memToReg, branch, memWrite, memRead, ALUFrc, AL
 			end
 			
 			BR2: begin
-				regWrite = 1'b0;
+				regWrite = (funccode[2:0] == 3'b001) ? 1'b1 : 1'b0;
 				memWrite = 1'b0;
 				memRead = 1'b0;
 				memToReg = 1'b0;
