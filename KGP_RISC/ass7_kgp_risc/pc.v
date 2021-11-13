@@ -7,11 +7,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module PC(
+	// inputs
 	input clk,
 	input rst,
    input [31:0] pc_in,
+	// outputs
    output reg [31:0] pc_out
 );
+	// Program Counter
 	always @(posedge clk) begin
 		if(rst) begin
 			pc_out <= 32'd0;

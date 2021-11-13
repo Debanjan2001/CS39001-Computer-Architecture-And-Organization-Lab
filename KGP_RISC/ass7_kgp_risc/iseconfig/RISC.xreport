@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-11-12T06:24:49</DateModified>
+  <DateModified>2021-11-13T06:06:31</DateModified>
   <ModuleName>RISC</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/iseconfig/RISC.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/KGP_RISC/ass7_kgp_risc/</ImplementationReportsDirectory>
   <DateInitialized>2021-11-12T06:03:52</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

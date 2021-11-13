@@ -7,12 +7,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ALUControl(ALUOp, funccode, cin, dir, resOp);
+	// Inputs
 	input [4:0] funccode;
 	input [1:0] ALUOp;
-	parameter R = 2'b01, I = 2'b10, LS = 2'b11, DEF = 2'b00;
-	parameter ADD=3'b000, COMP=3'b001, AND=3'b010, XOR=3'b011, SHIFT_L=3'b100, SHIFT_A=3'b101;
+	// Outputs
 	output reg [2:0] resOp;
 	output reg cin, dir;
+	
+	// Parameters for ALUOp and FuncCode
+	parameter R = 2'b01, I = 2'b10, LS = 2'b11, DEF = 2'b00;
+	parameter ADD=3'b000, COMP=3'b001, AND=3'b010, XOR=3'b011, SHIFT_L=3'b100, SHIFT_A=3'b101;
+	
+	// Set the ALU Result Selection Multiplexor line and Input carry and Shift Direction signals
 	always @(*) begin
 		case (ALUOp)
 			LS: begin
