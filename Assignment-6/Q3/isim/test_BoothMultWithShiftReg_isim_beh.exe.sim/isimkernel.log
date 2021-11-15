@@ -2,14 +2,14 @@ Command line:
    test_BoothMultWithShiftReg_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  54963
+     -socket  38608
 
-Sun Oct 10 16:44:52 2021
+Sat Oct  9 22:26:37 2021
 
 
- Elaboration Time: 0.01 sec
+ Elaboration Time: 0.05 sec
 
- Current Memory Usage: 184.226 Meg
+ Current Memory Usage: 198.582 Meg
 
  Total Signals          : 38
  Total Nets             : 66
@@ -19,11 +19,10 @@ Sun Oct 10 16:44:52 2021
  Total Processes        : 22
  Total Traceable Variables  : 37
  Total Scalar Nets and Variables : 254
-Total Line Count : 81
 
- Total Simulation Time: 0.03 sec
+ Total Simulation Time: 0.06 sec
 
- Current Memory Usage: 259.727 Meg
+ Current Memory Usage: 276.181 Meg
 
-Sun Oct 10 16:45:55 2021
+Sat Oct  9 22:27:24 2021
 

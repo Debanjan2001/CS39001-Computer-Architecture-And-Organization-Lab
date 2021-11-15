@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-10-10T16:36:18</DateModified>
+  <DateModified>2021-10-09T22:32:18</DateModified>
   <ModuleName>BoothMultWithShiftReg</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/bob/Desktop/coa-lab/Assignment-6/Q3/iseconfig/BoothMultWithShiftReg.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/bob/Desktop/coa-lab/Assignment-6/Q3</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/iseconfig/BoothMultWithShiftReg.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/shared_xlnx/CS39001-Computer-Architecture-And-Organization-Lab/Assignment-6/Q3/</ImplementationReportsDirectory>
   <DateInitialized>2021-10-10T16:36:18</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

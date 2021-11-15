@@ -1,0 +1,7 @@
+verilog isim_temp "twoscomplement.v"
+verilog isim_temp "logicshifter.v"
+verilog isim_temp "arithmeticshifter.v"
+verilog isim_temp "adder.v"
+verilog isim_temp "alu.v"
+verilog isim_temp "TB_alu.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

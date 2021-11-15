@@ -1,27 +1,12 @@
 `timescale 1ns / 1ps
-
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Group:21
+// Members:  Pritkumar Godhani [19CS10048],  Debanjan Saha [19CS30014]
+//  
+// Module Name: Bit Serial Adder testbench
+// Project Name: Assignment-6 Question 1
 //
-// Create Date:   14:18:57 10/07/2021
-// Design Name:   BitSerialAdder
-// Module Name:   /home/ise/shared_xlnx/Asgn6_Q2.v/test_bitserialadder.v
-// Project Name:  Asgn6_Q2.v
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: BitSerialAdder
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
+//////////////////////////////////////////////////////////////////////////////////
 module test_bitserialadder;
 
 	// Inputs
